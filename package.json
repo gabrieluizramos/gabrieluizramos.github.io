@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": ""
+    "version": "3.3.8"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -15,12 +15,14 @@
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "npm-run-all": "^4.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "hexo server",
-    "deploy": "hexo deploy",
-    "build:theme": "hexo server && cd themes && webpack --watch"
+    "start": "npm-run-all --parallel start:hexo start:theme",
+    "start:hexo": "hexo server",
+    "start:theme": "cd themes/gabrieluizramos && webpack --watch",
+    "deploy": "hexo deploy"
   }
 }
