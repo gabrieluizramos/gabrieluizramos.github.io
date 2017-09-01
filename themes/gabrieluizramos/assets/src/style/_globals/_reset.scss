@@ -1,0 +1,21 @@
+
+// Reset ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+@charset 'utf-8';
+
+* {
+  margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	z-index: 0;
+	font-family: $base-font;
+	outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}

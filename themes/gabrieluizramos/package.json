@@ -1,0 +1,21 @@
+{
+  "name": "gabrieluizramos-blog-theme",
+  "version": "1.0.0",
+  "description": "gabrieluizramos blog theme",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "deploy": "webpack && git commit -am. && git push"
+  }
+}

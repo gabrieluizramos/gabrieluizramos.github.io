@@ -1,0 +1,77 @@
+
+// Preset :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// Tags
+a {
+	color: $color-variant;
+}
+
+// scrollbar
+*::-webkit-scrollbar{
+	width: 10px;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-webkit-scrollbar-track{
+	border-radius: 0;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-webkit-scrollbar-thumb{
+	width: 10px;
+	background: $color-default;
+	border-radius: 0;
+	height:10px;
+	position:absolute;
+}
+*::-moz-scrollbar{
+	width: 10px;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-moz-scrollbar-track{
+	border-radius: 0;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-moz-scrollbar-thumb{
+	width: 10px;
+	background: $color-default;
+	border-radius: 0;
+	height:10px;
+	position:absolute;
+}
+*::-ms-scrollbar{
+	width: 10px;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-ms-scrollbar-track{
+	border-radius: 0;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-ms-scrollbar-thumb{
+	width: 10px;
+	background: $color-default;
+	border-radius: 0;
+	height:10px;
+	position:absolute;
+}
+*::-o-scrollbar{
+	width: 10px;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-o-scrollbar-track{
+	border-radius: 0;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+}
+*::-o-scrollbar-thumb{
+	width: 10px;
+	background: $color-default;
+	border-radius: 0;
+	height:10px;
+	position:absolute;
+}

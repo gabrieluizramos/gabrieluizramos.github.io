@@ -1,0 +1,32 @@
+
+// Structure ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+.wrapper {
+  width: 95%;
+  max-width: $screen-max-width;
+  margin: 0 auto;
+}
+
+.body {
+  @include flex;
+  background: $color-default;
+  color: $color-white;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: ($spacing * 2);
+}
+
+.title {
+  font-size: 45px;
+}
+
+.description {
+  font-size: $base-font;
+  margin-bottom: $spacing;
+}
+
+.footer {
+  display: none;
+}
