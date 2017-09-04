@@ -56,7 +56,7 @@ Deixei um parágrafo para um campo de texto, dois botões que chamam duas funç�
 
 Feito isso, começaremos a utilizar as infomações que o Parse nos dá. Eu separei meus scripts dessa forma, para facilitar a minha visualização (nada impede que você os coloque da forma que quiser, onde quiser, contanto que atinja o objetivo, utilize o padrão ao qual você está acostumado). Lembram daquela linha com o “Parse.initialize”? Então, eu a coloquei da seguinte forma, dentro da do meu HTML:
 
-```javascript
+```html
 <script>
   Parse.initialize("minha-id", "minha-key");
 </script>
@@ -64,7 +64,7 @@ Feito isso, começaremos a utilizar as infomações que o Parse nos dá. Eu sepa
 
 Como é um trecho de código que “inicializa” minha aplicação com o Parse, decidi por colocá-lo dentro do HTML mesmo. Precisaremos do script do Parse que é disponibilizado naquela página “em branco”. Você pode baixá-lo ou puxar pelo trecho que eles disponibilizam mesmo:
 
-```javascript
+```html
 <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 ```
 
@@ -72,7 +72,7 @@ Beleza! Já temos a aplicação com o ID e com o scripts funcionando corretament
 
 Vamos lá, naquela página em branco vocês terão um exemplo de gravação de objetos dentro do Parse. Eu separei um script com duas funções para realizarmos isso:
 
-```javascript
+```html
 <script>
   function armazena(){
     var nome = document.getElementById("enviaNome").value;
