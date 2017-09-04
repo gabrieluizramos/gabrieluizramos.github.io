@@ -4,8 +4,9 @@
 .post-list {
   @extend %display-flex;
   @extend %align-center;
-  @extend %justify-between;
+  @extend %justify-start;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .post-item {
@@ -22,6 +23,7 @@
   text-decoration: none;
   padding: 30px $spacing;
   background: lighten($color-coffee, 80);
+  min-height: 200px;
 
   &:hover {
     background: lighten($color-coffee, 70);
@@ -37,4 +39,22 @@
 
 .post-subtitle {
   font-size: 12px;
+}
+
+@include breakpoint {
+  .post-list {
+    flex-direction: column;
+  }
+
+  .post-item {
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

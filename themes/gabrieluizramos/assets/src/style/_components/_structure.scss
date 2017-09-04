@@ -4,7 +4,7 @@
 .wrapper {
   width: 95%;
   max-width: $screen-max-width;
-  margin: $spacing auto;
+  margin: 0 auto;
 }
 
 .body {
@@ -17,15 +17,16 @@
   padding: $spacing 0;
 }
 
-.title {
+.page-title {
   font-size: 45px;
 }
 
-.description {
+.page-description {
   font-size: $base-font;
   margin-bottom: $spacing;
 }
 
 .footer {
-  font-size: 12px
+  font-size: 12px;
+  padding: ($spacing / 2) 0;
 }
