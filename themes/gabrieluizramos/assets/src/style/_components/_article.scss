@@ -82,6 +82,16 @@
   height: 485px;
 }
 
+.comment-title {
+  display: block;
+  font-size: 18px;
+}
+
+.comment-subtitle {
+  display: block;
+  font-size: 16px;
+}
+
 @include breakpoint {
   .iframe-presentation {
     height: 200px;
