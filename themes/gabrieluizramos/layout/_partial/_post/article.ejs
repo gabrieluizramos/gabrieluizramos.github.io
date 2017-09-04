@@ -4,7 +4,7 @@
     <header class="article-header">
       <h1 class="article-title"><%= post.title %></h1>
       <h2 class="article-subtitle"><%= post.subtitle %></h2>
-      <span class="article-date"><%= post.date %></span>
+      <span class="article-date"><%= config.weekday[moment(post.date).format('d')]%>, <%=moment(post.date).format('DD/MM/YYYY') %></span>
     </header>
     <hr class="article-divider">
     <section class="article-description">

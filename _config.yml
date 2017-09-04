@@ -62,7 +62,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: DD/MMM/YYYY
+date_format: YYYY-MM-DDD
 time_format: HH:mm:ss
 
 # Pagination
@@ -82,3 +82,14 @@ deploy:
   repo: https://github.com/gabrieluizramos/blog.git
   branch: gh-pages
   message: New blog deploy
+
+
+# Time
+weekday:
+  - domingo
+  - segunda
+  - terça
+  - quarta
+  - quinta
+  - sexta
+  - sábado
