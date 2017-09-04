@@ -13,8 +13,12 @@ html,
 body {
   height: 100%; }
 
-a {
+a:not(.no-link) {
   color: #E19393; }
+
+.no-link {
+  color: #FFF;
+  text-decoration: none; }
 
 *::-webkit-scrollbar {
   width: 10px;
@@ -107,10 +111,10 @@ a {
   justify-content: center;
   flex-direction: row; }
 
-.display-flex {
+.display-flex, .post-list {
   display: flex; }
 
-.align-center {
+.align-center, .post-list {
   align-items: center; }
 
 .align-end {
@@ -131,7 +135,7 @@ a {
 .justify-around {
   justify-content: space-around; }
 
-.justify-between {
+.justify-between, .post-list {
   justify-content: space-between; }
 
 .direction-row {
@@ -152,7 +156,7 @@ a {
 .wrapper {
   width: 95%;
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 20px auto; }
 
 .body {
   background: linear-gradient(155deg, #460303, black);
@@ -160,7 +164,7 @@ a {
   text-align: center; }
 
 .header {
-  margin-bottom: 40px; }
+  padding: 20px 0; }
 
 .title {
   font-size: 45px; }
@@ -170,4 +174,82 @@ a {
   margin-bottom: 20px; }
 
 .footer {
-  display: none; }
+  font-size: 12px; }
+
+.post-item {
+  width: calc((100% / 4) - 20px);
+  margin: 0 10px;
+  border-radius: 2.5px; }
+
+.post-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: .2s ease-in-out;
+  position: relative;
+  color: #2D1D1D;
+  text-decoration: none;
+  padding: 30px 20px;
+  background: #f4eeee; }
+  .post-link:hover {
+    background: #e0cfcf; }
+
+.post-date {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 11px; }
+
+.post-subtitle {
+  font-size: 12px; }
+
+.article {
+  position: relative;
+  color: #2D1D1D;
+  background: #f4eeee;
+  padding: 20px 10px;
+  text-align: left; }
+  .article p {
+    margin-bottom: 20px; }
+
+.article-title {
+  font-size: 26px; }
+
+.article-subtitle {
+  font-size: 20px;
+  font-weight: 100; }
+
+.article-date {
+  font-size: 12px; }
+
+.article-divider {
+  position: relative;
+  margin: 40px auto;
+  height: 2px;
+  background: linear-gradient(to right, #460303 40%, transparent 40%, transparent 60%, #460303 60%); }
+  .article-divider:after {
+    content: "";
+    display: block;
+    background: #460303;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: calc(50% - 8px); }
+  .article-divider:before {
+    content: "";
+    display: block;
+    background: #460303;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: calc(50% - 8px); }
+
+.back-button {
+  position: absolute;
+  right: 10px;
+  top: 5px; }

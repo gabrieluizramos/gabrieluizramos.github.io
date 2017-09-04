@@ -1,0 +1,14 @@
+<article class="article">
+  <a href="/blog/" class="back-button">Voltar</a>
+  <div class="wrapper">
+    <header class="article-header">
+      <h1 class="article-title"><%= post.title %></h1>
+      <h2 class="article-subtitle"><%= post.subtitle %></h2>
+      <span class="article-date"><%= post.date %></span>
+    </header>
+    <hr class="article-divider">
+    <section class="article-description">
+      <%- post.content %>
+    </section>
+  </div>
+</article>

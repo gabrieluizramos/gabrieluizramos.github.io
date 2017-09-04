@@ -1,7 +1,27 @@
 <%- partial('_partial/head') %>
 
-<body class="body">
-  <%- partial('_partial/header') %>
-  
-  <%- partial('_partial/footer') %>
-</body>
+  <body class="body">
+    <%- partial('_partial/header') %>
+
+      <section class="wrapper">
+        <ul class="post-list">
+          <% 
+            if (site.posts.length) {
+              site.posts.each( function (post, i) { 
+          %>
+            <li class="post-item">
+              <a href="<%= url_for(post.path) %>" class="post-link no-link">
+                <span class="post-date"><%= post.date %></span>
+                <strong class="post-title"><%= post.title %></strong>
+                <span class="post-subtitle"><%= post.subtitle %></span>
+              </a>
+            </li>
+          <% 
+              }) 
+            }
+          %>
+        </ul>
+      </section>
+
+      <%- partial('_partial/footer') %>
+  </body>

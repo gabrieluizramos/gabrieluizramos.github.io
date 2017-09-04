@@ -1,0 +1,39 @@
+
+// Post list ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+.post-list {
+  @extend %display-flex;
+  @extend %align-center;
+  @extend %justify-between;
+}
+
+.post-item {
+  width: calc((100% / 4) - #{$spacing});
+  margin: 0 ($spacing / 2);
+  border-radius: $radius;
+}
+
+.post-link {
+  @include flex($flex-direction: column);
+  transition: .2s ease-in-out;
+  position: relative;
+  color: $color-coffee;
+  text-decoration: none;
+  padding: 30px $spacing;
+  background: lighten($color-coffee, 80);
+
+  &:hover {
+    background: lighten($color-coffee, 70);
+  }
+}
+
+.post-date {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 11px;
+}
+
+.post-subtitle {
+  font-size: 12px;
+}

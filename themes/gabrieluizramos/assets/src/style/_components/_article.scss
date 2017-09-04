@@ -1,0 +1,67 @@
+
+// Post :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+.article {
+  position: relative;
+  color: $color-coffee;
+  background: lighten($color-coffee, 80);
+  padding: $spacing ($spacing / 2);
+  text-align: left;
+
+  p {
+    margin-bottom: $spacing;
+  }
+}
+
+.article-title {
+  font-size: 26px;
+}
+
+.article-subtitle {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.article-date {
+  font-size: 12px;
+}
+
+// Article divider
+.article-divider {
+  position: relative;
+  margin: ($spacing * 2) auto;
+  height: 2px;
+  background: linear-gradient(to right, $color-default 40%, transparent 40%, transparent 60%, $color-default 60%);
+
+  $dot-size: 4px;
+
+  &:after {
+    content: "";
+    display: block;
+    background: $color-default;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    position: absolute;
+    top: -($dot-size / 2);
+    left: calc(50% - #{$dot-size * 2});
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    background: $color-default;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    position: absolute;
+    top: -($dot-size / 2);
+    right: calc(50% - #{$dot-size * 2});
+  }
+}
+
+.back-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
