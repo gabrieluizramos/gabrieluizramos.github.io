@@ -155,11 +155,7 @@ a {
   margin: 0 auto; }
 
 .body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background: #460303;
+  background: linear-gradient(155deg, #460303, black);
   color: #FFF;
   text-align: center; }
 

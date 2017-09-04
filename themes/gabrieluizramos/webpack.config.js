@@ -10,13 +10,13 @@ const config = {
     entry: './assets/index.js',
     output: {
         filename: 'dist.js',
-        path: path.resolve(__dirname, 'assets/dist'),
-        publicPath: path.resolve(__dirname, 'assets/dist')
+        path: path.resolve(__dirname, 'source'),
+        publicPath: path.resolve(__dirname, 'source')
     },
 
     // DevServer config
     devServer: {
-      publicPath: '/assets/dist/',
+      publicPath: '/source/',
       port: 8080
     },
 

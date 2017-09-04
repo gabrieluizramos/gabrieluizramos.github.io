@@ -8,8 +8,7 @@
 }
 
 .body {
-  @include flex;
-  background: $color-default;
+  background: linear-gradient(155deg, $color-gradient-1, $color-gradient-2);
   color: $color-white;
   text-align: center;
 }
