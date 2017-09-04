@@ -176,9 +176,12 @@ a:not(.no-link) {
 .footer {
   font-size: 12px; }
 
+.post-list {
+  flex-wrap: wrap; }
+
 .post-item {
   width: calc((100% / 4) - 20px);
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 2.5px; }
 
 .post-link {

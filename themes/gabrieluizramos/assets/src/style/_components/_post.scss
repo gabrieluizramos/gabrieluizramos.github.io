@@ -5,11 +5,12 @@
   @extend %display-flex;
   @extend %align-center;
   @extend %justify-between;
+  flex-wrap: wrap;
 }
 
 .post-item {
   width: calc((100% / 4) - #{$spacing});
-  margin: 0 ($spacing / 2);
+  margin: ($spacing / 2);
   border-radius: $radius;
 }
 
