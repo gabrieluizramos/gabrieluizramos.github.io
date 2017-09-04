@@ -11,7 +11,7 @@
   <!-- <link rel="shortcut icon" href="assets/dist/img/favicon.png" type="image/x-icon" /> -->
   <meta name="theme-color" content="#460303" />
   <!-- for Google -->
-	<meta name="description" content="Blog » Gabriel Ramos" />
+	<meta name="description" content="<%= page.subtitle || 'Blog'%>" />
 	<meta name="company" content="Gabriel Ramos" />  
 	<meta name="keywords" content="Desenvolvimento Web, Front-end, Back-end, Web Development">  
 	<meta name="author" content="Gabriel Ramos" />
@@ -24,9 +24,10 @@
 	<meta http-equiv="expires" content="0">
 	<!-- for Facebook -->   
 	<meta property="og:title" content="Gabriel Ramos"> 
-	<meta property="og:description" content="Blog"> 
-	<meta property="og:url" content="http://gabrieluizramos.com.br/blog"> 
-	<meta property="og:type" content="http://gabrieluizramos.com.br/blog">
+	<meta property="og:description" content="<%= page.subtitle || 'Blog'%>"> 
+	<meta property="og:url" content="<%= page.permalink || 'http://gabrieluizramos.com.br/blog' %>"> 
+	<meta property="og:type" content="<%= page.permalink || 'http://gabrieluizramos.com.br/blog' %>">
+
 	<meta property="og:site_name" content="gabrieluizramos"> 
 	<!-- <meta property="og:image" content="assets/dist/img/banner-site.png" /> -->
 	<!-- for Twitter -->          
@@ -35,7 +36,7 @@
 	<meta name="twitter:description" content="Blog" />
 	<!-- <meta name="twitter:image" content="assets/dist/img/banner-site.png" /> -->
 	<!-- /META -->
-  <title>Blog » Gabriel Ramos</title>
+  <title><%= page.title || 'Blog » Gabriel Ramos'%></title>
     
 	<%- css('style') %>
 
