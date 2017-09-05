@@ -24,6 +24,6 @@
     "start": "npm-run-all --parallel start:hexo start:theme",
     "start:hexo": "hexo server",
     "start:theme": "cd themes/gabrieluizramos && webpack --watch",
-    "deploy": "hexo deploy"
+    "deploy": "hexo clean && hexo generate && hexo deploy"
   }
 }
