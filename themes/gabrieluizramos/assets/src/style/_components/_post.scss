@@ -43,11 +43,12 @@
 
 @include breakpoint {
   .post-list {
-    flex-direction: column;
+    display: block;
   }
 
   .post-item {
     width: 100%;
+    margin: 10px auto;
 
     &:first-child {
       margin-top: 0;
