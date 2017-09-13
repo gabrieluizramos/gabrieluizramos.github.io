@@ -82,6 +82,7 @@
   height: 485px;
 }
 
+// Comments
 .comment-title {
   display: block;
   font-size: 18px;
@@ -90,6 +91,11 @@
 .comment-subtitle {
   display: block;
   font-size: 16px;
+}
+
+// Share
+.share {
+  margin: -($spacing / 2) auto ($spacing /2);
 }
 
 @include breakpoint {

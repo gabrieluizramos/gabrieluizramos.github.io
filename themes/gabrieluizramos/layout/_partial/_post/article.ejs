@@ -6,11 +6,19 @@
       <h2 class="article-subtitle"><%= post.subtitle %></h2>
       <span class="article-date"><%= config.weekday[moment(post.date).format('d')]%>, <%=moment(post.date).format('DD/MM/YYYY') %></span>
     </header>
+    
     <hr>
     <section class="article-description">
       <%- post.content %>
     </section>
     <hr>
+
+    <div class="share">
+      <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59b90e1ff065b646"></script> 
+      <div class="addthis_inline_share_toolbox"></div>
+    </div>
+    
     <section class="comment">
       <span class="comment-title">O que achou do post?</span>
       <span class="comment-subtitle">Deixei seu comentário :)</span>
