@@ -2,6 +2,8 @@
 title: Parse – Objetos na nuvem
 subtitle: Parse, um banco de dados, na nuvem, orientado a objetos.
 date: 2015-07-07
+tags:
+  - dev
 ---
 
 Esse artigo foi publicado originalmente no site <a href="https://tableless.com.br/parse-objetos-na-nuvem-2/">Tableless</a>, em 2015.

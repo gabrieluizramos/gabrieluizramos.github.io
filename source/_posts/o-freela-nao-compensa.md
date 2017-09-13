@@ -1,6 +1,7 @@
 ---
 title: O Freela não compensa
 subtitle: Reflexões após alguns anos pegando trabalhos como freelancer
+date: 2017-09-04
 tags:
   - dev
 ---

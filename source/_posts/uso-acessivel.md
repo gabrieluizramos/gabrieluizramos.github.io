@@ -2,6 +2,8 @@
 title: 'Uso acessível: O cumprimento das premissas na web contemporânea'
 subtitle: Motivações ao desenvolvimento acessível.
 date: 2015-10-29
+tags:
+  - dev
 ---
 
 Esse artigo foi publicado originalmente no site <a href="https://tableless.com.br/uso-acessivel-o-cumprimento-das-premissas-na-web-contemporanea/">Tableless</a>, em 2015.

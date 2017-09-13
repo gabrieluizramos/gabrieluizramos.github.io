@@ -13,6 +13,7 @@
   width: calc((100% / 4) - #{$spacing});
   margin: ($spacing / 2);
   border-radius: $radius;
+  overflow: hidden;
 }
 
 .post-link {
@@ -58,4 +59,22 @@
       margin-bottom: 0;
     }
   }
+}
+
+// Tags
+.tags-list {
+  display: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+  list-style: none;
+  color: $color-white;
+  font-size: 12px;
+}
+
+.tags-item {
+  padding: 5px;
+  display: inline-block;
+  background: $color-default;
+  margin: 1px;
 }
