@@ -4,6 +4,7 @@ subtitle: Reflexões após alguns anos pegando trabalhos como freelancer
 date: 2017-09-04
 tags:
   - dev
+  - lifestyle
 ---
 Você pode ler esse título e pensar: "Mas como não compensa? Existem tantas pessoas que se mantêm somente com freelas!"
 
