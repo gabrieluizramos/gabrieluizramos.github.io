@@ -25,6 +25,7 @@
 
   // Article divider
   hr {
+    overflow: visible;
     position: relative;
     margin: ($spacing * 2) auto;
     height: 2px;
@@ -73,8 +74,18 @@
 
 .back-button {
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 5px;
+  top: 0;
+}
+
+.article-figure {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  
+  img {
+    max-width: 100%;
+  }
 }
 
 .iframe-presentation {
