@@ -1,7 +1,7 @@
 ---
 title: Como um professor pode influenciar sua carreira
 subtitle: Já parou pra pensar como a pessoa que escreve na lousa pode mudar sua vida?
-date: 2017-09-13
+date: 2017-09-14
 tags:
   - dev
   - lifestyle
