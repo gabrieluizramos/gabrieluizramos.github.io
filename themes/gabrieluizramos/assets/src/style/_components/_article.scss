@@ -2,10 +2,8 @@
 // Post :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 .article {
-  position: relative;
   color: $color-coffee;
   background: lighten($color-coffee, 80);
-  padding: $spacing ($spacing / 2);
   text-align: left;
 
   p,
@@ -57,6 +55,11 @@
       right: calc(50% - #{$dot-size * 2});
     }
   }
+
+  .wrapper {
+    position: relative;
+    padding: ($spacing + 5) ($spacing / 2);
+  }
 }
 
 .article-title {
@@ -75,7 +78,8 @@
 .back-button {
   position: absolute;
   right: 5px;
-  top: 0;
+  top: 5px;
+  font-size: 14px;
 }
 
 .article-figure {
