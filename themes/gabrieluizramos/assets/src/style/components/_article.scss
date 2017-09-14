@@ -5,6 +5,7 @@
   color: $color-coffee;
   background: lighten($color-coffee, 80);
   text-align: left;
+  position: relative;
 
   p,
   ul,
@@ -59,6 +60,28 @@
   .wrapper {
     position: relative;
     padding: ($spacing + 5) ($spacing / 2);
+  }
+
+  // Reading progress
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: $color-default;
+    transition: .2s ease-in-out;
+  }
+
+  @for $progress from 1 through 100 {
+    &[data-progress="#{$progress}"] {
+      &:before {
+        width: $progress * 1%;
+      }
+    }
   }
 }
 
