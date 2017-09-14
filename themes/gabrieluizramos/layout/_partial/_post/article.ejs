@@ -37,3 +37,43 @@
     </section>
   </div>
 </article>
+
+<!-- Reading Progress Bar -->
+<script>
+    var readingProgressBar = {
+      config: {
+        article: '[data-progress]',
+        articleRead: '[data-content]',
+
+        progress: null
+      },
+
+      events: {
+        windowScroll: function () {
+          var bodyScrollHeight = document.body.scrollHeight;
+          var pageHeight = document.documentElement.clientHeight;
+          var windowPosition = window.scrollY;
+
+          var progress = (windowPosition / (bodyScrollHeight - pageHeight) * 100);
+          progress = parseInt(progress);
+
+          readingProgressBar.config.article.dataset.progress = progress;
+        },
+
+        init: function () {
+          window.onscroll = readingProgressBar.events.windowScroll;
+        }
+      },
+
+      init: function() {
+        (function queryElements () {
+          readingProgressBar.config.article = document.querySelector(readingProgressBar.config.article);
+          readingProgressBar.config.articleRead = document.querySelector(readingProgressBar.config.articleRead);
+        })();
+
+        readingProgressBar.events.init();
+      }
+    };
+    
+    readingProgressBar.init();
+  </script>
