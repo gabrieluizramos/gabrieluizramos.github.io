@@ -1,4 +1,4 @@
-<article class="article">
+<article class="article" data-progress>
   <div class="wrapper">
     <a href="/blog/" class="back-button">Voltar</a>
     <header class="article-header">
@@ -8,12 +8,13 @@
     </header>
     
     <hr>
-    <section class="article-description">
+    <section class="article-description" data-content>
       <%- post.content %>
     </section>
     <hr>
 
     <div class="share">
+      <!-- AddThis -->
       <!-- Go to www.addthis.com/dashboard to customize your tools --> 
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59b90e1ff065b646"></script> 
       <div class="addthis_inline_share_toolbox"></div>
@@ -23,6 +24,7 @@
       <span class="comment-title">O que achou do post?</span>
       <span class="comment-subtitle">Deixei seu comentário :)</span>
 
+      <!-- Facebook Comments -->
       <div class="comment-facebook">
           <div id="fb-root"></div>
           <script>(function(d, s, id) {
