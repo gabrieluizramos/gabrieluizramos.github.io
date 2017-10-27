@@ -1,8 +1,12 @@
-
-const path = require('path');
 const webpack = require('webpack');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// Plugins
+const autoprefixer = require('autoprefixer');
+const ExtractCSS = require('extract-text-webpack-plugin');
+
+// Path
+const path = require('path');
+const sourcePath = path.resolve(process.cwd(), 'assets');
 
 const config = {
 
@@ -23,11 +27,30 @@ const config = {
     // rules config
     module: {
         rules: [
-            {
+            { // babel config
+                test: /\.jsx?$/,
+                include: sourcePath,
+                use: [
+                  'babel-loader'
+                ]
+            },
+            
+            
+            { // scss config
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader?outputStyle=compressed']
+                include: sourcePath,
+                use: ExtractCSS.extract({
+                  fallback: 'style-loader',
+                  use: [
+                    'css-loader',
+                    {
+                      loader: 'postcss-loader',
+                      options: {
+                        plugins: [autoprefixer]
+                      }
+                    },
+                    'sass-loader'
+                  ]
                 })
             }
         ]
@@ -35,7 +58,7 @@ const config = {
 
     // plugins config
     plugins: [
-        new ExtractTextPlugin('style.css')
+        new ExtractCSS('style.css')
     ]
 
 };
