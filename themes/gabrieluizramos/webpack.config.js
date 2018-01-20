@@ -11,16 +11,19 @@ const sourcePath = path.resolve(process.cwd(), 'assets');
 const config = {
 
     // general config
-    entry: './assets/index.js',
+    entry: {
+        app:  './assets/index.js',
+        article: './assets/article.js'
+    },
     output: {
-        filename: 'dist.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'source'),
         publicPath: path.resolve(__dirname, 'source')
     },
 
     // DevServer config
     devServer: {
-      publicPath: '/source/',
+      publicPath: '/blog/',
       port: 8080
     },
 

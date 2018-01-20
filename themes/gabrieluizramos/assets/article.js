@@ -1,0 +1,1 @@
+import ProgressBar from './src/scripts/progressbar'
