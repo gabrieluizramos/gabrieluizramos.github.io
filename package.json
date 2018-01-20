@@ -23,7 +23,7 @@
     "start": "npm-run-all -p start:hexo start:theme",
     "start:hexo": "hexo server",
     "start:theme": "cd themes/gabrieluizramos && webpack --watch",
-    "deploy": "npm-run-all -s deploy:theme deploy:hexo",
+    "deploy:all": "npm-run-all -s deploy:theme deploy:hexo",
     "deploy:theme": "cd themes/gabrieluizramos && npm run deploy",
     "deploy:hexo": "hexo clean && hexo generate && hexo deploy"
   }
