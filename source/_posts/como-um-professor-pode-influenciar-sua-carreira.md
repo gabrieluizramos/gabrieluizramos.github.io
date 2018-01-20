@@ -57,6 +57,6 @@ E foi nesse ambiente de aprendizado de estágio/primeiro emprego que pude, tamb�
 
 ---
 
-Gostaria de agradecer especialmente a dois grandes mestres com os quais tive o prazer de aprender: **Eduardo Henrique Gomes**, por despertar meu interesse em desenvolvimento web e ter sido o melhor professor que tive durante meu curso técnico e **Ronaldo Luiz Pinto**, por me ensinar toda a base prática de programação que sei hoje e por acompanhar de perto minha carreira.
+Gostaria de agradecer especialmente a três grandes mestres com os quais tive o prazer de aprender: **Eduardo Henrique Gomes**, por despertar meu interesse em desenvolvimento web e ter sido o melhor professor que tive durante meu curso técnico. **Ronaldo Luiz Pinto**, por me ensinar toda a base prática de programação que sei hoje e por acompanhar de perto minha carreira. **Alisson Jadir Suzigan**, por me mostrar que todo carinho com o código em produção é pouco.
 
 Vocês são exemplos de profissionais para mim e sem vocês, com certeza, eu seria um cara perdido sem saber que rumo tomar na minha carreira!
