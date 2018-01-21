@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "npm-run-all -p start:hexo start:theme",
-    "start:hexo": "hexo server",
+    "start:hexo": "hexo server --drafts",
     "start:theme": "cd themes/gabrieluizramos && webpack --watch",
     "deploy:all": "npm-run-all -s deploy:theme deploy:hexo",
     "deploy:theme": "cd themes/gabrieluizramos && npm run deploy",
