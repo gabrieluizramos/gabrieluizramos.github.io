@@ -20,6 +20,26 @@ a:not(.no-link) {
   color: #FFF;
   text-decoration: none; }
 
+::-moz-selection {
+  background: #770505;
+  color: #FFF; }
+
+::selection {
+  background: #770505;
+  color: #FFF; }
+
+::-moz-selection {
+  background: #770505;
+  color: #FFF; }
+
+::-ms-selection {
+  background: #770505;
+  color: #FFF; }
+
+::-o-selection {
+  background: #770505;
+  color: #FFF; }
+
 .img-responsive {
   display: block;
   max-width: 100%;
