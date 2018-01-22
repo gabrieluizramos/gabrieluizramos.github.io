@@ -60,6 +60,7 @@
   .wrapper {
     position: relative;
     padding: ($spacing + 5) ($spacing / 2);
+    max-width: $mobile-width;
   }
 
   // Reading progress
