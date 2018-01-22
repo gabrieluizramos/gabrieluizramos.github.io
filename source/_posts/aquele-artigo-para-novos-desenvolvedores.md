@@ -104,7 +104,7 @@ No front-end, podemos citar alguns como o [eslint](https://eslint.org/) para jav
 
 Independente da linguagem que você vai utilizar, pensar em responsabilidade única também é muito importante.
 
-Basicamente o "princípio da responsabilidade única" define que um trecho de código deve fazer apenas uma única tarefa, de forma singular, e bem feita.
+Basicamente o "princípio da responsabilidade única" define que um trecho de código deve fazer apenas uma única tarefa, de forma singular e bem feita.
 
 Procurando sobre tutoriais e aprendendo novas coisas na internet (e no mercado) você vai se deparar diversas vezes com códigos como esse:
 
