@@ -109,9 +109,11 @@
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
+  background: $color-default;
   
   img {
     max-width: 100%;
+    vertical-align: middle;
   }
 }
 
