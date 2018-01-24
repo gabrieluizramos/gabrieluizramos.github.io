@@ -16,7 +16,19 @@ Sempre gostei de artigos que ajudam a galera que está iniciando e, ultimamente,
 <figure class="article-figure">{% asset_img tools.jpg %}</figure>
 
 Tudo no mundo do desenvolvimento muda muito rápido. Quantas piadas com ferramentas em javascript você já não deve ter visto por aí? Não se atenha somente às ferramentas do momento. 
-Aprenda conceitos, o resto, você consegue estudar conforme necessidade.
+Aprenda conceitos, orientação a objetos, programação reativa e funcional, necessidades e boas práticas da linguagem que você vai utilizar... O resto, você consegue estudar conforme necessidade.
+
+### Mantenha sua curiosidade em dia
+
+<figure class="article-figure">{% asset_img curious.jpg %}</figure>
+
+Ser curioso é uma habilidade nata para muitos desenvolvedores pelo fato de gostarem de programar.
+
+Escrever código que resolve problemas é muito gratificante e, muitas vezes, a vontade de aprender e se manter atualizado vem naturalmente, mas, assim como essa vontade vem, muitas vezes ela passa.
+
+Seja por problemas pessoais, profissionais ou qualquer outro, é sempre bom ter um espaço para manter sua curiosidade em dia. Criar uma rotina de leitura de alguns artigos, de pesquisar algum assunto novo surgindo na comunidade ou algo do tipo. Mesmo que de algum assunto que, a primeira vista, possa não parecer tão aplicável em algum projeto seu, nunca se sabe quando você vai precisar solucionar algum problema novo. 
+
+Seja curioso! É uma atitude sempre bem-vinda, não só no seu cotidiano, mas dentro de uma equipe. Um desenvolvedor que gosta de estudar e de aprender coisas novas com certeza se destaca e possui uma facilidade de se adaptar a novas ferramentas e mudanças com tecnologias do mercado.
 
 ### Senioridade não define nível de conhecimento
 
