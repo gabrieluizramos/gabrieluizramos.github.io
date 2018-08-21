@@ -54,9 +54,3 @@ Podemos espelhar grande parte do que disse acima para um profissional de qualque
 Da mesma forma, todo profissional pode servir de exemplo e estar disposto a ajudar e a ensinar o que sabe para um membro de equipe mais novo que esteja aprendendo ou até mesmo membros antigos, já que cada profissional tem sua visão. 
 
 E foi nesse ambiente de aprendizado de estágio/primeiro emprego que pude, também, entrar em contato pela primeira vez com profissionais na área de desenvolvimento web que também acabaram, inevitavelmente, cumprindo admirosamente bem o papel de professores.
-
----
-
-Gostaria de agradecer especialmente a três grandes mestres com os quais tive o prazer de aprender: **Eduardo Henrique Gomes**, por despertar meu interesse em desenvolvimento web e ter sido o melhor professor que tive durante meu curso técnico. **Ronaldo Luiz Pinto**, por me ensinar toda a base prática de programação que sei hoje e por acompanhar de perto minha carreira. **Alisson Jadir Suzigan**, por me mostrar que todo carinho com o código em produção é pouco.
-
-Vocês são exemplos de profissionais para mim e sem vocês, com certeza, eu seria um cara perdido sem saber que rumo tomar na minha carreira!
