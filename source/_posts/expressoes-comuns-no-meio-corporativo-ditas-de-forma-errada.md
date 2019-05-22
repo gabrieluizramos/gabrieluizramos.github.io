@@ -96,7 +96,7 @@ Muitas vezes confundido com "simpatia" (igual os casos onde alguém coloca "infe
 Se pesquisarmos os dois casos, também temos algo como:
 
 > Empatia: capacidade de compreender e identificar sentimentos de outra pessoa.
-> Simpatia: palavra relacionado ao bom envolvimento com outras pessoas
+> Simpatia: bom envolvimento e relacionamento com outras pessoas.
 
 Basicamente, podemos dizer que pessoas **simpáticas** são pessoas agradaveis e positivas em um ambiente junto às outras. Assim como, pessoas que possuem **empatia** são pessoas que sabem entender o momento (como tristeza, felicidade, luto) que algum colega de trabalho está passando.
 
