@@ -1,7 +1,7 @@
 ---
 title: Expressões comuns no meio corporativo que são ditas de forma errada
 subtitle: Tenho certeza que você já se deparou com alguma(s)
-date: 2015-07-07
+date: 2019-05-22
 tags:
   - work
 ---
@@ -66,6 +66,9 @@ Chefe: "Gostou? Muito legal, né? Se você trabalhar dureto, com garra, não des
 
 Brincadeiras a parte, metas agressivas podem acabar motivando você e as outras pessoas. Isso não quer dizer, também, que transformar todo objetivo em **moonshot** seja benéfico para sua equipe.
 
+É bem comum em alguns ambientes ouvir sobre **moonshot** relacionado à outro jargão: o **high stakes**. 
+Basicamente, **high stakees**, é saber que você (ou a equipe, ou alguem...) corre um **alto risco** com determinada ação ou objetivo.
+
 ___
 
 ## Você tem que acreditar na empresa/produto
@@ -97,4 +100,4 @@ Se pesquisarmos os dois casos, também temos algo como:
 
 Basicamente, podemos dizer que pessoas **simpáticas** são pessoas agradaveis e positivas em um ambiente junto às outras. Assim como, pessoas que possuem **empatia** são pessoas que sabem entender o momento (como tristeza, felicidade, luto) que algum colega de trabalho está passando.
 
-Embora sejam muito próximas, é comum ouvir algo como "você deveria ter mais empatia" quando, por algum descuido (ou não, rs), você acaba cometendo algum erro, como tratar alguém de forma ríspida. O que acaba, por muitas vezes, não sendo totalmente certo.
+Embora sejam muito próximas, é comum ouvir algo como "você deveria ter mais empatia" quando, por algum motivo, você vai contra as ideias de alguém. O que acaba, por muitas vezes, não sendo totalmente certo. Você não precisa compartilhar nas mesmas ideias que uma pessoa e isso não tem nada a ver com **empatia** e nem mesmo com **simpatia**, trata-se, apenas, de duas pessoas com opiniões (e experiências) totalmente diferentes.
