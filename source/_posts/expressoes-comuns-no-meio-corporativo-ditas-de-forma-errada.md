@@ -58,7 +58,43 @@ ___
 
 ## Esse é um verdadeiro "moonshot"
 
+Usado no momento em que alguma meta é apresentada deixando clara, desde o início, que é algo inatingível. Facilmente colocada em um momento onde tentam demonstrar a importância do seu esforço. Mesmo você dando seu máximo, a empresa sabe que colocou objetivos extremamente difíceis, **um tiro para acertar a lua**.
+
+Me lembra um pouco aquela imagem/tirinha/conversa entre um funcionário e um chefe, que é algo como:
+Funcionário: "Muito bacana seu novo carro, chefe!"
+Chefe: "Gostou? Muito legal, né? Se você trabalhar dureto, com garra, não desistir e der o melhor de si, ano que vem eu consigo comprar outro!"
+
+Brincadeiras a parte, metas agressivas podem acabar motivando você e as outras pessoas. Isso não quer dizer, também, que transformar todo objetivo em **moonshot** seja benéfico para sua equipe.
 
 ___
 
 ## Você tem que acreditar na empresa/produto
+
+E com certeza tem! Afinal, se você não acredita no ambiente que está inserido, não faz sentido algum estar lá, não é mesmo?
+O complicado nesse termo é entender que, da mesma forma que a empresa perde a confiança nas pessoas diversas vezes, **você tem o direito de não acreditar mais nas empresa também**. E é natural quando você vê situações que incomodam um grande time serem recorrentes.
+
+Já ouvi casos onde essa frase foi empregada até mesmo em uma negociação sobre salário. Afinal: *"é só um detalhe e você precisa acreditar no potencial que você tem aqui dentro e nas chances de crescimento!"*
+___
+
+## Nós temos um "soft deadline" daqui um mês
+
+Algo que vejo crescendo ao longo do tempo. Admito que tenho até um pouco de dificuldade de entender esse.
+Basicamente, você ouve sobre um **soft deadline** quando você tem um objetivo, mas esse objetivo "nem é tão prioritário assim".
+
+Mas ué, se não é prioridade, não é um objetivo, certo? Se não é objetivo, *não precisa ter um deadline*.
+Se existe um **deadline**, ele foi feito para ser cumprido e, se precisa e tem data para ser cumprido, é um **deadline** como qualquer outro, não tem nada de **soft**, concorda?
+
+___
+
+## Nessas situações, precisamos ter "empatia"
+
+Muitas vezes confundido com "simpatia" (igual os casos onde alguém coloca "inferir" no lugar de "ferir", sabe?).
+
+Se pesquisarmos os dois casos, também temos algo como:
+
+> Empatia: capacidade de compreender e identificar sentimentos de outra pessoa.
+> Simpatia: palavra relacionado ao bom envolvimento com outras pessoas
+
+Basicamente, podemos dizer que pessoas **simpáticas** são pessoas agradaveis e positivas em um ambiente junto às outras. Assim como, pessoas que possuem **empatia** são pessoas que sabem entender o momento (como tristeza, felicidade, luto) que algum colega de trabalho está passando.
+
+Embora sejam muito próximas, é comum ouvir algo como "você deveria ter mais empatia" quando, por algum descuido (ou não, rs), você acaba cometendo algum erro, como tratar alguém de forma ríspida. O que acaba, por muitas vezes, não sendo totalmente certo.
