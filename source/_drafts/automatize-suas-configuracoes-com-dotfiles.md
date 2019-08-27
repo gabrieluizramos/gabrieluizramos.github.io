@@ -9,19 +9,19 @@ tags:
 
 Você já se viu em uma situação onde precisou formatar seu computador e precisou reinstalar manualmente todos os programas que utilizava? Ou então trocou de máquina e teve que ir na página de cada um dos softwares que usa (Google Chrome, Spotify e vários outros) e baixar e executar o instalador um por um? Ou até mesmo, realizar algumas configurações de mouse/teclado ou visualização do seu sistema operacional?
 
-Depois de passar por essa situação algumas (várias) vezes, acredito que você deve se cansar. Afinal, é um tempo praticamente perdido só configurando sua máquina. E é exatamente ai que o conceito (e a prática) dos tão falados "dotfiles" vem ajudar!
+Depois de passar por essa situação algumas (várias) vezes, acredito que você deve se cansar. Afinal, é um tempo praticamente perdido só configurando sua máquina. E é exatamente aí que o conceito (e a prática) dos tão falados "dotfiles" vem ajudar!
 
 
 ### Ok, mas o que são esses dotfiles?
 
 **Dotfiles** (ou **.files**, onde "dot" significa "ponto" e é explicado pelo fato desses arquivos iniciarem com um ponto final) é um padrão de escrita de arquivos que são ocultos em alguns alguns sistemas operacionais por padrão. Geralmente esses arquivos armazenam dados sobre configurações de programas e aplicações que você executa no seu cotidiano.
 
-Um muito conhecido na comunidade entre os desenvolvedores é o famoso **.bashrc**, responsável por conter algumas configurações iniciais que são rodadas ao abrir um novo terminal.
+Um muito conhecido na comunidade entre os desenvolvedores é o famoso **.bashrc**, responsável por conter algumas configurações iniciais que são rodadasco ao abrir um novo terminal.
 
 
 ### E como isso pode me ajudar?
 
-Basicamente, configurar e manter seus **dotfiles** atualizados consiste em automatizar todas as rotinas e processos manuais que você, como desenvolvedor ou até mesmo usuário, tem que executar toda vez que formata seu sistema operacional ou troca seu computador. 
+Basicamente, configurar e manter seus **dotfiles** atualizados consiste em automatizar todas as rotinas e processos manuais que você, como desenvolvedor ou até mesmo usuário, tem que executar toda vez que formata seu sistema operacional ou troca de computador.
 
 Ou seja: se você precisa baixar uma lista de programas (como o seu navegador favorito, serviço de streaming de música, aplicativo para mensagens e comunicação) ou configurar seu sistema operacional (como o que acontece se você clicar e arrastar usando 3 dedos no trackpad do seu notebook), você pode deixar isso automatizado. Quando trocar de computador ou precisar formatar, basta executar esses arquivos responsáveis por fazer esse "setup" e boa parte do trabalho chato já estará pronto pra você!
 
@@ -108,7 +108,7 @@ defaults read com.apple.menuextra.battery ShowPercent
 
 Dessa forma, o comando retorna (lê e, por isso o "read") o valor configurado em *com.apple.menuextra.battery*
 
-Cada sistema operacional tem sua peculiaridade, o MacOS configura mantém essas preferências através do comando "defaults" no terminal (você pode dar uma olhada em alguns outros [aqui](https://ss64.com/osx/defaults.html)). Sistemas Linux como o Ubuntu utilizam o [gsettings](https://manpages.ubuntu.com/manpages/xenial/en/man1/gsettings.1.html), responsável por configurar essas preferências gráficas.
+Cada sistema operacional tem sua peculiaridade, o MacOS mantém essas preferências através do comando "defaults" no terminal (você pode dar uma olhada em alguns outros [aqui](https://ss64.com/osx/defaults.html)). Sistemas Linux como o Ubuntu utilizam o [gsettings](https://manpages.ubuntu.com/manpages/xenial/en/man1/gsettings.1.html), responsável por configurar essas preferências gráficas.
 
 
 ### Evite copiar dotfiles de terceiros
@@ -124,6 +124,6 @@ Espero que esses exemplos básicos sobre o conceito e funcionamento dos **dotfil
 
 Eu costumo manter os meus no [github](https://github.com/gabrieluizramos/dotfiles), lá você vai encontrar link para alguns outros que usei como referência e como eu estruturo meus **dotfiles** atualmente, contendo tanto configurações gráficas, como arquivos usados para *symlinks* e definições do meu terminal.
 
-Existe também uma [página no github ](https://dotfiles.github.io) que contem links bem bacanas para alguns **dotfiles** que são vistos como referências na comunidade.
+Existe também uma [página no github](https://dotfiles.github.io) que contém links bem bacanas para alguns **dotfiles** que são vistos como referências na comunidade.
 
 Torço para que a próxima formatação do seu sistema operacional ou troca de computador gaste menos tempo e facilite sua vida pelo menos um pouquinho! :)
