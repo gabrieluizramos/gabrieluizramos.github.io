@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.8"
+    "version": "3.9.0"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -25,6 +25,7 @@
     "start:theme": "cd themes/gabrieluizramos && webpack --watch",
     "deploy:all": "npm-run-all -s deploy:theme deploy:hexo",
     "deploy:theme": "cd themes/gabrieluizramos && npm run deploy",
-    "deploy:hexo": "hexo clean && hexo generate && hexo deploy"
+    "deploy:hexo": "npm run hexo:build && hexo deploy",
+    "hexo:build": "hexo clean && hexo generate"
   }
 }
