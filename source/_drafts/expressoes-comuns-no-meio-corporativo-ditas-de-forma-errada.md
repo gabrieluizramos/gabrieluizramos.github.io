@@ -1,0 +1,103 @@
+---
+title: Expressões comuns no meio corporativo que são ditas de forma errada
+subtitle: Tenho certeza que você já se deparou com alguma(s)
+date: 2019-05-22
+tags:
+  - work
+---
+
+É muito comum, no meio corporativo, a existência de alguns **jargões** ou expressões que são ditas ao longo de reuniões ou emails/publicações dentro de uma companhia.
+
+Já parou pra reparar o que elas, de fato, significam, e qual o sentido que elas expressam se forem colocadas de forma errada em um contexto? Vamos à uma lista delas:
+
+## O famoso "ownership"
+
+Geralmente utilizada quando alguém refere-se à "sentir-se dono" do produto ou projeto em que está envolvido.
+Mas, vamos lá: o que de fato é ter um "sentido de dono"? É prezar pelo seu trabalho e realizar entregas/projetos com qualidade? É aceitar demandas que estão fora do escopo da sua função e do seu conhecimento?
+
+A linha entre ter **ownership** e **resolver problemas que não são sua competência** é muito tênue.
+Claro, não estou dizendo que você deve chegar e "só fazer seu trabalho" e pronto. Apenas acho que vale a atenção e repensar até onde seu **ownership** pode estar sendo saudável.
+
+___
+
+## Parabéns por sua "resiliência"
+
+Não só colocadas no mundo corporativo, muitas vezes encontradas em contextos mais pessois ~(como uma tatuagem no pulso ou num story de rede social)~.
+Se checarmos o significado de **resiliência**, encontraremos, em muitos dicionários/sites algo como o seguinte:
+
+> Capacidade de se adaptar facilmente às mudanças ou lidar com problemas/imprevistos
+
+Precisa de pouco esforço para notar que essa é uma das mais fáceis de ser colocada de forma equivocada.
+Capacidade de se adaptar e lidar com problemas não quer dizer que você deva aceitar a todo momento os erros que a companhia pode cometer. Assim como não quer dizer que a companhia aceitará os seus.
+
+Se algum acontecimento/evento problemático ocorre corriqueiramente, pode ser que não seja questão de resiliência e sim algo cultural presente no seu ambiente de trabalho. **Resiliência** não é sinônimo de aceitar calado tudo o que acontece.
+
+___
+
+## Podemos fazer um "pair" para resolver isso!
+
+Um pouco mais comuns dentro da área de tecnologia, geralmente utilizada no termo **pair programming**, que é o que ocorre quando dois programadores se juntam para resolver alguma questão ou desenvolver alguma solução em conjunto.
+
+Quando você fala sobre **pair** (imagine em um contexto mais abrangente, como uma pequena reunião), pressupõe-se que o assunto ou objetivo a ser tratado será abordado por ambas as pessoas envolvidas nesse processo. Ou seja, não existe **pair** (seja *pair programming* ou não) onde só uma pessoa envolvida fale ou demonstre suas ideias. Se o assunto ou a voz ativa de um dos membros é mais importante que a do outro, você está em um **monólogo**, não acha?
+
+___
+
+## Acreditamos e fazemos valer a "meritocracia"
+
+Sério mesmo? Essa nem tem muito o que falar...
+Tenho certeza que você já passou por alguma situação ou já leu na descrição de alguma vaga em que a empresa se declarava como **meritocrática**.
+
+Na prática, todo mundo sabe que não é bem assim. Se você não souber dar o valor (e demonstrando de forma correta) ao seu trabalho, a **meritocracia** não vai bater nas suas costas e falar "Parabéns! Você foi promovido!" ou "Toma esse aumento, você manda muito". Experimente tentar ou observar ao seu redor para ver se isso ocorre.
+
+Você tem que saber vender seu peixe, se não, vai ser só mais uma barraquinha no meio da feira.
+Mas, isso também **não quer dizer que você deva ser aquela pessoa extremamente política**, que se dá ao trabalho de ser gente boa com todo mundo de forma claramente forçada.
+
+Na minha opinião, é melhor você nem vender o seu peixe do que estar sem nada e fingir que tem um peixe para vender.
+
+___
+
+## Esse é um verdadeiro "moonshot"
+
+Usado no momento em que alguma meta é apresentada deixando clara, desde o início, que é algo inatingível. Facilmente colocada em um momento onde tentam demonstrar a importância do seu esforço. Mesmo você dando seu máximo, a empresa sabe que colocou objetivos extremamente difíceis, **um tiro para acertar a lua**.
+
+Me lembra um pouco aquela imagem/tirinha/conversa entre um funcionário e um chefe, que é algo como:
+Funcionário: "Muito bacana seu novo carro, chefe!"
+Chefe: "Gostou? Muito legal, né? Se você trabalhar dureto, com garra, não desistir e der o melhor de si, ano que vem eu consigo comprar outro!"
+
+Brincadeiras a parte, metas agressivas podem acabar motivando você e as outras pessoas. Isso não quer dizer, também, que transformar todo objetivo em **moonshot** seja benéfico para sua equipe.
+
+É bem comum em alguns ambientes ouvir sobre **moonshot** relacionado à outro jargão: o **high stakes**. 
+Basicamente, **high stakees**, é saber que você (ou a equipe, ou alguem...) corre um **alto risco** com determinada ação ou objetivo.
+
+___
+
+## Você tem que acreditar na empresa/produto
+
+E com certeza tem! Afinal, se você não acredita no ambiente que está inserido, não faz sentido algum estar lá, não é mesmo?
+O complicado nesse termo é entender que, da mesma forma que a empresa perde a confiança nas pessoas diversas vezes, **você tem o direito de não acreditar mais nas empresa também**. E é natural quando você vê situações que incomodam um grande time serem recorrentes.
+
+Já ouvi casos onde essa frase foi empregada até mesmo em uma negociação sobre salário. Afinal: *"é só um detalhe e você precisa acreditar no potencial que você tem aqui dentro e nas chances de crescimento!"*
+___
+
+## Nós temos um "soft deadline" daqui um mês
+
+Algo que vejo crescendo ao longo do tempo. Admito que tenho até um pouco de dificuldade de entender esse.
+Basicamente, você ouve sobre um **soft deadline** quando você tem um objetivo, mas esse objetivo "nem é tão prioritário assim".
+
+Mas ué, se não é prioridade, não é um objetivo, certo? Se não é objetivo, *não precisa ter um deadline*.
+Se existe um **deadline**, ele foi feito para ser cumprido e, se precisa e tem data para ser cumprido, é um **deadline** como qualquer outro, não tem nada de **soft**, concorda?
+
+___
+
+## Nessas situações, precisamos ter "empatia"
+
+Muitas vezes confundido com "simpatia" (igual os casos onde alguém coloca "inferir" no lugar de "ferir", sabe?).
+
+Se pesquisarmos os dois casos, também temos algo como:
+
+> Empatia: capacidade de compreender e identificar sentimentos de outra pessoa.
+> Simpatia: bom envolvimento e relacionamento com outras pessoas.
+
+Basicamente, podemos dizer que pessoas **simpáticas** são pessoas agradaveis e positivas em um ambiente junto às outras. Assim como, pessoas que possuem **empatia** são pessoas que sabem entender o momento (como tristeza, felicidade, luto) que algum colega de trabalho está passando.
+
+Embora sejam muito próximas, é comum ouvir algo como "você deveria ter mais empatia" quando, por algum motivo, você vai contra as ideias de alguém. O que acaba, por muitas vezes, não sendo totalmente certo. Você não precisa compartilhar nas mesmas ideias que uma pessoa e isso não tem nada a ver com **empatia** e nem mesmo com **simpatia**, trata-se, apenas, de duas pessoas com opiniões (e experiências) totalmente diferentes.
