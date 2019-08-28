@@ -1,7 +1,7 @@
 ---
 title: Automatizando suas preferências do sistema
 subtitle: Configure seus dotfiles e viva mais tranquilamente
-date: 2019-08-27
+date: 2019-08-28
 tags:
   - general
   - dev
