@@ -1,6 +1,6 @@
 ---
-title: Automatizando suas preferências do sistema
-subtitle: Configure seus dotfiles e viva mais tranquilamente
+title: Configure seus dotfiles
+subtitle: Automatize suas preferências e viva mais tranquilamente
 date: 2019-08-28
 tags:
   - general
