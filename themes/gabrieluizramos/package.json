@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "gabrieluizramos blog theme",
   "main": "webpack.config.js",
+  "engineStrict": true,
+  "engines": {
+    "node": "6.17.1"
+  },
   "dependencies": {},
   "devDependencies": {
     "css-loader": "^0.28.4",
