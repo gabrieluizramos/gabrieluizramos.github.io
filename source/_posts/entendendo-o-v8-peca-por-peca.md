@@ -1,5 +1,5 @@
 ---
-title: V8
+title: Entendendo o V8
 subtitle: Um resumo sobre as peças e conceitos envolvidos no motor JavaScript
 date: 2019-09-23
 tags:
