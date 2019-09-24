@@ -1,6 +1,6 @@
 ---
 title: Entendendo o V8 peça por peça
-subtitle: Um resumo sobre dos componentes e conceitos envolvidos no motor JavaScript
+subtitle: Um resumo sobre os componentes e conceitos envolvidos no motor JavaScript
 date: 2019-09-23
 tags:
   - dev
