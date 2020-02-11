@@ -10,7 +10,7 @@ gatsby clean
 gatsby build
 
 # Move builded files to root
-mv ./public/* ./
+mv ./public/**/** ./
 
 # Commit and pushes
 git add . && git commit -m 'release' git push origin gh-pages
