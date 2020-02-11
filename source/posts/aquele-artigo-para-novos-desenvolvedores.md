@@ -17,7 +17,7 @@ Sempre gostei de artigos que ajudam a galera que está iniciando e, ultimamente,
 
 ![Ferramentas e computador](/images/aquele-artigo-para-novos-desenvolvedores/tools.jpg)
 
-Tudo no mundo do desenvolvimento muda muito rápido. Quantas piadas com ferramentas em javascript você já não deve ter visto por aí? Não se atenha somente às ferramentas do momento. 
+Tudo no mundo do desenvolvimento muda muito rápido. Quantas piadas com ferramentas em javascript você já não deve ter visto por aí? Não se atenha somente às ferramentas do momento.
 Aprenda conceitos, orientação a objetos, programação reativa e funcional, necessidades e boas práticas da linguagem que você vai utilizar... O resto, você consegue estudar conforme necessidade.
 
 ### Mantenha sua curiosidade em dia
@@ -28,7 +28,7 @@ Ser curioso é uma habilidade nata para muitos desenvolvedores pelo fato de gost
 
 Escrever código que resolve problemas é muito gratificante e, muitas vezes, a vontade de aprender e se manter atualizado vem naturalmente, mas, assim como essa vontade vem, muitas vezes ela passa.
 
-Seja por problemas pessoais, profissionais ou qualquer outro, é sempre bom ter um espaço para manter sua curiosidade em dia. Criar uma rotina de leitura de alguns artigos, de pesquisar algum assunto novo surgindo na comunidade ou algo do tipo. Mesmo que de algum assunto que, a primeira vista, possa não parecer tão aplicável em algum projeto seu, nunca se sabe quando você vai precisar solucionar algum problema novo. 
+Seja por problemas pessoais, profissionais ou qualquer outro, é sempre bom ter um espaço para manter sua curiosidade em dia. Criar uma rotina de leitura de alguns artigos, de pesquisar algum assunto novo surgindo na comunidade ou algo do tipo. Mesmo que de algum assunto que, a primeira vista, possa não parecer tão aplicável em algum projeto seu, nunca se sabe quando você vai precisar solucionar algum problema novo.
 
 Seja curioso! É uma atitude sempre bem-vinda, não só no seu cotidiano, mas dentro de uma equipe. Um desenvolvedor que gosta de estudar e de aprender coisas novas com certeza se destaca e possui uma facilidade de se adaptar a novas ferramentas e mudanças com tecnologias do mercado.
 
@@ -56,7 +56,7 @@ Cabe a você saber e demonstrar seu valor como profissional, afinal, o que vale 
 Não tem jeito. Mesmo a quantidade de anos na área não significando qualidade do profissional, ainda existem muitas empresas no mercado (mas não todas) que ligam pra isso, é normal.
 Isso não quer dizer que esses paradigmas não possam mudar no futuro e cabe a nós, desenvolvedores, adaptarmos essa cultura e, aos poucos, mudar esse pensamento.
 
-Já perdi a conta de quantas vagas me candidatei, possuindo todos os requisitos técnicos necessários, mas que não levaram minha candidatura adiante porque "não tinha o tempo de experiência necessário". 
+Já perdi a conta de quantas vagas me candidatei, possuindo todos os requisitos técnicos necessários, mas que não levaram minha candidatura adiante porque "não tinha o tempo de experiência necessário".
 
 É a vida, rs.
 
@@ -67,7 +67,7 @@ Já perdi a conta de quantas vagas me candidatei, possuindo todos os requisitos 
 Você sempre vai ter algum tempo ocioso. Seja no seu trabalho, no percurso até sua casa ou até sua faculdade...
 E por quê não aproveitar esse tempo pra ler algum artigo, se inteirar na comunidade, ouvir algum podcast ou até mesmo estudar algo fora da área técnica?
 
-Inclusive coisas não técnicas, que fazem parte da sua vida pessoal e são apenas lazeres. 
+Inclusive coisas não técnicas, que fazem parte da sua vida pessoal e são apenas lazeres.
 
 Aproveite seu tempo ocioso.
 
@@ -75,7 +75,7 @@ Aproveite seu tempo ocioso.
 
 ![Pessoa irritada mordendo telefone](/images/aquele-artigo-para-novos-desenvolvedores/stress.png)
 
-É muito comum ver muitos desenvolvedores deixando de fazer coisas que gostam pela correria do dia-a-dia, quantidade de trabalho ou até mesmo por causa dos projetos paralelos (<a href="{% post_path o-freela-nao-compensa %}" target="_blank">freelas</a> ou não).
+É muito comum ver muitos desenvolvedores deixando de fazer coisas que gostam pela correria do dia-a-dia, quantidade de trabalho ou até mesmo por causa dos projetos paralelos (<a href="/blog/o-freela-nao-compensa" target="_blank">freelas</a> ou não).
 
 Não deixe seus hobbies e seu lazer de lado. Eu mesmo adoro música (estudar, tocar, ouvir) e tirar algumas <a href="https://www.instagram.com/gabrieluizramos/" target="_blank">fotos</a>. E são assuntos que, sempre que me sobram um tempo extra, gosto de dar estudar.
 
@@ -184,7 +184,7 @@ Se você quer estudar: estude.
 Se você quer dedicar mais tempo aos seus lazeres: dedique.
 Se você quer escrever um artigo em um blog de vez em quando: escreva.
 
-Faça o que te fizer bem, como pessoa e como profissional. 
+Faça o que te fizer bem, como pessoa e como profissional.
 Defina suas metas, objetivos e tente alcançá-los.
 
 Se autopromover apenas para passar uma imagem de pessoa engajada na comunidade ou tentar se promover utilizando o suor de outros desenvolvedores é uma coisa bem chata e, no fim das contas, pega mal pra sua imagem. Além de que você pode acabar tendo problemas em alguns relacionamentos (profissionais e amistosos) ao longo de sua carreira.
