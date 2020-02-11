@@ -42,7 +42,7 @@ module.exports = {
       options: {
         name: `Blog » Gabriel Ramos`,
         short_name: `gabrieluizramos`,
-        start_url: `/blog`,
+        start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
