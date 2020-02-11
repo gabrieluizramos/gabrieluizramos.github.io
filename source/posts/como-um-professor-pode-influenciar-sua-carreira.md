@@ -20,9 +20,9 @@ Alguns anos depois (e mais recentemente) também tive a oportunidade de conduzir
 
 Mas, primeiro, vamos falar um pouco sobre a forma de ensino que vivenciamos.
 
-<figure class="article-figure">{% asset_img ensino-industrial.jpg %}</figure>
+![Ensino industrial](/images/como-um-professor-pode-influenciar-sua-carreira/ensino-industrial.jpg)
 
-A forma de ensino por aqui é um tanto quanto arcaica, me fazendo lembrar uma linha de produção industrial. 
+A forma de ensino por aqui é um tanto quanto arcaica, me fazendo lembrar uma linha de produção industrial.
 Nós temos os diversos alunos (se pegarmos uma turma de faculdade, teremos mais de 50) enfileirados, cada um em sua devida posição, assistindo o professor falar (e, dependendo da maturidade do professor, até exigindo que realizem "anotações" para mostrar que estão acompanhando a aula). Os alunos tem a "função" de assistir e, o professor, a de ensinar. Mas, será mesmo que TODOS os alunos aprendem dessa forma? Acredito que não.
 
 Não veja isso como uma crítica negativa, muito pelo contrário... Pra grande maioria dos estudantes, esse formato de estudo pode ser adequado, alguns até preferem este à qualquer tentativa  "disruptiva" de ensinar mas, e os que não se adequam às salas de aula industriais?
@@ -33,9 +33,9 @@ O que nos leva a outro ponto...
 
 ### O professor que gosta do que faz
 
-<figure class="article-figure">{% asset_img bad-good-teacher.jpeg %}</figure>
+![Professor bom e ruim](/images/como-um-professor-pode-influenciar-sua-carreira/bad-good-teacher.jpeg)
 
-Quantos professores você já teve, que fizeram você sentir gosto por aprender (como citei no começo do texto)? E quantos você já teve que claramente não ligavam para o conteúdo que estavam passando? Muitos, não fazem questão nem de dominar ou de preparar uma aula boa, apenas pegam uma apresentação de 10 anos atrás e passam como se fosse completamente atualizada. 
+Quantos professores você já teve, que fizeram você sentir gosto por aprender (como citei no começo do texto)? E quantos você já teve que claramente não ligavam para o conteúdo que estavam passando? Muitos, não fazem questão nem de dominar ou de preparar uma aula boa, apenas pegam uma apresentação de 10 anos atrás e passam como se fosse completamente atualizada.
 
 Obviamente, todo professor tem seu dia ruim, assim como ele pode estar cansado de sua carreira mas, vejamos bem: se o profissional que tem a "função" de ensinar está cansado da própria carreira, como ele pretende formar profissionais engajados? Meio irônico, não? Ou então o exemplo do professor que pega uma apresentação antiga... Como servir de exemplo para os alunos dessa forma?
 
@@ -53,6 +53,6 @@ Ok. Me formei, já estava estagiando e fui efetivado em meu primeiro emprego na 
 
 Podemos espelhar grande parte do que disse acima para um profissional de qualquer área: o amor pela profissão, a vontade de cativar os outros e de manter-se atualizado e também os desafios e problemas que enfrentam.
 
-Da mesma forma, todo profissional pode servir de exemplo e estar disposto a ajudar e a ensinar o que sabe para um membro de equipe mais novo que esteja aprendendo ou até mesmo membros antigos, já que cada profissional tem sua visão. 
+Da mesma forma, todo profissional pode servir de exemplo e estar disposto a ajudar e a ensinar o que sabe para um membro de equipe mais novo que esteja aprendendo ou até mesmo membros antigos, já que cada profissional tem sua visão.
 
 E foi nesse ambiente de aprendizado de estágio/primeiro emprego que pude, também, entrar em contato pela primeira vez com profissionais na área de desenvolvimento web que também acabaram, inevitavelmente, cumprindo admirosamente bem o papel de professores.
