@@ -1,7 +1,3 @@
-# Go to public pages
-git checkout gh-pages
-git merge master
-
 # Clear current public directory
 rm -rf public
 
@@ -10,7 +6,8 @@ gatsby clean
 gatsby build
 
 # Move builded files to root
-mv ./public/**/** ./
+mkdir ./docs
+mv ./public/**/** ./docs/
 
 # Commit and pushes
-git add . && git commit -m 'release' git push origin gh-pages
+git add . && git commit -m 'release' git push origin master
