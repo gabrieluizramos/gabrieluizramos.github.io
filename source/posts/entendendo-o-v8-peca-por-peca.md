@@ -1,0 +1,412 @@
+---
+path: /post/entendendo-o-v8-peca-por-peca/
+
+title: Entendendo o V8 peça por peça
+subtitle: Um resumo sobre os componentes e conceitos envolvidos no motor JavaScript
+date: 2019-09-23
+tags:
+  - dev
+  - js
+---
+
+Há um tempo venho me interessado e dedicado um tempo a estudar como os motores ("engines") de **JavaScript** funcionam por debaixo dos panos. Resolvi agrupar o que entendi em um artigo para elucidar todos os componentes envolvidos nessa trama toda. Tenha em mente que a maioria desses estudos e conteúdos baseiam-se no V8, motor utilizado pelo NodeJS e Google Chrome. O que não deve se diferenciar (muito) dos motores utilizados em outros navegadores.
+
+------
+
+## Uma pincelada sobre estruturas de dados
+Antes de começar a entender como um motor **JavaScript** funciona, é importante ter um breve conhecimento sobre algumas estruturas de dados envolvidas no processo: **pilha** e **fila**.
+
+### Pilha
+Uma **pilha** segue o princípio chamado **LIFO**: "last-in, first-out", que quer dizer que o último valor a ser inserido em uma **pilha**, deverá ser o primeiro a ser retirado.
+
+Para ficar mais fácil de entender, pense em uma pilha de roupas: você não consegue simplesmente puxar uma roupa de uma pilha sem antes remover as que estão em cima, pois elas cairiam.
+
+### Fila
+Já a **fila** segue outro princípio, chamado **FIFO**: "first-in, first-out", onde o primeiro valor a entrar numa fila, deverá ser o primeiro a ser retirado.
+
+Uma **fila** se assemelha às filas que encontramos em super-mercados, bancos ou shows, onde você é atendido por ordem de chegada e não é correto alguma pessoa ser atendida antes de qualquer outra que já estava ali anteriormente (tirando os casos onde existem filas preferenciais).
+
+Você pode pensar em ambas as estruturas de dados como **arrays** com comportamentos específicos, onde na **pilha** os últimos valores a entrarem nesse **array** serão os primeiros a serem removidos e em uma **fila** seguirão a ordem de entrada, onde os primeiros valores serão os primeiros a serem removidos.
+
+### Heap
+É uma estrutura de dados não-linear, assemelha-se muito à estrutura de **árvore** (ou "**tree**") e não segue uma ordem predeterminada, como na **pilha** e na **fila**, onde a inserção e remoção segue um padrão específico.
+
+-------
+
+## Alocação de memória e contextos de execução
+
+O **JavaScript** aloca/libera memória automaticamente (em uma estrutura de **Heap**), diferente de linguagens de "baixo nível" como **C** que permitem gerenciar memória e alocação de forma mais explícita. Em outras palavras, **JavaScript** aloca memória quando valores/objetos são declarados e alterados e libera esse espaço de memória automaticamente quando esses valores não são mais utilizados, deixando essa responsabilidade a cargo do **garbage collector**. Mesmo assim, é importante manter-se sempre atento aos possíveis valores que você declara/instancia para que não fiquem alocados de forma global ou apontem para objetos que não são utilizados, previnindo eventuais vazamento de memória ("**memory leaks**").
+
+Quando você executa um **script** ou uma **função**, o motor do **JavaScript** compila e interpreta o código em tempo de execução (também conhecido como **JIT** ou just-in-time compilation) e cria determinados contextos e espaços de memória onde esse código é executado. Você pode pensar nesses contextos como os escopos onde sua função pode ser executada.
+
+Vamos criar um trecho de código para exemplificar melhor:
+
+```js
+const numero = 10;
+
+function multiplica (numero) {
+    return numero * 2;
+}
+```
+
+Quando esse trecho de código é executado via **JavaScript**, os seguintes passos ocorrem:
+- a variável **numero** é registrada com o valor 10
+- a função **multiplica** é registrada o seu valor de função
+
+**Mas como assim, valor de função?**
+**JavaScript** é uma linguagem conhecida também por tratar funções como qualquer outro valor. Você pode passar funções como parâmetro, retorná-las de outras funções e atribuí-las à variáveis normalmente. Essa caracterísica é conhecida como [**função First-class**](https://developer.mozilla.org/pt-BR/docs/Glossario/Funcao-First-class) (ou "**fist-class functions**").
+
+Assim como o motor **JavaScript** registra esses valores em sua memória, ele também cria um contexto onde funções são registradas e podem ser executadas. Como estamos executando esse trecho de código diretamente em um arquivo, sem estar dentro de qualquer escopo, a função **multiplica** estará presente no **contexto global** de execução.
+
+Existem, também, **contextos locais**, que são os responsáveis por guardar funções e variáveis locais à um escopo. Imagine a seguinte alteração na função **multiplica** nosso script:
+
+```js
+function multiplica (numero) {
+    const multiplicador = 2;
+    return numero * multiplicador;
+}
+```
+Fazendo essa pequena alteração, um novo **contexto de execução** é criado **localmente** para a função **multiplica**, armazenando também o valor 2 dentro da variável **multiplicador**.
+
+Com isso em mente, acredito que você já consegue imaginar que a criação de um contexto dentro de outro pode ser realizada de forma exaustiva.
+
+Vale lembrar que também é nesse instante que o motor **JavaScript** registra o valor correspondente ao **this** presente no escopo da sua função.
+
+-------
+
+## Entendendo os componentes do motor
+
+### Call Stack
+Existe uma **pilha** nos motores **JavaScript** chamada **Call Stack** (ou **pilha de chamadas**, em sua tradução), onde cada chamada à uma função é empilhada ao ser executada e desempilhada ao terminar sua execução.
+
+Executando no seguinte trecho de código, com o `DevTools` aberto:
+
+```js
+function terceira(num) {
+    debugger;
+    return num + 1;
+}
+
+function segunda(num) {
+    return terceira(num + 1)
+}
+
+function primeira(num) {
+    return segunda(num + 1)
+}
+
+console.log(primeira(1));
+```
+
+Você verá algo semelhante à isso:
+
+![CallStack no DevTools do Chrome](/images/entendendo-o-v8-peca-por-peca/call-stack.png)
+
+No lado direito do seu **DevTools** ou da imagem, você consegue encontrar a aba **Call Stack**, onde você encontra toda a pilha de chamadas executadas até o ponto onde o breakpoint `debugger` foi executado e logo abaixo a aba **scope** que mantém as variáveis envolvidas naquele escopo (incluindo o `this`!). E o que aconteceu neste momento é o seguinte:
+
+- a função `primeira` é executada na página em questão pelo motor **JavaScript**, sua execução é a primeira linha (mais abaixo) e, como é executada pelo próprio script, recebe o nome de **(anonymous)**
+- a função `primeira` recebe `num` (com valor 1) como argumento e é empilhada na **call stack**, e retorna a execução da função `segunda` passando `num + 1` como parâmetro
+- a função `segunda` é executada e executada e recebe `num` (agora valor 2) como argumento, nesse momento, a função é empilhada à **call stack** e retorna a execução da função `terceira` passando `num + 1` como parâmetro
+- a função `terceira` é executada e empilada à **call stack** recebendo `num` (agora com valor 3) e o `debugger` é executado.
+
+Ao executar o `debugger`, é apresentado o estado na qual **call stack** se encontra. Com isso você pode ver as chamadas empilhadas de forma correta e os valores mantidos em **scope**: neste momento `this` refere-se à `window` e `num` é `3`.
+
+Após continuar a execução do **script**, a função `terceira` retorna o valor de `num + 1` (4, ao total) e é desempilhada da **call stack**, após isso, a função `segunda` e `primeira` são desempilhadas em ordem e, por fim, você consegue ver o valor `4` sendo impresso no console.
+
+Talvez você já tenha lido que **JavaScript** segue o paradigma **run-to-completion** (ou "execução até conclusão" traduzido). Isso quer dizer que as funções declaradas na linguagem (com uma exceção, que abordaremos mais abaixo) seguem sua ordem de execução síncronamente até que terminem por completo. Por isso, toda função possui um `return` mesmo que implícito. Tente executar o trecho de código acima com uma pequena alteração:
+
+```js
+function terceira(num) {
+    return num + 1;
+}
+
+function segunda(num) {
+    return terceira(num + 1)
+}
+
+function primeira(num) {
+    segunda(num + 1);
+}
+
+primeira(1);
+```
+
+Apenas removemos o `console.log` que mostra o valor final e o `return` da função `primeira`. Note que agora que no seu console aparecerá uma linha com `undefined` ao final da execução. Isso ocorre porque a função `primeira`, embora tenha chamado a função `segunda` e executado todos os passos como vimos anteriormente, não retornou valor algum explicitamente (ao contrário das funções `segunda` e `terceira`) e, por isso, retorna `undefined` por padrão.
+
+#### Maximum call stack size exceeded
+Talvez você já tenha visto o erro `Maximum call stack size exceeded` no seu console. Esse erro ocorre justamente quando um trecho de código empilha funções excessivamente na **call stack**, geralmente por algum trecho recursivo ou que apresente algum loop infinito que faz com que a **pilha de chamadas** "estoure" (nome, inclusive, dado ao famoso fórum "**Stack Overflow**").
+
+#### Stack Trace
+Outro comportamento comum é o chamado `stack trace`, que é o rastro de execução das funções até um determinado erro, por exemplo:
+
+
+```js
+function terceira(num) {
+    throw new Error('ops');
+}
+
+function segunda(num) {
+    return terceira(num + 1)
+}
+
+function primeira(num) {
+    return segunda(num + 1);
+}
+
+primeira(5);
+```
+
+Executando esse trecho você conseguirá visualizar todas as chamadas envolvidas até o momento onde a função disparou um erro, algo como:
+
+![CallStack no DevTools do Chrome](/images/entendendo-o-v8-peca-por-peca/call-stack.png)
+
+Ou seja:
+- o script executou a função "primeira"
+- a função "primeira" foi empilhada e retornou a função "segunda"
+- a função "segunda" foi empilhada e retornou a função "terceira"
+- a função "terceira" foi empilhada e, nesse momento, todo esse rastro fica disponível para visualização e o erro é impresso no terminal
+
+### APIs envolvidas: lidando com detalhes de implementação
+Além da **Call Stack**, existem outras camadas de **APIs** envolvidas ao rodar **JavaScript**. Funções como `setTimeout`, ou que permitem acesso ao `DOM`, realização de **AJAX** com `XmlHttpRequest` ou até mesmo acesso aos arquivos existentes no disco rígido do computador foram implementadas separadamente e não fazem parte do motor de execução. Essas **APIs** são providas pelo ambiente no qual você executa seu código, podendo ser:
+
+- Web (nos navegadores)
+- C++ (no NodeJS)
+
+#### Web APIs
+São as **APIs** implementadas pelos navegadores (como Google Chrome). Funções de acesso à elementos `DOM` estão presentes apenas ao rodar um código **JavaScript** no navegador (afinal, não existe `DOM` no **NodeJS**).
+
+#### C++ APIs
+São as **APIs** providas para o **NodeJS**, já que é escrito em C++. Algumas funções existentes nas APIs web foram reescritas (como o `setTimeout`) e podem ser utilizadas nesse contexto também, mas muitas outras são específicas: como o módulo `fs` responsável por acessar o sistema de arquivos da máquina e realizar operações com dados do disco rígido.
+
+### Task Queue: a fila de tarefas
+A **task queue** (ou **fila de tarefas**), também conhecida como **message** ou **callback** **queue** é a estrutura responsável por armazenar tarefas assíncronas e trabalha em conjunto com a **call stack** e as **APIs** existentes no ambiente em que você roda seu código.
+
+Imagine o seguinte trecho:
+
+```js
+console.log('1');
+setTimeout(function delayLog() {
+    console.log('2')
+}, 1000);
+console.log('3');
+```
+
+O que acontece quando você executa esse exemplo é:
+
+- `console.log` é executado com o valor `1`, empilhado e desempilhado da **call stack** e o valor é exibido no console
+- a função `setTimeout` (provida pelas **APIs** do seu ambiente) é empilhada na **call stack**, registrando a função `delayLog` como `callback` e pra ser executado apís `1000` milissegundos (1 segundo)
+- o navegador (ou NodeJS) registra um `timer` com contador de `1000` milissegundos em `background` e continua a execução do código normalmente e a função `setTimeout` é desempilhada da **call stack**, deixando à livre para executar o restante do código
+- a função `console.log` é executada com valor `3`, empilhada e desempilhada da **call stack** e o valor também é exibido no console
+- após 1 segundo (`1000` milissegundos) a função `delayLog` é inserida na **call stack** (caso esteja vazia), onde o `console.log` é executado e o valor `2` é impresso no console.
+
+
+Dessa forma, códigos assíncronos (como callbacks do `setTimout`) são registrados e inseridos em uma **fila**, onde são executados posteriormente na ordem em que foram definidos.
+
+É pos isso que, muito provavelmente, você você já tenha visto alguma execução de `setTimeout` da seguinte forma:
+
+```js
+setTimeout(callback, 0);
+```
+
+O que acontece nesse caso é que, mesmo a função sendo registrada para ser executada em `0` milissegundos, ela só será executada após ser registrada na **task queue** e ao retornar à **call stack** quando estiver completamente vazia. Fazendo com que o restante do código síncrono execute primeiro.
+
+O mesmo ocorre com os `listeners` de eventos do `DOM`. Quando você registra alguma função, como:
+
+```js
+button.addEventListener('click', function onClickButton() {
+    console.log('clicked');
+});
+```
+
+Essa função é registrada na **web API** do navegador em questão e, ao clicar no botão, faz com que essa função entre na **task queue** e, consequentemente, seja empilhada na **call stack** para ser executada e desempilhada.
+
+É inclusive por isso que funções como `setTimeout` e `setInterval`, retornam um valor numérico, servindo de identificador na **task queue** para que você possa cancelá-las caso deseje, tente fazer o seguinte teste:
+
+```js
+setTimeout(() => console.log('timer 1'), 0);
+
+const timer = setTimeout(() => console.log('timer 2'), 0);
+clearTimeout(timer);
+```
+
+Perceba que apenas `timer 1` aparecerá no console.
+
+## Outras filas do motor
+No entanto, não existe somente um tipo de **fila** nos motores **JavaScript**.
+
+### Microtask Queue
+Com a adição das **Promises** ao **EcmaScript**, esse novo tipo de fila foi inserido nos motores **JavaScript**. É a **fila** responsável por lidar com a execução de **Promises**.
+
+Em outras palavras, cada vez que você executar algum trecho que utilize **Promise**, como:
+
+```js
+const a = new Promise((resolve, reject) => {
+    // lida com a promise
+});
+```
+
+Essa chamada será **enfileirada** em uma **fila** diferente da **task queue**.
+
+A **microtask queue** possuí alguns comportamentos específicos, tendo uma certa prioridade em relação à **task queue**.
+
+Em um cenário em que existam tarefas enfileiradas na **task queue** e na **microtask queue**, todas que estão na **microtask queue** serão executadas primeiramente.
+
+Isso quer dizer que o motor **JavaScript** que estiver executando uma tarefa vinda da **task queue** finalizará sua execução mas, a próxima tarefa que irá executar será prioritariamente vinda da **microtask queue** até que todas as tarefas dessa fila sejam finalizadas.
+
+Para testar, execute o seguinte código:
+
+```js
+console.log('log 1');
+
+Promise.resolve().then(() => console.log('promise 1'))
+
+setTimeout(() => console.log('timeout 1'), 0);
+
+Promise.resolve().then(() => console.log('promise 2'));
+
+setTimeout(() => console.log('timeout 2'), 0);
+
+console.log('log 2')
+```
+
+Perceba que a ordem das informações printadas no console será a seguinte:
+- log 1
+- log 2
+- promise 1
+- promise 2
+- timeout 1
+- timeout 2
+
+### Animation Frame Callback Queue (ou Animation Queue)
+É a **fila** responsável por conter as tarefas de `callback` ao executar a função **requestAnimationFrame**.
+Ao realizar a chamada dessa função, também retornam um número que serve como identificador do `callback` registrado na **fila** onde são armazenados até sua execução (assim como o exemplo anterior do `setTimeout` e do `setInterval`).
+
+Essa **fila** trabalha em conjunto com a **Rendering Pipeline** que é a sequência de processos que o navegador executa para repintar um elemento na tela.
+
+Essa **fila** também possuí um tratamento diferenciado se comparada à **task queue** e à **microtask queue**, de forma que sua execução só se dá início ao finalizar as tarefas das demais filas, entretanto, se novas tarefas dessa **fila** forem **enfileiradas** após o início de sua execução, elas serão executadas somente no próximo **loop** de eventos.
+
+## E o tal do Event Loop?
+**Event Loop** é a peça responsável por orquestrar esses componentes em questão. Ele checa se a **call stack** está vazia e não executa mais nenhuma função. Caso esteja, verifica se existe alguma função na **task queue** que deve ser executada e, caso a **call stack** esteja vazia, ele faz com que a tarefa em questão seja executada e empilhada.
+
+Caso a **microtask queue** possua tarefas, elas serão executadas prioritariamente antes das tarefas presentes na **task queue**, mesmo que novas `Promises` sejam enfileiradas ao longo desse processo e, ao finalizar, o motor checará se é necessário realizar algum `repaint` na tela e executará os demais `callbacks` registrados na **animation queue**.
+
+## Iteradores, iteráveis e Geradores
+Outra estrutura de dados que tem um comportamento diferenciado em relação à **call stack** são os iteradores (ou **iterators**) e os **geradores** (ou **function generators**).
+
+Iteradores foram criados para suprir uma forma de iterar valores não-lineares (que não são arrays) e geradores são utilizados para facilitar sua implementação, imagine o seguinte trecho:
+
+```js
+function * createIterator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const generated = createIterator(); // cria o iterador e o mantém suspenso
+console.log(generated.next()) // { value: 1, done: false }
+console.log(generated.next()) // { value: 2, done: false }
+console.log(generated.next()) // { value: 3, done: false }
+console.log(generated.next()) // { value: undefined, done: true }
+```
+
+O asterisco (*) após o nome da função indica que ela é uma função geradora, e cada um dos `yield` é responsável por retornar um valor e "pausar" a execução dessa função, até que próximo `next` seja executado. Ao executarmos a função `createIterator()` e atribuir seu retorno à uma variável, apenas estamos declarando um novo iterador, e a execução da função só é realmente iniciada a partir do primeiro `next` executado.
+
+A cada novo `next`, uma nova função é empilhada na **call stack**, desempilhada e retorna o valor apresentado no `yield`. Nesse momento, todo seu contexto de execução e variáveis de escopo são armazenadas e o objeto gerador mantém uma cópia desses valores para que possa continuar sua execução no futuro. Para visualizar melhor, você pode inserir um `debugger` antes de cada um dos `yield` presente na função acima:
+
+```js
+function * createIterator() {
+    debugger;
+    yield 1;
+    
+    debugger;
+    yield 2;
+    
+    debugger;
+    yield 3;
+}
+
+const generated = createIterator();
+```
+
+Note que nada aconteceu, mas se você executar `generated.next()` o primeiro `debugger` entrará em ação, assim como os demais conforme sua execução.
+
+Muito parecida essa estrutura com a utilizada pelo `async/await`, não? Os geradores serviram como base para criação dessa estrutura que facilita a escrita de `Promises`, tornando sua leitura mais amigável e dando a sensação de que código assíncrono é executado de forma síncrona.
+
+## Web Workers
+**Web Workers** funcionam de maneira igual às execuções de **JavaScript** comum, a única diferença é que são executados em segundo plano (outra thread). Por não rodarem diretamente no navegador, não possuem acesso ao `DOM` e nem são manipulados por eventos de click ou interação de usuários e se comunicam com a thread principal através de eventos de mensagem.
+
+Em resumo, **web workers** possuem sua própria **call stack** com suas **filas** definidas e são recomendados para operações que demandem alto processamento de dados para que não impactem a experiência do usuário ao ocupar a thread principal.
+
+## Exceções no NodeJS
+Todos os conceitos até o momento são aplicados em um ambiente de NodeJS, com exceção da **Animation Frame Callback Queue** e da **Rendering Pipeline**, já que o NodeJS não realiza nenhuma animação ou renderização.
+
+O **Event Loop** do NodeJS também possui algumas particularidades. Enquanto o **Event Loop** de um navegador fica checando as filas e prepara-se para execução das tarefas a todo momento, o do NodeJS realiza sua execução apenas quando existem tarefas a serem executadas.
+
+O NodeJS também possui algumas **filas** diferentes, sendo:
+
+
+- uma para eventos de callback (parecida com a **task queue**), para I/O, operações de leitura/escrita em disco
+- **check queue** que rodará todos as tarefas executadas com `setImmediate` (praticamente o mesmo que o `setTimeout(callback, 0)`, mas com prioridade diferente caso alguma operação de I/O esteja ocorrendo)
+- uma para timers do `setTimeout` e `setInterval`
+- uma **microtask queue** para `Promises`
+- outra **microtask queue** para execução de tarefas imediatas, através do `process.nextTick()`, que possui uma prioridade maior que a **microtask queue** de `Promises`
+
+Caso queira testar, você pode executar o seguinte trecho via NodeJS:
+
+```js
+// arquivo test.js
+console.log('log 1');
+process.nextTick(() => console.log('tick 1'));
+Promise.resolve().then(() => console.log('promise 1'));
+setTimeout(() => console.log('timeout 1'), 0)
+setImmediate(() => console.log('immediate 1'));
+process.nextTick(() => console.log('tick 2'));
+Promise.resolve().then(() => console.log('promise 2'));
+setImmediate(() => console.log('immediate 2'));
+setTimeout(() => console.log('timeout 2'), 0)
+console.log('log 2');
+```
+
+Caso você execute `node test.js` você receberá o seguinte como output:
+
+- log 1
+- log 2
+- tick 1
+- tick 2
+- promise 1
+- promise 2
+- timeout 1
+- timeout 2
+- immediate 1
+- immediate 2
+
+* O log dos `setImmediate` podem variar, por não estarem em uma execução de I/O
+
+Caso queira testar um evento de I/O e ver a execução do `setImmediate` com prioridade em ação, pode testar com:
+
+```js
+const fs = require('fs');
+
+fs.readFile(__filename, () => {
+    setTimeout(() => {
+        console.log('timeout')
+    }, 0);
+    setImmediate(() => {
+        console.log('immediate')
+    })
+});
+```
+
+Crie um arquivo qualquer e substitua `__filename` pelo seu nome e execute esse trecho.
+Você verá que o log exeutado pelo `setImmediate` sempre ocorrerá antes do log de `setTimeout`.
+
+Caso queira checar mais afundo, você pode dar uma olhada na [documentação](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/).
+
+## Resumo
+Para resumirmos, vale lembrar que os motores **JavaScript** fazem uso dos conceitos de pilha (para a pilha de chamadas) e de fila (para as filas de tarefa, callbacks de promise e de animation). Ao rodar seu código, algumas APIs de ambiente também estão presentes, sejam elas providas pelo navegador (web) ou pelo NodeJS (C++). E o Event Loop é a peça responsável por orquestrar essa execução, checando as filas de tarefa e inserindo essas tarefas na **call stack** quando vazia.
+
+Ao final, podemos imaginar o motor **JavaScript** como:
+
+![Diagrama sobre os componentes V8](/images/entendendo-o-v8-peca-por-peca/diagrama.png)
+
+[Links relacionados](https://github.com/gabrieluizramos/entrevistas/blob/master/estudos/javascript-engines.md)
