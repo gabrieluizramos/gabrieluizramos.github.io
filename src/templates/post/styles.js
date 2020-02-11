@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, font, colors } from '../../preferences/variables';
+import { spacing, font, colors } from '@gabrieluizramos/preferences/variables';
 
 export const Back = styled.div`
   padding: ${spacing.default} 0;

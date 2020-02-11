@@ -42,9 +42,9 @@ module.exports = {
       options: {
         name: `Blog » Gabriel Ramos`,
         short_name: `gabrieluizramos`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        start_url: `/blog`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -63,5 +63,6 @@ module.exports = {
         trackingId: "UA-105850294-1",
       },
     },
+    ...require('@gabrieluizramos/preferences/gatsby/config'),
   ],
 }

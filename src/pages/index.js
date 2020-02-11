@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import SEO from '../components/seo';
 import PostList from '../components/post-list';
-import { Layout } from '../preferences/components';
+import { Layout } from '@gabrieluizramos/preferences/components';
 
 const IndexPage = ({data: {allMarkdownRemark: { edges }}}) => (
   <Layout>

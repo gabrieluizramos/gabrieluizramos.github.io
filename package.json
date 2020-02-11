@@ -5,9 +5,11 @@
   "version": "0.1.0",
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com>",
   "dependencies": {
+    "@gabrieluizramos/preferences": "github:gabrieluizramos/preferences",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
@@ -38,7 +40,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "preinstall": "sh commands/preinstall.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, spacing } from '../../preferences/variables';
+import { colors, spacing } from '@gabrieluizramos/preferences/variables';
 
 export const PostItem = styled.li`
   display: block;

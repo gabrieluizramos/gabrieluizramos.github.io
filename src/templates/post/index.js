@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import SEO from '../../components/seo';
 
-import Layout from '../../preferences/components/layout';
+import Layout from '@gabrieluizramos/preferences/components/layout';
 
 import * as S from './styles';
 

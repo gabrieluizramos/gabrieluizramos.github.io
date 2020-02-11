@@ -1,2 +1,2 @@
 import 'lazysizes';
-import './src/preferences/plugins/prism/nord.css';
+import '@gabrieluizramos/preferences/gatsby/browser';
