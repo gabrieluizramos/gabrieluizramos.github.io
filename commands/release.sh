@@ -4,15 +4,12 @@ git checkout gh-pages
 # Clear current public directory
 rm -rf public
 
-# Build files
+# Clear and build files
+gatsby clean
 gatsby build
 
-# Clear all files
-rm -v !("./public")
-
 # Move builded files to root
-mv ./public ./
-rm -rf ./public
+mv ./public/* ./
 
 # Commit and pushes
 git commit -am "release"
