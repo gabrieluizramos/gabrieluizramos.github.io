@@ -1,5 +1,6 @@
 # Go to public pages
 git checkout gh-pages
+git merge master
 
 # Clear current public directory
 rm -rf public
@@ -12,5 +13,4 @@ gatsby build
 mv ./public/* ./
 
 # Commit and pushes
-git commit -am "release"
-git push origin gh-pages
+git add . && git commit -m 'release' git push origin gh-pages
