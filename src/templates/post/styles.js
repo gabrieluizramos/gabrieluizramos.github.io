@@ -29,6 +29,8 @@ export const PostSubtitle = styled.h2`
 `;
 
 export const PostContent = styled.div`
+  line-height: 1.5;
+
   p,
   h1,
   h2,
