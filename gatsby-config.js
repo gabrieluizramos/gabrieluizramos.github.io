@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/blog',
   siteMetadata: {
     title: `Blog » Gabriel Ramos`,
     description: `Lugar onde eu rabisco umas ideias.`,
