@@ -10,12 +10,12 @@ import * as S from './styles';
 const Template = ({
   data: {
     markdownRemark: { frontmatter, html }
-  } // this prop will be injected by the GraphQL query below.
+  }
 }) => (
   <Layout>
     <SEO title={frontmatter.title} />
     <S.Back>
-      <Link to="/blog">Voltar</Link>
+      <Link to="/">Voltar</Link>
     </S.Back>
     <S.PostArticle>
       <S.PostHeader>
