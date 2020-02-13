@@ -9,7 +9,7 @@ import * as S from './styles';
 
 const Template = ({
   data: {
-    markdownRemark: { frontmatter, html }
+    markdownRemark: { frontmatter, html, timeToRead }
   }
 }) => (
   <Layout>
@@ -20,7 +20,8 @@ const Template = ({
     <S.PostArticle>
       <S.PostHeader>
         <S.PostTitle>{frontmatter.title}</S.PostTitle>
-        <S.PostSubtitle>{frontmatter.date}</S.PostSubtitle>
+        <S.PostTime>{timeToRead} min. de leitura</S.PostTime>
+        <S.PostDate>{frontmatter.date}</S.PostDate>
       </S.PostHeader>
       <hr />
       <S.PostContent
@@ -42,6 +43,7 @@ export const pageQuery = graphql`
         path
         title
       }
+      timeToRead
     }
   }
 `

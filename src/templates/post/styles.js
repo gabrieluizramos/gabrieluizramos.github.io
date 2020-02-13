@@ -15,14 +15,25 @@ export const PostArticle = styled.article`
   padding: ${spacing.default} 0;
 `;
 
-export const PostHeader = styled.header``;
+export const PostHeader = styled.header`
+  > * {
+    &:not(:last-child) {
+      margin-bottom: ${spacing.half};
+    }
+  }
+`;
 
 export const PostTitle = styled.h1`
   font-size: ${font.size.big};
   margin-bottom: ${spacing.half};
 `;
 
-export const PostSubtitle = styled.h2`
+export const PostTime = styled.div`
+  font-size: ${font.size.small};
+  color: ${colors.terminal.blue.default};
+`;
+
+export const PostDate = styled.h2`
   color: ${colors.terminal.green};
   font-size: ${font.size.default};
   font-weight: normal;
@@ -43,6 +54,15 @@ export const PostContent = styled.div`
   figure,
   image {
     margin-bottom: ${spacing.default};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${colors.terminal.blue.light};
   }
 
   li {
