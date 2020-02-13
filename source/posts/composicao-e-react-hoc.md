@@ -1,0 +1,318 @@
+---
+path: /post/composicao-e-react-hoc/
+
+title: Composição e React HoC (Higher Order Components)
+subtitle: Alguns conceitos de programação funcional aplicados à criação de interfaces
+date: 2020-02-13
+tags:
+  - dev
+  - react
+---
+
+Composição é um tópico bastante abordado quando o assunto é programação funcional.
+
+Os exemplos mais comuns seguem algumas regras como: dada uma sequência de funções, você deve executar essa sequência em ordem.
+
+Muito provavelmente você já deve ter visto um exemplo com algumas operações de adição/subtração, onde você deve executá-las. Algo que você faria dessa forma:
+```js
+const adicao = valor => valor + 1;
+const subtracao = valor => valor - 1;
+
+console.log(adicao(subtracao(2)))
+```
+
+Pensando num cenário onde essas funções tendem a crescer, você pode aprimorar a legibilidade do seu código e facilitar a manutenção, utilizando uma função principal responsável por executar toda essa sequência de funções, sendo algo como:
+```js
+const adicao = valor => valor + 1;
+const subtracao = valor => valor - 1;
+
+// função que recebe outras funções e as executa em ordem
+const compose = (...fn) => arg => fn.reduce((returned, fn) => fn(returned), arg);
+
+console.log(compose(adicao, subtracao)(2));
+```
+
+Deixando seu código muito mais fácil de extender, sem a necessidade de ficar encadeando uma função diretamente na chamada da outra (imagine se a sequência em adicao(subtracao()) tendesse a crescer com o tempo?).
+
+-------------------------
+
+### Higher Order Functions
+
+`Higher order functions` são funções que, em resumo, recebem outras funções como argumentos e retornam novas funções como resultado (geralmente relacionada ao termo `currying`, que é representado pelo fato de uma função justamente retornar outra função a ser executada futuramente).
+
+Ainda no exemplo anterior, pensemos no seguinte cenário: você precisa criar uma função de cálculo que recebe como parâmetro uma função qualquer que realizará esse determinado cálculo (soma/subtração), então, você retornará uma outra função que, ao ser executada, receberá o valor a ser calculado como parâmetro e executará essa determinada operação de cálculo.
+
+Escrevendo tudo isso parece até um pouco complexo, mas se olharmos o código, é um pouco mais prático de enxergar:
+```js
+// Mesmas funções
+const adicao = valor => valor + 1;
+const subtracao = valor => valor - 1;
+
+// Função de calculo
+const calcular = operacao => valor => operacao(valor);
+
+console.log(calcular(adicao)(1))
+```
+
+Ao executar esse trecho de código, você verá que o resultado ocorreu como esperávamos. Entretanto, aplicamos o conceito de `Higher Order Function`, retornando uma outra função a ser executada posteriormente.
+
+-------------------------
+
+### E o que tudo isso tem a ver com interfaces?
+
+Tendo os exemplos acima em mente, podemos avançar um pouco e pensar em que cenário tudo isso se aplica às interfaces.
+
+Após trabalhar algum tempo com [`React`](https://reactjs.org/) você acaba conhecendo, se interesando e aplicando alguns padrões que tornam seu dia-a-dia mais fácil enquanto escreve seus componentes.
+
+Construir interfaces é uma tarefa que envolve reutilização de componentes e criação de abstrações para facilitar lógicas reutilizadas em diversos trechos de seu site/sistema.
+
+Imagine outro cenário: você possui um botão que é responsável por disparar um alerta (um modal ou qualquer mensagem na tela).
+
+Essa responsabilidade de disparar uma mensagem pode ser implementada diretamente no seu componente ou pode ser abstraída para que outros botões possam se beneficiar dessa implementação futuramente através de alguma `prop` que será compartilhada e responsável por fazer a ligação entre seu componente e essa "camada" de abstração.
+
+E uma das formas de criar essa camada de abstração é justamente aplicando **HoC (ou Higher-order Components)** e permitindo compartilhamento de lógica entre componentes.
+
+#### Vamos deixar os exemplos mais práticos
+
+Pense no cenário onde seu componente implementa essa lógica por si só:
+```js
+import React, { useState } from 'react';
+import Modal from 'components/modal';
+
+const Button = () => {
+  const [isVisible, setVisible] = useState(false);
+
+  return (
+    <button onClick={() => setVisible(true)}>
+      Clique aqui para disparar a notificação
+    </button>
+    {
+      isVisible && (
+        <Modal>notificação</Modal>
+      )
+    }
+  );
+}
+
+export default Button;
+```
+O que fizemos foi: criamos o componente de botão, que dispara uma função no click e inserimos uma variável de estado que controla a visibilidade da notificação (no caso, a modal).
+
+Agora, vamos pensar no segundo cenário, onde essa implementação será abstraída do componente de botão e tudo que ela saberá é, basicamente, chamar uma `prop` com nome de `dispatchNotification` e não tenha ligação qualquer com o componente `Modal` ou seja lá qual notificação é renderizada.
+
+Em outras palavras, queremos que nosso componente se comporte da seguinte maneira:
+
+```js
+import React from 'react';
+
+const Button = ({ dispatchNotification }) => (
+  <button onClick={dispatchNotification}>
+    Clique aqui para disparar a notificação
+  </button>
+);
+
+export default Button;
+```
+
+Bem mais limpo, certo? Dessa forma, também removemos qualquer lógica de estado atrelado ao componente `Button`.
+
+Agora, vamos implementar nosso **HoC** chamado **withNotification**, onde ele será responsável por receber um componente e tratar esse estado que iremos abstrair:
+
+```js
+import React, { useState } from 'react';
+import Modal from 'components/modal';
+
+const withMessage = Component => props => {
+  const [isVisible, setVisibility] = useState(false);
+
+  const dispatchNotification = () => setVisibility(true);
+
+  return (
+    <>
+      <Component dispatchNotification={dispatchNotification} {...props} />
+      {
+        isVisible && (
+          <Modal>notificação</Modal>
+        )
+      }
+    </>
+  )
+}
+
+export default withMessage;
+```
+Talvez pareça meio confuso olhando de primeira, mas o que fizemos aqui foi:
+- Declaramos o **HoC** `withMessage`
+- Recebemos um componente genérico como primeiro parâmetro e retornamos uma nova função
+- Essa nova função, basicamente, recebe as `props` do componente que foi passado como primeiro parâmetro para que ele, dessa forma, possa ser renderizado normalmente
+- Criamos toda a lógica de estado e visibilidade da notificação no **HoC** e passamos uma nova `prop` para o componente recebido, na hora de ser renderizado, em outras palavras, "decoramos" nosso componente (inclusive poderíamos manipular se ele seria ou não renderizado, entrando também no conceito de `render highjacking`)
+
+Dessa forma, o componente que antes exportávamos assim:
+```js
+export default Button;
+```
+
+Agora passará pelo processamento do nosso **HoC**, onde, simplesmente faremos o seguinte:
+
+```js
+import React from 'react';
+
+// importamos nosso HoC
+import withMessage from './with-message';
+
+const Button = ({ dispatchNotification }) => (
+  <button onClick={dispatchNotification}>
+    Clique aqui para disparar a notificação
+  </button>
+);
+
+// exportamos o componente após processá-lo no HoC
+export default withMessage(Button);
+```
+
+Simples, não?
+
+### Compondo múltiplos HoC
+O problema dessa abordagem é quando seus **HoC** começam a crescer e alguns de seus componentes precisam de lógicas que são compartilhadas por diferentes **HoC**.
+
+Imagine que seu componente de botão (por um motivo qualquer) precisa agora acessar:
+- Receber os dados de um usuário para mostrar alguma mensagem qualquer
+- Receber uma função para fazer log de eventos
+- Receber uma função que realizará alguma requisição
+
+Dessa forma, seu componente tende a crescer da seguinte forma:
+
+```js
+import React from 'react';
+
+// a quantidade de HoC aumentou
+import withMessage from './with-message';
+import withUserdata from './with-userdata';
+import withLogging from './with-logging';
+import withFetching from './with-fetching';
+
+// seu componente recebe novos parâmetros
+const Button = ({ dispatchNotification, dispatchLogging, userdata, fetching }) => (
+  /*
+    implementação do botão
+  */
+);
+
+// precisamos procesar o componente por todos os HoC
+export default withFetching(withLogging(withUserdata(withMessage(Button))));
+```
+
+Um pouco custoso, não?
+Agora, com cada inserção de um novo **Hoc**, uma nova chamada para processar seu componente é necessária, dificultando a legibilidade do seu código.
+
+### Utilizando composição nos HoC
+
+É ai que podemos utilizar a composição de forma mais clara: compondo **HoC** de forma a facilitar o uso dessas abstrações.
+
+Lembra da função `compose` que declaramos lá no início? Algo como:
+
+```js
+const compose = (...fn) => arg => fn.reduce((returned, fn) => fn(returned), arg);
+```
+
+Podemos utilizá-la para compor nossos **HoC** de uma forma mais limpa.
+Deixando nosso código da seguinte maneira:
+
+```js
+import React from 'react';
+
+// Compose
+import compose from './compose';
+
+// HoC
+import withMessage from './with-message';
+import withUserdata from './with-userdata';
+import withLogging from './with-logging';
+import withFetching from './with-fetching';
+
+const Button = ({ dispatchNotification, dispatchLogging, userdata, fetching }) => (
+  /*
+    implementação do botão
+  */
+);
+
+// Realizamos a composição de todos os HoC
+const composed = compose(
+  withMessage,
+  withUserdata,
+  withLogging,
+  withFetching
+)(Button)
+
+export default composed;
+```
+
+Muito mais legível e claro, não? Agora, independente da quantidade de **HoC** que seu componente tiver, sua clareza será mantida.
+
+### Talvez você já tenha um compose no seu codebase e nem tenha percebido
+
+É muito comum em aplicações `React` utilizarmos outra ferramenta para nos auxiliar com estado, chamada [`Redux`](https://redux.js.org/).
+E um método disponibilizado convenientemente pelo `Redux` é o próprio [`compose`](https://redux.js.org/api/compose#composefunctions) que funciona de forma bem parecida com a que implementamos.
+
+Dessa forma, caso sua aplicação já utilize essa ferramenta, podemos importar essa função diretamente de lá, nos poupando o trabalho de realizar essa implementação por conta própria. Ou seja, por fim, o componente ficaria parecido com:
+
+```js
+import React from 'react';
+
+// Agora importando compose diretamente do Redux
+import { compose } from 'redux';
+
+// HoC
+import withMessage from './with-message';
+import withUserdata from './with-userdata';
+import withLogging from './with-logging';
+import withFetching from './with-fetching';
+
+const Button = ({ dispatchNotification, dispatchLogging, userdata, fetching }) => (
+  /*
+    implementação do botão
+  */
+);
+
+// Mantemos a composição de todos os HoC
+const composed = compose(
+  withMessage,
+  withUserdata,
+  withLogging,
+  withFetching
+)(Button)
+
+export default composed;
+```
+
+Simples, não?
+
+Se quiser, você ainda pode optar por externalizar essa manipulação dos **HoC** separando de alguma maneira. Por exemplo, deixando seu arquivo `index.js` responsável por importar seu componente e fazendo a composição, assim você separa essa "responsabilidade" de atrelar as **HoC** ao componente em si:
+
+```js
+import { compose } from 'redux';
+
+// Importa todos os HoC
+import withMessage from './with-message';
+import withUserdata from './with-userdata';
+import withLogging from './with-logging';
+import withFetching from './with-fetching';
+
+// Importa seu componente
+import Button from './button';
+
+// Exporta a composição dos HoC
+export default compose(
+  withMessage,
+  withUserdata,
+  withLogging,
+  withFetching
+)(Button);
+
+```
+
+O que achou dessa abordagem para reutilizar a lógica de seus componentes?
+
+-------------------------
+
+Se quiser brincar um pouco mais, deixei um [Codesandbox](https://codesandbox.io/s/compose-react-hoc-0uetx) pronto para você dar uma olhada, já com as implementações manuais ou importando `compose` provido pelo `Redux`. Para testar os dois cenários é só comentar/descomentar as primeiras linhas no código onde tem a implementação/importação desse código.
