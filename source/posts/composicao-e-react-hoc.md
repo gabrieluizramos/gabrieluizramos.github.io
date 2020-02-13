@@ -32,7 +32,7 @@ const compose = (...fn) => arg => fn.reduce((returned, fn) => fn(returned), arg)
 console.log(compose(adicao, subtracao)(2));
 ```
 
-Deixando seu código muito mais fácil de extender, sem a necessidade de ficar encadeando uma função diretamente na chamada da outra (imagine se a sequência em adicao(subtracao()) tendesse a crescer com o tempo?).
+Deixando seu código muito mais fácil de estender, sem a necessidade de ficar encadeando uma função diretamente na chamada da outra (imagine se a sequência em adicao(subtracao()) tendesse a crescer com o tempo?).
 
 -------------------------
 
@@ -315,4 +315,4 @@ O que achou dessa abordagem para reutilizar a lógica de seus componentes?
 
 -------------------------
 
-Se quiser brincar um pouco mais, deixei um [Codesandbox](https://codesandbox.io/s/compose-react-hoc-0uetx) pronto para você dar uma olhada, já com as implementações manuais ou importando `compose` provido pelo `Redux`. Para testar os dois cenários é só comentar/descomentar as primeiras linhas no código onde tem a implementação/importação desse código.
+Se quiser brincar um pouco mais, deixei um [Codesandbox](https://codesandbox.io/s/compose-react-hoc-53v3i) pronto para você dar uma olhada, já com as implementações manuais ou importando `compose` provido pelo `Redux`. Para testar os dois cenários é só comentar/descomentar as primeiras linhas no código onde tem a implementação/importação desse código.
