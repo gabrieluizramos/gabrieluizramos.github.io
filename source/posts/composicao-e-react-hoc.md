@@ -32,7 +32,7 @@ const compose = (...fn) => arg => fn.reduce((returned, fn) => fn(returned), arg)
 console.log(compose(adicao, subtracao)(2));
 ```
 
-Deixando seu código muito mais fácil de extender, sem a necessidade de ficar encadeando uma função diretamente na chamada da outra (imagine se a sequência em adicao(subtracao()) tendesse a crescer com o tempo?).
+Deixando seu código muito mais fácil de estender, sem a necessidade de ficar encadeando uma função diretamente na chamada da outra (imagine se a sequência em adicao(subtracao()) tendesse a crescer com o tempo?).
 
 -------------------------
 
