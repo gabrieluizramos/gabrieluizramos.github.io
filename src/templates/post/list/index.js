@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PostItem from './post-item';
+import PostItem from './item';
 
 const PostList = ({ posts }) => (
   <ol>
