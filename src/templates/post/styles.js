@@ -40,6 +40,11 @@ export const PostTitle = styled.h1`
   margin-bottom: ${spacing.half};
 `;
 
+export const PostSubtitle = styled.h2`
+  font-size: ${font.size.medium};
+  font-weight: normal;
+`
+
 export const PostTime = styled.div`
   font-size: ${font.size.small};
   color: ${colors.terminal.blue.default};

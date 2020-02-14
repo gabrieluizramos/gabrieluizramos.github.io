@@ -14,19 +14,20 @@ const Template = ({
       html,
       timeToRead,
       frontmatter: {
-        title, date, banner
+        title, subtitle, date, banner
       }
     }
   }
 }) => (
   <Layout>
-    <SEO title={title} />
+    <SEO title={title} description={subtitle} />
     <S.Back>
       <GLink to="/">Voltar</GLink>
     </S.Back>
     <S.PostArticle>
       <S.PostHeader>
         <S.PostTitle>{title}</S.PostTitle>
+        <S.PostSubtitle>{subtitle}</S.PostSubtitle>
         <S.PostTime>{timeToRead} min. de leitura</S.PostTime>
         <S.PostDate>{date}</S.PostDate>
         {
@@ -59,6 +60,7 @@ export const pageQuery = graphql`
         date(locale: "pt-br", formatString: "DD/MM/YYYY")
         path
         title
+        subtitle
         banner {
           author
           href
