@@ -15,6 +15,18 @@ export const PostArticle = styled.article`
   padding: ${spacing.default} 0;
 `;
 
+export const Banner = styled.figure``;
+
+export const Caption = styled.figcaption`
+  padding-top: ${spacing.half};
+  font-size: ${font.size.small};
+  text-align: right;
+
+  a {
+    color: ${colors.terminal.purple};
+  }
+`;
+
 export const PostHeader = styled.header`
   > * {
     &:not(:last-child) {

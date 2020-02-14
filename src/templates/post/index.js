@@ -1,27 +1,44 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link as GLink, graphql } from "gatsby"
+import Img from 'gatsby-image';
 
 import SEO from '../../components/seo';
 
-import Layout from '@gabrieluizramos/preferences/components/layout';
+import { Layout, Link } from '@gabrieluizramos/preferences/components';
 
 import * as S from './styles';
 
 const Template = ({
   data: {
-    markdownRemark: { frontmatter, html, timeToRead }
+    markdownRemark: {
+      html,
+      timeToRead,
+      frontmatter: {
+        title, date, banner
+      }
+    }
   }
 }) => (
   <Layout>
-    <SEO title={frontmatter.title} />
+    <SEO title={title} />
     <S.Back>
-      <Link to="/">Voltar</Link>
+      <GLink to="/">Voltar</GLink>
     </S.Back>
     <S.PostArticle>
       <S.PostHeader>
-        <S.PostTitle>{frontmatter.title}</S.PostTitle>
+        <S.PostTitle>{title}</S.PostTitle>
         <S.PostTime>{timeToRead} min. de leitura</S.PostTime>
-        <S.PostDate>{frontmatter.date}</S.PostDate>
+        <S.PostDate>{date}</S.PostDate>
+        {
+          banner && (
+             <S.Banner>
+              <Img fluid={banner.image.childImageSharp.fluid} />
+              <S.Caption>
+                Photo by <Link href={banner.href} target="_blank">{banner.author}</Link>
+              </S.Caption>
+            </S.Banner>
+          )
+        }
       </S.PostHeader>
       <hr />
       <S.PostContent
@@ -42,6 +59,17 @@ export const pageQuery = graphql`
         date(locale: "pt-br", formatString: "DD/MM/YYYY")
         path
         title
+        banner {
+          author
+          href
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1200, maxHeight: 500) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
       }
       timeToRead
     }
