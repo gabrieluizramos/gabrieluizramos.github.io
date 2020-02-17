@@ -16,6 +16,7 @@ const PostLink = ({ post, last }) => (
       <S.PostTitle>
         {post.frontmatter.title}
       </S.PostTitle>
+      {last && <S.PostCursor>&nbsp;</S.PostCursor>}
     </Link>
   </S.PostItem>
 )

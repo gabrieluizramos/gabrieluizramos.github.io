@@ -51,6 +51,20 @@ export const PostDate = styled.span`
   }
 `
 
+export const PostCursor = styled.span`
+  width: ${spacing.half};
+  display: inline-block;
+  background: ${colors.white};
+  margin-left: ${spacing.half};
+  animation: blink 1s infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+`
+
 export const PostLast = styled.span`
   color: ${colors.terminal.yellow};
 `
