@@ -22,7 +22,7 @@ const Article = ({
   }
 }) => (
   <Layout>
-    <SEO title={title} description={subtitle} />
+    <SEO title={title} description={subtitle} banner={banner} />
     <S.Back>
       <Link to="/">Voltar</Link>
     </S.Back>
@@ -52,6 +52,9 @@ export const pageQuery = graphql`
             childImageSharp {
               fluid(maxWidth: 1200, maxHeight: 500) {
                 ...GatsbyImageSharpFluid_tracedSVG
+              }
+              fixed(width: 1200, height: 1200) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
