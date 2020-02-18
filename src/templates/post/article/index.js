@@ -40,6 +40,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      timeToRead
       frontmatter {
         date(locale: "pt-br", formatString: "DD/MM/YYYY")
         path
@@ -60,7 +61,6 @@ export const pageQuery = graphql`
           }
         }
       }
-      timeToRead
     }
   }
 `

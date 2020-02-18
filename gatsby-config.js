@@ -51,13 +51,21 @@ module.exports = {
         icon: `src/images/favicon.png`
       },
     },
-     {
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `posts`,
         path: `${__dirname}/source/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `drafts`,
+        path: `${__dirname}/source/drafts`,
+      },
+    },
+    `gatsby-remark-source-name`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-analytics`,
