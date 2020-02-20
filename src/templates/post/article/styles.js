@@ -84,6 +84,7 @@ export const PostContent = styled.div`
   h4,
   h5,
   h6 {
+    padding-top: ${spacing.double};
     color: ${colors.terminal.blue.light};
   }
 
