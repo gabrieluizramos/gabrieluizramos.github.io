@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 import { spacing, font, colors } from '@gabrieluizramos/preferences/variables';
 
+export const Content = styled.div`
+  margin: 0 auto;
+  max-width: 800px;
+`;
+
 export const Back = styled.div`
   padding: ${spacing.default} 0;
   text-align: right;

@@ -22,15 +22,17 @@ const Article = ({
   }
 }) => (
   <Layout>
-    <SEO title={title} description={subtitle} banner={banner} />
-    <S.Back>
-      <Link to="/">Voltar</Link>
-    </S.Back>
-    <S.PostArticle>
-      <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />
-      <Banner {...banner} />
-      <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
-    </S.PostArticle>
+    <S.Content>
+      <SEO title={title} description={subtitle} banner={banner} />
+      <S.Back>
+        <Link to="/">Voltar</Link>
+      </S.Back>
+      <S.PostArticle>
+        <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />
+        <Banner {...banner} />
+        <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
+      </S.PostArticle>
+    </S.Content>
   </Layout>
 );
 
