@@ -4,6 +4,8 @@ module.exports = {
     title: `Blog » Gabriel Ramos`,
     description: `Lugar onde eu rabisco umas ideias.`,
     author: `@gabrieluizramos`,
+    siteUrl: 'https://gabrieluizramos.com.br/blog',
+    facebookAppId: '134327417835817'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
