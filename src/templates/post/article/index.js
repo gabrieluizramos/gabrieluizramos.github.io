@@ -55,7 +55,7 @@ export const pageQuery = graphql`
           href
           image {
             childImageSharp {
-              fluid(maxWidth: 1200, maxHeight: 500) {
+              fluid(maxWidth: 1200, maxHeight: 750) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
               fixed(width: 1200, height: 1200) {

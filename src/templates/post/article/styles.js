@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { spacing, font, colors } from '@gabrieluizramos/preferences/variables';
+import { cursor } from '../list/styles';
 
 export const Content = styled.div`
   margin: 0 auto;
@@ -63,6 +64,14 @@ export const PostDate = styled.h2`
 
 export const PostContent = styled.div`
   line-height: 1.5;
+
+  .terminal-purple { color: ${colors.terminal.purple}; }
+  .terminal-blue-default { color: ${colors.terminal.blue.default}; }
+  .terminal-blue-light { color: ${colors.terminal.blue.light}; }
+  .terminal-green { color: ${colors.terminal.green}; }
+  .terminal-yellow { color: ${colors.terminal.yellow}; }
+  .terminal-black { color: ${colors.terminal.black}; }
+  .cursor { ${cursor} }
 
   p,
   h1,

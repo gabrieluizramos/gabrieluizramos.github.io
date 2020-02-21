@@ -51,7 +51,7 @@ export const PostDate = styled.span`
   }
 `
 
-export const PostCursor = styled.span`
+export const cursor = `
   width: ${spacing.half};
   display: inline-block;
   background: ${colors.white};
@@ -63,6 +63,10 @@ export const PostCursor = styled.span`
       opacity: 0;
     }
   }
+`
+
+export const PostCursor = styled.span`
+  ${cursor}
 `
 
 export const PostLast = styled.span`
