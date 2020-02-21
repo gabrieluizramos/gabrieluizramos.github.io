@@ -11,7 +11,7 @@ const Banner = ({ image, href, author }) => image ? (
     <S.Banner>
       <Img fluid={image.childImageSharp.fluid} />
       <S.Caption>
-        Photo by <Link href={href} target="_blank">{author}</Link>
+        Foto por <Link href={href} target="_blank">{author}</Link>
       </S.Caption>
     </S.Banner>
     <hr />

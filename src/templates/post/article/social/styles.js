@@ -12,8 +12,9 @@ export const Container = styled.div`
 `;
 
 export const FacebookContainer = styled(Container)`
-  & > div {
-    width: 100%;
+  & > div,
+  iframe {
+    width: 100% !important;
   }
 `;
 
