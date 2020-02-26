@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title, banner }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -59,7 +60,7 @@ function SEO({ description, lang, meta, title, banner }) {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: `${site.siteMetadata.siteUrl}${image}`,
         },
         {
           name: `twitter:creator`,
