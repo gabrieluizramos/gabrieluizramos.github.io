@@ -52,7 +52,7 @@ function SEO({ description, lang, meta, title, banner }) {
         },
         {
           name: `twitter:site`,
-          content: '@gabrieluizramos',
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:card`,
