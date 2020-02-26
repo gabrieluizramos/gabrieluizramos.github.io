@@ -83,7 +83,8 @@ export const PostContent = styled.div`
   ul,
   ol,
   figure,
-  image {
+  img,
+  .gatsby-resp-image-wrapper {
     margin-bottom: ${spacing.default};
   }
 
