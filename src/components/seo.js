@@ -50,8 +50,12 @@ function SEO({ description, lang, meta, title, banner }) {
           content: `website`,
         },
         {
+          name: `twitter:site`,
+          content: '@gabrieluizramos',
+        },
+        {
           name: `twitter:card`,
-          content: 'summary_large_image',
+          content: 'summary',
         },
         {
           name: `twitter:image`,
