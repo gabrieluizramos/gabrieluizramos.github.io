@@ -73,6 +73,20 @@ export const PostContent = styled.div`
   .terminal-black { color: ${colors.terminal.black}; }
   .cursor { ${cursor} }
 
+  blockquote {
+    padding: ${spacing.default};
+    font-style: italic;
+    border-left: 2px solid ${colors.terminal.blue.light};
+
+    a {
+      color: ${colors.terminal.blue.light};
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   p,
   h1,
   h2,
@@ -84,6 +98,7 @@ export const PostContent = styled.div`
   ol,
   figure,
   img,
+  blockquote,
   .gatsby-resp-image-wrapper {
     margin-bottom: ${spacing.default};
   }
