@@ -77,6 +77,7 @@ export const PostContent = styled.div`
     padding: ${spacing.default};
     font-style: italic;
     border-left: 2px solid ${colors.terminal.blue.light};
+    background: ${colors.terminal.black};
 
     a {
       color: ${colors.terminal.blue.light};
