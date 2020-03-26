@@ -8,6 +8,7 @@ import SEO from '../../../components/seo';
 import Header from './header';
 import Banner from './banner';
 import Social from './social';
+import Breadcrumb from './breadcrumb';
 
 import * as S from './styles';
 
@@ -29,6 +30,7 @@ const Article = ({
         <S.Back>
           <Link to="/">Voltar</Link>
         </S.Back>
+        <Breadcrumb current={title} />
         <S.PostArticle>
           <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />
           <Banner {...banner} />
