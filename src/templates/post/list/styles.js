@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-import { colors, spacing } from '@gabrieluizramos/preferences/variables';
+import { colors, spacing, grid } from '@gabrieluizramos/preferences/variables';
+
+export const List = styled.ol`
+  width: 100%;
+  max-width: ${grid.size};
+  margin: 0 auto;
+  padding: 0 ${spacing.double};
+`;
 
 export const PostItem = styled.li`
   display: block;

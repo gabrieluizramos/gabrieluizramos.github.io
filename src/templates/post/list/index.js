@@ -2,12 +2,14 @@ import React from 'react';
 
 import PostItem from './item';
 
+import { List } from './styles';
+
 const PostList = ({ posts }) => (
-  <ol>
+  <List>
       {posts.map(({ node: post }, index) => (
         <PostItem key={post.id} post={post} last={index === 0} />
       ))}
-  </ol>
+  </List>
 );
 
 export default PostList;

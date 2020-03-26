@@ -4,8 +4,15 @@ import { spacing, font, colors } from '@gabrieluizramos/preferences/variables';
 import { cursor } from '../list/styles';
 
 export const Content = styled.div`
+  margin: -${spacing.double} auto;
+  background: ${colors.terminal.black};
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  max-width: 750px;
   margin: 0 auto;
-  max-width: 800px;
+  padding: 0 ${spacing.double};
 `;
 
 export const Back = styled.div`
@@ -19,6 +26,15 @@ export const Back = styled.div`
 
 export const PostArticle = styled.article`
   padding: ${spacing.default} 0;
+
+  hr {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, ${colors.white} 25%, transparent 25%, transparent 75%, ${colors.white} 75%);
+    background-size: ${spacing.default};
+    margin: ${spacing.double} 0;
+  }
 `;
 
 export const Banner = styled.figure``;
@@ -125,4 +141,4 @@ export const PostContent = styled.div`
       color: ${colors.terminal.purple};
     }
   }
-`
+`;
