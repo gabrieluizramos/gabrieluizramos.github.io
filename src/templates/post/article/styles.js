@@ -5,7 +5,8 @@ import { cursor } from '../list/styles';
 
 export const Content = styled.div`
   margin: -${spacing.double} auto;
-  background: ${colors.terminal.black};
+  background: ${colors.post.background};
+  color: ${colors.post.color};
 `;
 
 export const Wrapper = styled.div`
