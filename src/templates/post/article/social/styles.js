@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 import { spacing } from '@gabrieluizramos/preferences/variables';
 
-export const Share = styled.section`
-`;
+export const Share = styled.section``;
 
 export const Container = styled.div`
   width: 100%;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { font, spacing, colors } from '@gabrieluizramos/preferences/variables';
 
 export const Breadcrumb = styled.ul`
-  padding: ${spacing.default} 0;
+  padding-bottom: ${spacing.default};
 
   a {
     color: ${colors.white};

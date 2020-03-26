@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  padding: 0 ${spacing.double};
+  padding: ${spacing.double};
 `;
 
 export const Back = styled.div`

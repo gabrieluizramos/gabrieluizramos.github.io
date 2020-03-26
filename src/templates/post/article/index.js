@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import { Layout } from '@gabrieluizramos/preferences/components';
 
@@ -27,9 +27,6 @@ const Article = ({
     <S.Content>
       <S.Wrapper>
         <SEO title={title} description={subtitle} banner={banner} />
-        <S.Back>
-          <Link to="/">Voltar</Link>
-        </S.Back>
         <Breadcrumb current={title} />
         <S.PostArticle>
           <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />

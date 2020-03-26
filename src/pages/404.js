@@ -36,7 +36,7 @@ const NotFoundPage = () => (
     <Container>
       <h1>404</h1>
       <p>Eita! Acho que o que você procura não está por aqui...</p>
-      <Link to="/">Voltar</Link>
+      <Link to="/">Voltar ao blog</Link>
     </Container>
   </Layout>
 )
