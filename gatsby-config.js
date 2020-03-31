@@ -83,11 +83,6 @@ module.exports = {
       },
     },
     ...require('@gabrieluizramos/preferences/gatsby/config'),
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        resolveSiteUrl: () => `https://gabrieluizramos.com.br/blog`
-      }
-    }
+    `gatsby-plugin-sitemap`
   ],
 }
