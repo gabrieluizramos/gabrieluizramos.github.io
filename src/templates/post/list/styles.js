@@ -7,6 +7,8 @@ export const List = styled.ol`
   max-width: ${grid.size};
   margin: 0 auto;
   padding: 0 ${spacing.double};
+  display: flex;
+  flex-direction: column-reverse;
 `;
 
 export const PostItem = styled.li`
@@ -19,7 +21,7 @@ export const PostItem = styled.li`
     content: '~/';
   }
 
-  &:not(:last-child) {
+  &:not(:first-child) {
     &:after {
       content: '';
       display: block;
