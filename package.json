@@ -46,6 +46,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "preinstall": "sh commands/preinstall.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
