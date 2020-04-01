@@ -30,6 +30,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank'
+            }
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'images'
@@ -44,7 +50,7 @@ module.exports = {
             }
           },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-prismjs`
+          `gatsby-remark-prismjs`,
         ]
       }
     },
