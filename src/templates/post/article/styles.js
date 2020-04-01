@@ -140,5 +140,9 @@ export const PostContent = styled.div`
       margin-right: ${spacing.half};
       color: ${colors.terminal.purple};
     }
+
+    &:not(:last-child) {
+      margin-bottom: ${spacing.half};
+    }
   }
 `;
