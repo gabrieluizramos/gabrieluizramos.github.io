@@ -145,4 +145,14 @@ export const PostContent = styled.div`
       margin-bottom: ${spacing.half};
     }
   }
+
+  s,
+  del {
+    text-decoration: line-through;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 350px;
+  }
 `;
