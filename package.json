@@ -49,10 +49,12 @@
   "scripts": {
     "preinstall": "sh commands/preinstall.sh",
     "build": "gatsby build",
+    "build:prod": "gatsby clean && gatsby build --prefix-paths",
+    "upload:github": "gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "npm run build:prod && npm run upload:github",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
