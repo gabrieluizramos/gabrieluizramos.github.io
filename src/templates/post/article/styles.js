@@ -70,7 +70,7 @@ export const PostSubtitle = styled.h2`
 
 export const PostTime = styled.div`
   font-size: ${font.size.small};
-  color: ${colors.terminal.blue.default};
+  color: ${colors.terminal.blue.light};
 `;
 
 export const PostDate = styled.h2`
