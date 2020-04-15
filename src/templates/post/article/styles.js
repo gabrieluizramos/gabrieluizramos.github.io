@@ -116,7 +116,8 @@ export const PostContent = styled.div`
   figure,
   img,
   blockquote,
-  .gatsby-resp-image-wrapper {
+  .gatsby-resp-image-wrapper,
+  .gatsby-highlight {
     margin-bottom: ${spacing.default};
   }
 
