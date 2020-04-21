@@ -9,6 +9,10 @@ import SEO from "../components/seo"
 
 const Container = styled.div`
   text-align: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: ${spacing.double};
 
   h1 {
     color: ${colors.terminal.yellow};
