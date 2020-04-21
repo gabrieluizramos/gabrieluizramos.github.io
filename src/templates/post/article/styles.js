@@ -7,6 +7,7 @@ export const Content = styled.div`
   margin: -${spacing.double} auto;
   background: ${colors.post.background};
   color: ${colors.post.color};
+  line-height: 1.5;
 
   hr {
     display: block;
@@ -80,8 +81,6 @@ export const PostDate = styled.h2`
 `;
 
 export const PostContent = styled.div`
-  line-height: 1.5;
-
   .terminal-purple { color: ${colors.terminal.purple}; }
   .terminal-blue-default { color: ${colors.terminal.blue.default}; }
   .terminal-blue-light { color: ${colors.terminal.blue.light}; }
