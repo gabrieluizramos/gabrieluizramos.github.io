@@ -48,6 +48,8 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "sh commands/preinstall.sh",
+    "draft:create": "sh commands/posts/draft.sh",
+    "draft:publish": "sh commands/posts/publish.sh",
     "build": "gatsby build",
     "build:prod": "gatsby clean && gatsby build --prefix-paths",
     "upload:github": "gh-pages -d public",
