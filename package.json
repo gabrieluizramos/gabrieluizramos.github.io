@@ -7,7 +7,7 @@
   "dependencies": {
     "@gabrieluizramos/preferences": "github:gabrieluizramos/preferences",
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.20.31",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.1.35",
@@ -50,16 +50,15 @@
     "preinstall": "sh commands/preinstall.sh",
     "draft:create": "sh commands/posts/draft.sh",
     "draft:publish": "sh commands/posts/publish.sh",
-    "build": "gatsby build",
-    "build:prod": "gatsby clean && gatsby build --prefix-paths",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build:prod": "npm run build -- --prefix-paths",
     "upload:github": "gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "deploy": "npm run build:prod && npm run upload:github",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
