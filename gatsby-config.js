@@ -5,7 +5,9 @@ module.exports = {
     description: `Lugar onde eu rabisco umas ideias.`,
     author: `@gabrieluizramos`,
     siteUrl: 'https://gabrieluizramos.com.br',
-    facebookAppId: '134327417835817'
+    facebookAppId: '134327417835817',
+    blogUrl: 'https://gabrieluizramos.com.br/blog',
+    postUrl: 'https://gabrieluizramos.com.br/blog/post'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -89,6 +91,59 @@ module.exports = {
       },
     },
     ...require('@gabrieluizramos/preferences/gatsby/config'),
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                blogUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            output: '/feed.xml',
+            title: 'Blog » Gabriel Ramos',
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.subtitle,
+                  date: edge.node.frontmatter.date,
+                  url: `${site.siteMetadata.blogUrl}${edge.node.frontmatter.path}`,
+                  guid: `${site.siteMetadata.blogUrl}${edge.node.frontmatter.path}`,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      frontmatter {
+                        title
+                        subtitle
+                        date
+                        path
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          },
+        ],
+      },
+    },
   ],
 }
