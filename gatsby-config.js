@@ -111,18 +111,26 @@ module.exports = {
           {
             output: '/feed.xml',
             title: 'Blog » Gabriel Ramos',
+            custom_namespaces: {
+              media: 'http://search.yahoo.com/mrss/'
+            },
             serialize: ({ query: {
               site: { siteMetadata: { siteUrl, blogUrl } }, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.subtitle,
-                  date: edge.node.frontmatter.date,
-                  url: `${blogUrl}${edge.node.frontmatter.path}`,
-                  guid: `${blogUrl}${edge.node.frontmatter.path}`,
-                  custom_elements: [
-                    { subtitle: edge.node.frontmatter.subtitle },
-                    { image: edge.node.frontmatter.banner && `${siteUrl}${edge.node.frontmatter.banner.image.childImageSharp.fluid.src}` }
-                  ],
+              return allMarkdownRemark.edges.map(({ node: { frontmatter: { banner, ...frontmatter } } }) => {
+                const bannerUrl = banner && `${siteUrl}${banner.image.childImageSharp.fluid.src}`;
+                const bannerMedia = banner && `media:content url="${bannerUrl}" type="image/jpg"`;
+
+                return Object.assign({}, frontmatter, {
+
+                  description: frontmatter.subtitle,
+                  date: frontmatter.date,
+                  url: `${blogUrl}${frontmatter.path}`,
+                  guid: `${blogUrl}${frontmatter.path}`,
+                  custom_elements: banner && [
+                    {
+                      [bannerMedia]: null,
+                    }
+                  ]
                 })
               })
             },
@@ -143,7 +151,7 @@ module.exports = {
                         banner {
                           image {
                             childImageSharp {
-                              fluid(maxWidth: 500, maxHeight: 300) {
+                              fluid(maxWidth: 600, maxHeight: 350) {
                                 src
                               }
                             }
