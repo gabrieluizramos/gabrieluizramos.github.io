@@ -58,6 +58,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "deploy": "npm run build:prod && npm run upload:github",
+    "deploy:clean": "npm run clean && npm run build:prod && npm run upload:github",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
