@@ -102,6 +102,7 @@ module.exports = {
                 title
                 description
                 blogUrl
+                siteUrl
               }
             }
           }
@@ -110,13 +111,18 @@ module.exports = {
           {
             output: '/feed.xml',
             title: 'Blog » Gabriel Ramos',
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
+            serialize: ({ query: {
+              site: { siteMetadata: { siteUrl, blogUrl } }, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.subtitle,
                   date: edge.node.frontmatter.date,
-                  url: `${site.siteMetadata.blogUrl}${edge.node.frontmatter.path}`,
-                  guid: `${site.siteMetadata.blogUrl}${edge.node.frontmatter.path}`,
+                  url: `${blogUrl}${edge.node.frontmatter.path}`,
+                  guid: `${blogUrl}${edge.node.frontmatter.path}`,
+                  custom_elements: [
+                    { subtitle: edge.node.frontmatter.subtitle },
+                    { image: edge.node.frontmatter.banner && `${siteUrl}${edge.node.frontmatter.banner.image.childImageSharp.fluid.src}` }
+                  ],
                 })
               })
             },
@@ -134,6 +140,15 @@ module.exports = {
                         subtitle
                         date
                         path
+                        banner {
+                          image {
+                            childImageSharp {
+                              fluid(maxWidth: 500, maxHeight: 300) {
+                                src
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }
