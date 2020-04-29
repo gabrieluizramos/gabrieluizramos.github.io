@@ -24,9 +24,10 @@ export const Form = styled.div`
     align-items: baseline;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: -${spacing.half};
 
     > * {
-      margin: 2px;
+      margin: ${spacing.half};
     }
   }
 
@@ -47,4 +48,17 @@ export const Form = styled.div`
       width: 100%;
     }
   }
+`;
+
+const colorsByType = {
+  success: colors.terminal.green,
+  error: colors.terminal.yellow,
+  warning: colors.terminal.green
+}
+
+export const Message = styled.div`
+  padding-top: ${spacing.double};
+  font-size: ${font.size.small};
+
+  color: ${({ type }) => colorsByType[type]}
 `;
