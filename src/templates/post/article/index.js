@@ -6,9 +6,10 @@ import { Layout } from '@gabrieluizramos/preferences/components';
 import SEO from '../../../components/seo';
 
 import Header from './header';
-import Banner from './banner';
-import Social from './social';
 import Breadcrumb from './breadcrumb';
+import Banner from './banner';
+import Newsletter from './newsletter';
+import Social from './social';
 
 import * as S from './styles';
 
@@ -33,6 +34,7 @@ const Article = ({
           <Banner {...banner} />
           <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
         </S.PostArticle>
+        <Newsletter />
         <Social path={path} title={title} />
       </S.Wrapper>
     </S.Content>
