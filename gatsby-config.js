@@ -151,7 +151,7 @@ module.exports = {
                         banner {
                           image {
                             childImageSharp {
-                              fluid(maxWidth: 600, maxHeight: 350) {
+                              fluid(maxWidth: 600, maxHeight: 300) {
                                 src
                               }
                             }
