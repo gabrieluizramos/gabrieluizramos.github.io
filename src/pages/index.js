@@ -5,14 +5,12 @@ import SEO from '../components/seo';
 import PostList from '../templates/post/list';
 import { Layout } from '@gabrieluizramos/preferences/components';
 
-import { showDrafts } from '../utils/query-string';
-
-const filterDrafts = edges => edges.filter(({ node: { fields: { sourceName } } }) => sourceName !== 'drafts');
+import { filterDraftNodes, showDrafts  } from '../utils/drafts';
 
 const IndexPage = ({data: {allMarkdownRemark: { edges }}, ...props}) => (
   <Layout>
     <SEO title="Posts" />
-    <PostList posts={!showDrafts(props) ? filterDrafts(edges) : edges} />
+    <PostList posts={!showDrafts(props) ? edges.filter(filterDraftNodes) : edges} />
   </Layout>
 );
 

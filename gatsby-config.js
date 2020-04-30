@@ -1,3 +1,5 @@
+const { filterDraftNodes } = require('./src/utils/drafts');
+
 module.exports = {
   pathPrefix: '/blog',
   siteMetadata: {
@@ -116,7 +118,10 @@ module.exports = {
             },
             serialize: ({ query: {
               site: { siteMetadata: { siteUrl, blogUrl } }, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(({ node: { frontmatter: { banner, ...frontmatter } } }) => {
+              return allMarkdownRemark
+                .edges
+                .filter(filterDraftNodes)
+                .map(({ node: { frontmatter: { banner, ...frontmatter } } }) => {
                 const bannerUrl = banner && `${siteUrl}${banner.image.childImageSharp.fluid.src}`;
                 const bannerMedia = banner && `media:content url="${bannerUrl}" type="image/jpg"`;
 
@@ -141,8 +146,9 @@ module.exports = {
                 ) {
                   edges {
                     node {
-                      excerpt
-                      html
+                      fields {
+                        sourceName
+                      }
                       frontmatter {
                         title
                         subtitle
