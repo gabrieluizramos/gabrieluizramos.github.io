@@ -17,6 +17,15 @@ export const Content = styled.div`
     background-size: ${spacing.default};
     margin: ${spacing.double} 0;
   }
+
+  hr + h1,
+  hr + h2,
+  hr + h3,
+  hr + h4,
+  hr + h5,
+  hr + h6 {
+    padding-top: 0;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -36,7 +45,7 @@ export const Back = styled.div`
 `;
 
 export const PostArticle = styled.article`
-  padding: ${spacing.default} 0;
+  padding: ${spacing.default} 0 0;
 `;
 
 export const Banner = styled.figure``;
@@ -74,7 +83,7 @@ export const PostTime = styled.div`
   color: ${colors.terminal.blue.light};
 `;
 
-export const PostDate = styled.h2`
+export const PostDate = styled.time`
   color: ${colors.terminal.green};
   font-size: ${font.size.default};
   font-weight: normal;
