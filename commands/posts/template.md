@@ -1,5 +1,5 @@
 ---
-path: /post/post-url
+path: /post/draft/post-url
 
 title: title
 subtitle: subtitle
