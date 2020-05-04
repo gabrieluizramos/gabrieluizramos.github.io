@@ -139,9 +139,12 @@ export const PostContent = styled.div`
     color: ${colors.terminal.blue.light};
   }
 
-  li {
-    padding-left: ${spacing.default};
+  ul,
+  ol {
+    padding-left: ${spacing.half};
+  }
 
+  li {
     &:before {
       content: '•';
       font-weight: bold;
