@@ -139,6 +139,12 @@ export const PostContent = styled.div`
     color: ${colors.terminal.blue.light};
   }
 
+  h4,
+  h5,
+  h6 {
+    font-size: ${font.size.medium};
+  }
+
   ul,
   ol {
     padding-left: ${spacing.half};
