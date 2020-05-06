@@ -8,6 +8,8 @@ export const Content = styled.div`
   background: ${colors.post.background};
   color: ${colors.post.color};
   line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-size: 17px;
 
   hr {
     display: block;
