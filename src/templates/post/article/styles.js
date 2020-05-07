@@ -3,9 +3,18 @@ import styled from 'styled-components';
 import { spacing, font, colors } from '../../../variables';
 import { cursor } from '../list/styles';
 
-export const Content = styled.div`
-  margin: -${spacing.double} auto;
+export const Container = styled.div`
+  margin: 0 auto;
+  padding: ${spacing.double};
+
   background: ${colors.post.background};
+`;
+
+export const PostArticle = styled.article`
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+
   color: ${colors.post.color};
   line-height: 1.5;
   letter-spacing: 0.5px;
@@ -30,11 +39,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
-  padding: ${spacing.double};
+export const Footer = styled.footer`
 `;
 
 export const Back = styled.div`
@@ -44,10 +49,6 @@ export const Back = styled.div`
   a {
     color: ${colors.terminal.purple};
   }
-`;
-
-export const PostArticle = styled.article`
-  padding: ${spacing.default} 0 0;
 `;
 
 export const Banner = styled.figure``;

@@ -1,5 +1,5 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '@components/layout';
 
@@ -18,26 +18,29 @@ const Article = ({
     markdownRemark: {
       html,
       timeToRead,
-      frontmatter: {
-        path, title, subtitle, date, banner
-      }
+      frontmatter: { path, title, subtitle, date, banner }
     }
   }
 }) => (
   <Layout>
-    <S.Content>
-      <S.Wrapper>
-        <SEO title={title} description={subtitle} banner={banner} />
+    <S.Container>
+      <SEO title={title} description={subtitle} banner={banner} />
+      <S.PostArticle>
         <Breadcrumb current={title} />
-        <S.PostArticle>
-          <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />
-          <Banner {...banner} />
-          <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
-        </S.PostArticle>
-        <Newsletter />
-        <Social path={path} title={title} />
-      </S.Wrapper>
-    </S.Content>
+        <Header
+          title={title}
+          subtitle={subtitle}
+          time={timeToRead}
+          date={date}
+        />
+        <Banner {...banner} />
+        <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
+        <S.Footer>
+          <Newsletter />
+          <Social path={path} title={title} />
+        </S.Footer>
+      </S.PostArticle>
+    </S.Container>
   </Layout>
 );
 
@@ -70,4 +73,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

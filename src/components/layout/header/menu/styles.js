@@ -11,15 +11,12 @@ import {
 
 import { colors, spacing } from '@variables';
 
-export const Wrapper = styled.div`
+export const List = styled.ul`
+  display: flex;
   width: 95%;
   max-width: 350px;
   margin: 0 auto;
-  margin: -${spacing.double} auto;
-`;
-
-export const List = styled.ul`
-  display: flex;
+  padding: ${spacing.onehalf} 0;
 `;
 
 export const Item = styled.li`

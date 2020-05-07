@@ -6,7 +6,7 @@ export const List = styled.ol`
   width: 100%;
   max-width: ${grid.size};
   margin: 0 auto;
-  padding: 0 ${spacing.double};
+  padding: ${spacing.onehalf} ${spacing.double};
   display: flex;
   flex-direction: column-reverse;
 `;

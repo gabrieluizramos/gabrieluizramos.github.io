@@ -9,11 +9,9 @@ const Layout = ({ children }) => (
   <>
     <Reset />
     <Header />
-    <hr />
     <Wrapper>
       {children}
     </Wrapper>
-    <hr />
     <Footer />
   </>
 );
