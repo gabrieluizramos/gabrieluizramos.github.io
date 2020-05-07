@@ -4,6 +4,7 @@ import {
   Behance,
   Codepen,
   Instagram,
+  Twitter,
   Linkedin,
   Unsplash
 } from '@styled-icons/boxicons-logos';
@@ -12,7 +13,7 @@ import { colors, spacing } from '@variables';
 
 export const Wrapper = styled.div`
   width: 95%;
-  max-width: 275px;
+  max-width: 300px;
   margin: 0 auto;
   margin: -${spacing.double} auto;
 `;
@@ -46,6 +47,7 @@ const GithubIcon = styled(Github)`${iconsStyle}`;
 const BehanceIcon = styled(Behance)`${iconsStyle}`;
 const CodepenIcon = styled(Codepen)`${iconsStyle}`;
 const InstagramIcon = styled(Instagram)`${iconsStyle}`;
+const TwitterIcon = styled(Twitter)`${iconsStyle}`;
 const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
 const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
 
@@ -55,5 +57,6 @@ export const icons = {
   linkedin: LinkedinIcon,
   behance: BehanceIcon,
   instagram: InstagramIcon,
+  twitter: TwitterIcon,
   unsplash: UnsplashIcon
 };

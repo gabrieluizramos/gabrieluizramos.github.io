@@ -5,4 +5,5 @@ export default {
   instagram: 'https://www.instagram.com/gabrieluizramos/',
   linkedin: 'https://www.linkedin.com/in/gabrieluizramos/',
   unsplash: 'https://unsplash.com/@gabrieluizramos',
+  twitter: 'https://twitter.com/gabrieluizramos',
 }
