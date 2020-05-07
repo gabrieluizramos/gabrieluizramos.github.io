@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://gabrieluizramos.com.br/post/desenhando-com-css</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/renderizacao-de-aplicacoes-modernas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/chinelo-ou-gravata</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/usando-not-e-empty-para-excecoes</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/context-redux-e-gerenciamento-de-estado</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/minha-aplicacao-com-gatsby-cresceu</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/emendando-commits/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/voce-confia-em-si/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/nao-se-apegue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/refatorei-o-blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/desmistificando-injecao-de-dependencia/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/composicao-e-react-hoc/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/entendendo-o-v8-peca-por-peca/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/configure-seus-dotfiles/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/expressoes-comuns-no-meio-corporativo-ditas-de-forma-errada/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/aquele-artigo-para-novos-desenvolvedores/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/como-um-professor-pode-influenciar-sua-carreira/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/o-freela-nao-compensa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/uso-acessivel/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/post/parse-objetos-na-nuvem/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
