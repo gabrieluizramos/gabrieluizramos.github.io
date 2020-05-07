@@ -9,7 +9,7 @@ import { filterDraftNodes, showDrafts  } from '../utils/drafts';
 
 const IndexPage = ({data: {allMarkdownRemark: { edges }}, ...props}) => (
   <Layout>
-    <SEO title="Posts" />
+    <SEO title="Blog" />
     <PostList posts={!showDrafts(props) ? edges.filter(filterDraftNodes) : edges} />
   </Layout>
 );

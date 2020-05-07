@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "gabrieluizramos.com.br",
   "private": true,
-  "description": "My Personal blog",
+  "description": "My personal website and blog",
   "version": "0.1.0",
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com>",
   "dependencies": {
@@ -66,9 +66,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gabrieluizramos/blog"
+    "url": "https://github.com/gabrieluizramos/gabrieluizramos.com.br"
   },
   "bugs": {
-    "url": "https://github.com/gabrieluizramos/blog"
+    "url": "https://github.com/gabrieluizramos/gabrieluizramos.com.br"
   }
 }
