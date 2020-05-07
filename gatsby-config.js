@@ -2,15 +2,12 @@ const path = require('path');
 const { filterDraftNodes, filterDraftPaths } = require('./src/utils/drafts');
 
 module.exports = {
-  pathPrefix: '/blog',
   siteMetadata: {
     title: `Blog » Gabriel Ramos`,
     description: `Lugar onde eu rabisco umas ideias.`,
     author: `@gabrieluizramos`,
     siteUrl: 'https://gabrieluizramos.com.br',
     facebookAppId: '134327417835817',
-    blogUrl: 'https://gabrieluizramos.com.br/blog',
-    postUrl: 'https://gabrieluizramos.com.br/blog/post'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -132,7 +129,6 @@ module.exports = {
               siteMetadata {
                 title
                 description
-                blogUrl
                 siteUrl
               }
             }
@@ -146,7 +142,7 @@ module.exports = {
               media: 'http://search.yahoo.com/mrss/'
             },
             serialize: ({ query: {
-              site: { siteMetadata: { siteUrl, blogUrl } }, allMarkdownRemark } }) => {
+              site: { siteMetadata: { siteUrl } }, allMarkdownRemark } }) => {
               return allMarkdownRemark
                 .edges
                 .filter(filterDraftNodes)
@@ -158,8 +154,8 @@ module.exports = {
 
                   description: frontmatter.subtitle,
                   date: frontmatter.date,
-                  url: `${blogUrl}${frontmatter.path}`,
-                  guid: `${blogUrl}${frontmatter.path}`,
+                  url: `${siteUrl}${frontmatter.path}`,
+                  guid: `${siteUrl}${frontmatter.path}`,
                   custom_elements: banner && [
                     {
                       [bannerMedia]: null,
