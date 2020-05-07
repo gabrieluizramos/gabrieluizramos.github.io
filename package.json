@@ -1,5 +1,5 @@
 {
-  "name": "gabrieluizramos.com.br",
+  "name": "gabrieluizramos.github.io",
   "private": true,
   "description": "My personal website and blog",
   "version": "0.1.0",
@@ -66,9 +66,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gabrieluizramos/gabrieluizramos.com.br"
+    "url": "https://github.com/gabrieluizramos/gabrieluizramos.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gabrieluizramos/gabrieluizramos.com.br"
+    "url": "https://github.com/gabrieluizramos/gabrieluizramos.github.io"
   }
 }
