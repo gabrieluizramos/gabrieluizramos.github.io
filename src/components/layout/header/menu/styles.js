@@ -13,7 +13,7 @@ import { colors, spacing } from '@variables';
 
 export const Wrapper = styled.div`
   width: 95%;
-  max-width: 300px;
+  max-width: 350px;
   margin: 0 auto;
   margin: -${spacing.double} auto;
 `;
@@ -27,7 +27,7 @@ export const Item = styled.li`
 
   a {
     display: block;
-    padding: 10px;
+    padding: 10px ${spacing.default};
 
     &:hover {
       svg {
