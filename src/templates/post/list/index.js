@@ -4,10 +4,10 @@ import PostItem from './item';
 
 import { List } from './styles';
 
-const PostList = ({ posts, last = posts.length - 1 }) => (
+const PostList = ({ posts }) => (
   <List>
       {posts.map(({ node: post }, index) => (
-        <PostItem key={post.id} post={post} last={index === last} />
+        <PostItem key={post.id} post={post} last={index === 0} />
       ))}
   </List>
 );
