@@ -4,16 +4,17 @@ import {
   Behance,
   Codepen,
   Instagram,
-  Linkedin
+  Linkedin,
+  Unsplash
 } from '@styled-icons/boxicons-logos';
 
-import { colors } from '@variables';
+import { colors, spacing } from '@variables';
 
 export const Wrapper = styled.div`
   width: 95%;
   max-width: 275px;
   margin: 0 auto;
-  margin: -30px auto;
+  margin: -${spacing.double} auto;
 `;
 
 export const List = styled.ul`
@@ -25,7 +26,7 @@ export const Item = styled.li`
 
   a {
     display: block;
-    padding: 15px;
+    padding: 10px;
 
     &:hover {
       svg {
@@ -46,11 +47,13 @@ const BehanceIcon = styled(Behance)`${iconsStyle}`;
 const CodepenIcon = styled(Codepen)`${iconsStyle}`;
 const InstagramIcon = styled(Instagram)`${iconsStyle}`;
 const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
+const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
 
 export const icons = {
   github: GithubIcon,
-  behance: BehanceIcon,
   codepen: CodepenIcon,
+  linkedin: LinkedinIcon,
+  behance: BehanceIcon,
   instagram: InstagramIcon,
-  linkedin: LinkedinIcon
+  unsplash: UnsplashIcon
 };

@@ -3,5 +3,6 @@ export default {
   behance: 'https://www.behance.net/gabrieluizramos',
   codepen: 'https://codepen.io/gabrieluizramos/',
   instagram: 'https://www.instagram.com/gabrieluizramos/',
-  linkedin: 'https://www.linkedin.com/in/gabrieluizramos/'
+  linkedin: 'https://www.linkedin.com/in/gabrieluizramos/',
+  unsplash: 'https://unsplash.com/@gabrieluizramos',
 }
