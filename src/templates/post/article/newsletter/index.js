@@ -42,7 +42,7 @@ const Newsletter = () => {
       <hr />
       <S.Newsletter>
         <S.Title>
-          Assine a Newsletter!
+          <span role="img" aria-label="mailbox">📬</span> Assine a Newsletter!
         </S.Title>
         <S.Text>
           Assim você recebe por email as novidades :)
