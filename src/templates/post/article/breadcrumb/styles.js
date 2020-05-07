@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { font, spacing, colors } from '@gabrieluizramos/preferences/variables';
+import { font, spacing, colors } from '../../../../variables';
 
 export const Breadcrumb = styled.ul`
   padding-bottom: ${spacing.default};

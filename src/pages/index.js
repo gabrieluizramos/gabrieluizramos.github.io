@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import SEO from '../components/seo';
 import PostList from '../templates/post/list';
-import { Layout } from '@gabrieluizramos/preferences/components';
+import Layout from '../components/layout';
 
 import { filterDraftNodes, showDrafts  } from '../utils/drafts';
 

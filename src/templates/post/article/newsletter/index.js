@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import addToMailChimp from 'gatsby-plugin-mailchimp';
 
-import { Form } from '@gabrieluizramos/preferences/components';
+import Form from '@components/form';
 import schema from './schema';
 import messages from './messages';
 

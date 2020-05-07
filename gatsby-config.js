@@ -1,3 +1,4 @@
+const path = require('path');
 const { filterDraftNodes, filterDraftPaths } = require('./src/utils/drafts');
 
 module.exports = {
@@ -92,7 +93,6 @@ module.exports = {
         trackingId: "UA-105850294-1",
       },
     },
-    ...require('@gabrieluizramos/preferences/gatsby/config'),
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -207,6 +207,17 @@ module.exports = {
       options: {
         endpoint: 'https://gabrieluizramos.us8.list-manage.com/subscribe/post?u=a28aa5218b0f56cc08730dcec&id=e8f87b328e'
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@variables': path.resolve(__dirname, 'src/variables'),
+          '@templates': path.resolve(__dirname, 'src/templates')
+        },
+        extensions: ['js']
+      },
+    },
   ],
 }

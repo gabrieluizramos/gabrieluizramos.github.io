@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing } from '@gabrieluizramos/preferences/variables';
+import { spacing } from '../../../../variables';
 
 export const Share = styled.section``;
 

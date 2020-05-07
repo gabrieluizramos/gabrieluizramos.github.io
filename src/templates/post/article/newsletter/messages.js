@@ -1,4 +1,4 @@
-import { colors } from '@gabrieluizramos/preferences/variables';
+import { colors } from '../../../../variables';
 
 export default {
   success: {

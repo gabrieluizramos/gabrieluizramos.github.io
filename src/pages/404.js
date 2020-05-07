@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from 'gatsby';
 
-import Layout from "@gabrieluizramos/preferences/components/layout"
-import { spacing, colors } from '@gabrieluizramos/preferences/variables';
+import Layout from "../components/layout"
+import { spacing, colors } from '../variables';
 import styled from 'styled-components';
 
 import SEO from "../components/seo"

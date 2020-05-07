@@ -1,2 +1,2 @@
 import 'lazysizes';
-import '@gabrieluizramos/preferences/gatsby/browser';
+import './src/preferences/gatsby/browser';

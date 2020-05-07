@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Layout } from '@gabrieluizramos/preferences/components';
+import Layout from '@components/layout';
 
-import SEO from '../../../components/seo';
+import SEO from '@components/seo';
 
 import Header from './header';
 import Breadcrumb from './breadcrumb';

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, spacing, grid } from '@gabrieluizramos/preferences/variables';
+import { colors, spacing, grid } from '../../../variables';
 
 export const List = styled.ol`
   width: 100%;

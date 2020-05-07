@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, font, colors } from '@gabrieluizramos/preferences/variables';
+import { spacing, font, colors } from '../../../variables';
 import { cursor } from '../list/styles';
 
 export const Content = styled.div`

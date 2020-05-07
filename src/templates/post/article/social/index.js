@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { colors } from '@gabrieluizramos/preferences/variables';
+import { colors } from '@variables';
 
 import {
   // Buttons

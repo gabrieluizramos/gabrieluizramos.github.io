@@ -2,7 +2,7 @@ import React from 'react';
 
 import Img from 'gatsby-image';
 
-import { Link } from '@gabrieluizramos/preferences/components';
+import Link from '@components/link';
 
 import * as S from './styles';
 
