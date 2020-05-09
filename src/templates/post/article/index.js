@@ -16,6 +16,7 @@ import * as S from './styles';
 const Article = ({
   data: {
     markdownRemark: {
+      id,
       html,
       timeToRead,
       frontmatter: { path, title, subtitle, date, banner }
@@ -37,7 +38,7 @@ const Article = ({
         <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
         <S.Footer>
           <Newsletter />
-          <Social path={path} title={title} />
+          <Social path={path} title={title} id={id} />
         </S.Footer>
       </S.PostArticle>
     </S.Container>
@@ -49,6 +50,7 @@ export default Article;
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
+      id
       html
       timeToRead
       frontmatter {

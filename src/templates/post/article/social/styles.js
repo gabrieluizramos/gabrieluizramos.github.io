@@ -10,13 +10,6 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const FacebookContainer = styled(Container)`
-  & > div,
-  iframe {
-    width: 100% !important;
-  }
-`;
-
 export const Icons = styled.ul`
   display: flex;
   padding: 0 ${spacing.half};
