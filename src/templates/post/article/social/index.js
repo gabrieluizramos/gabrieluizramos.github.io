@@ -50,9 +50,9 @@ const Share = ({ title, path, id: identifier }) => {
   const disqus = { url, identifier, title };
 
   return (
-    <S.Share>
+    <>
       <hr />
-      <S.Container>
+      <S.Share>
         <S.Icons>
           {social.map(({ Component, Icon }, index) => (
             <S.Icon key={`share_${index}`}>
@@ -62,9 +62,9 @@ const Share = ({ title, path, id: identifier }) => {
             </S.Icon>
           ))}
         </S.Icons>
-      </S.Container>
-      <Disqus config={disqus} />
-    </S.Share>
+        <Disqus config={disqus} />
+      </S.Share>
+    </>
   );
 };
 

@@ -1,20 +1,26 @@
 import styled from 'styled-components';
 
-import { spacing } from '../../../../variables';
+import { spacing, colors } from '@variables';
 
 export const Share = styled.section``;
 
-export const Container = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-`;
-
 export const Icons = styled.ul`
   display: flex;
-  padding: 0 ${spacing.half};
+  padding-bottom: ${spacing.half};
 `;
 
 export const Icon = styled.li`
   margin-right: ${spacing.half};
+
+  rect,
+  path {
+    transition: .2s ease-in-out;
+  }
+
+  &:hover {
+    rect,
+    path {
+      fill: ${colors.post.color};
+    }
+  }
 `;
