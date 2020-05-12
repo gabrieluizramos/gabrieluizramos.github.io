@@ -16,7 +16,7 @@ export const PostArticle = styled.article`
   margin: 0 auto;
 
   color: ${colors.post.color};
-  line-height: 1.5;
+  line-height: 1.7;
   letter-spacing: 0.5px;
   font-size: 17px;
 
