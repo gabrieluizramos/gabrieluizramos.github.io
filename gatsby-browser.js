@@ -1,2 +1,1 @@
-import 'lazysizes';
-import './config/browser';
+require('./config/browser');
