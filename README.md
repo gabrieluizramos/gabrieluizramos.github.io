@@ -1,11 +1,13 @@
-# Personal website and blog
+# [gabrieluizramos.com.br](https://gabrieluizramos.com.br/)
 Built with [Gatsby](https://www.gatsbyjs.org/).
 
-It contains the following folder structure:
-- [commands](./commands): contains some setup, draft creation and publishing scripts;
-- [config](./config): contains the gatsby and blog build configuration, such ash [browser](./config/browser) and [plugins](./config/plugins) settings;
-- [posts](./posts): contains all the blog posts, divided into the [draft](./posts/drafts) and [published](./posts/published) categories;
-- [src](./src): with the application source files;
-- [static](./static): with the static files preserved during build time.
+Follows my personal [terminal](https://github.com/gabrieluizramos/dotfiles/blob/master/.dotfiles/symlinks/.zshrc#L16) and [editor](https://www.nordtheme.com/) theme.
 
-All the posts are written in markdown files and are being built and deployed to the `master` branch of the github repo, that's why the `develop` branch is the current base branch in this case.
+---
+
+Folder structure:
+- [commands](./commands): some setup, draft creation and publishing scripts;
+- [config](./config): build and configuration files, such as [browser](./config/browser) and [plugins](./config/plugins) settings;
+- [posts](./posts): all the blog posts, divided into the [draft](./posts/drafts) and [published](./posts/published) categories;
+- [src](./src): application source files;
+- [static](./static): static files preserved during build time.
