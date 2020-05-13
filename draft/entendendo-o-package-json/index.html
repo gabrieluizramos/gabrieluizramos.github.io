@@ -266,8 +266,10 @@ data-styled.g51[id="sc-global-bEiNQD1"]{content:"sc-global-bEiNQD1,"}
     <span class="token property">"preinstall"</span><span class="token operator">:</span> <span class="token string">"sh preinstall.sh"</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>E nesse script, "pular" a instalação do pacote <code class="language-text">gatsby-cli</code> caso ele já esteja instalado globalmente na sua máquina, como faz o sript abaixo:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token comment"># Mensagem que indica que o script está sendo executado</span>
+<p>E no script <code class="language-text">preinstall.sh</code> , "pular" a instalação do pacote <code class="language-text">gatsby-cli</code> caso ele já esteja instalado globalmente na sua máquina, da seguinte maneira:</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token comment"># arquivo preinstall.sh</span>
+
+<span class="token comment"># Mensagem que indica que o script está sendo executado</span>
 <span class="token builtin class-name">echo</span> <span class="token string">"Executando script de preinstall"</span>
 
 <span class="token comment"># Checa se o comando gatsby já existe</span>
@@ -285,6 +287,7 @@ data-styled.g51[id="sc-global-bEiNQD1"]{content:"sc-global-bEiNQD1,"}
 <p>E para publicar esse mesmo post, basta executar:</p>
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run draft:publish <span class="token number">2020</span>-01-01.nome-do-novo-post</code></pre></div>
 <p>Onde o valor de <code class="language-text">2020-01-01.nome-do-novo-post</code> é manipulado internamente por esses scripts e utilizado para substituir as informações no template que já está separado e criar os arquivos e pastas necessários. Bem mais prático, não acha?</p>
+<p>Vale lembrar os scripts customizados (que não sejam os de <code class="language-text">start</code>, <code class="language-text">test</code> e alguns outros que estão na <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="nofollow noopener noreferrer">documentação oficial</a>), precisam ser executados com o <code class="language-text">run</code>, como os exemplos que citei acima: <code class="language-text">npm run script-customizado</code></p>
 <p>Se quiser se aprofundar um pouco mais no que os <code class="language-text">scripts</code> te oferecem, você pode ver também a documentação oficial no NPM sobre <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="nofollow noopener noreferrer">esses scripts</a> e sobre o <a href="https://docs.npmjs.com/cli/run-script" target="_blank" rel="nofollow noopener noreferrer">run scripts</a> que permite que você execute scripts customizados.</p>
 <hr>
 <h3>Informações extras</h3>
