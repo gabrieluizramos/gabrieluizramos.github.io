@@ -2,7 +2,7 @@
   "name": "gabrieluizramos.github.io",
   "private": true,
   "description": "My personal website and blog",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
