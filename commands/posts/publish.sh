@@ -14,7 +14,7 @@ sed -i '' "s/draft\///g;" posts/published/${name}.md
 
 echo "Committing and pushing published post"
 git add .
-git commit -m "chore(publish): publish post $name"
+git commit -m "feat(post): publish post $name"
 git push origin develop
 
 echo "Running deploy script"
