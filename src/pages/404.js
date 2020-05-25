@@ -36,7 +36,7 @@ const Container = styled.div`
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="404 - Not found" />
     <Container>
       <h1>404</h1>
       <p>Eita! Acho que o que você procura não está por aqui...</p>

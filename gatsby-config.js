@@ -3,7 +3,7 @@ const plugins = require('./config/plugins');
 module.exports = {
   siteMetadata: {
     title: `Gabriel Ramos`,
-    description: `Lugar onde eu rabisco umas ideias.`,
+    description: `Um blog sobre JavaScript, CSS, Testes, front-end e tópicos relacionados a desenvolvimento de software em geral.`,
     author: `@gabrieluizramos`,
     siteUrl: 'https://gabrieluizramos.com.br',
   },
