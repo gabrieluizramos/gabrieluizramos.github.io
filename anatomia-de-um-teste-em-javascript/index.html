@@ -194,9 +194,9 @@ All files |      100 |      100 |      100 |      100 |                   |
     <span class="token comment">// asserção será feita a seguir</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>Já temos as variáveis com os retorno função (<code class="language-text">atual</code>) e o resultado esperado (<code class="language-text">resultado</code>).</p>
+<p>Já temos as variáveis com o retorno função (<code class="language-text">atual</code>) e o resultado esperado (<code class="language-text">resultado</code>).</p>
 <p>Com isso podemos escrever nossa asserção. A função é iniciada com <code class="language-text">expect</code> (pois iremos consultar e <code class="language-text">esperar</code> que algum valor seja igual a algo que determinamos) e essa função retorna um objeto com outras funções (chamadas <code class="language-text">matchers</code> onde verificamos valores correspondentes), como: <code class="language-text">toEqual</code> (verifica se um valor é igual a outro), <code class="language-text">toThrow</code> (verifica se um erro foi disparado), <code class="language-text">toBeGreaterThan</code> (verifica se o valor é maior que outro).</p>
-<p>Caso tenha precise, você também pode criar seus seus <a href="https://jestjs.io/docs/pt-BR/expect#expectextendmatchers" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">matchers</code></a> customizados.</p>
+<p>Caso tenha precise, você também pode criar seus <a href="https://jestjs.io/docs/pt-BR/expect#expectextendmatchers" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">matchers</code></a> customizados.</p>
 <p>Nesse exemplo, podemos utilizar o <code class="language-text">toEqual</code> já que vamos comparar se o valor retornado por nossa função é igual a <code class="language-text">2</code>.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
 
@@ -212,7 +212,7 @@ All files |      100 |      100 |      100 |      100 |                   |
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Poderíamos ter moldado o teste de qualquer forma, inclusive removendo as variáveis e passando os valores diretamente. Mas acho que dividindo os testes nessas etapas (entrada, saída e execução da função) é uma forma prática de entender como tudo funciona.</p>
-<p>Sobre a semântica e a leitura dos testes que comentamos, podemos parar para fazer uma leitura sobre o teste que críamos. Ao ler o código desenvolvido, podemos ler algo como:</p>
+<p>Sobre a semântica e a leitura dos testes que comentamos, podemos parar para fazer uma leitura sobre o teste que criamos. Ao ler o código desenvolvido, podemos ler algo como:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Descrição: calculadora
 Ela: soma
 Espero: que o valor atual (2) seja igual ao esperado (resultado da calculadora.soma(1, 1));</code></pre></div>
