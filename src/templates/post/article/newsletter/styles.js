@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, spacing, font } from '../../../../variables';
+import { colors, spacing, font } from '@variables';
 
 import messages from './messages';
 

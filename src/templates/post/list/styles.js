@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { colors, spacing, grid } from '../../../variables';
+import { colors, spacing, grid } from '@variables';
 
 export const List = styled.ol`
   width: 100%;
   max-width: ${grid.size};
   margin: 0 auto;
-  padding: ${spacing.onehalf} ${spacing.double};
+  padding: 0 ${spacing.double} ${spacing.onehalf};
   display: flex;
   flex-direction: column;
 `;
