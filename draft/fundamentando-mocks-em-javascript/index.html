@@ -260,17 +260,6 @@ jest<span class="token punctuation">.</span><span class="token function">mock</s
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>A diferença da primeira pra segunda utilização é que a segunda nos permite customizar os valores exportados pelo módulo, caso precisemos. Caso você opte por utilizar a primeira, todos as funções exportadas pelo módulo já serão sobrescritas por uma função de <em>mock</em> igual ao retorno do <code class="language-text">jest.fn</code> por padrão.</p>
-<p>Vale apontar que, utilizando <code class="language-text">jest.mock</code> você não vai conseguir passar uma variável para a função (como segundo parâmetro) a menos que ela tenha <code class="language-text">mock</code> como prefixo no nome da variável. Ou seja:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> mockIsAlive <span class="token operator">=</span> <span class="token punctuation">{</span>
-  isAlive<span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> isAlive <span class="token operator">=</span> mockIsAlive<span class="token punctuation">;</span>
-
-<span class="token comment">// This works</span>
-jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'./is-alive'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> mockIsAlive<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// This doesn't work</span>
-jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'./is-alive'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> isAlive<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Com isso, podemos manter nosso teste exatamente igual! A única diferença é que não precisaremos mais passar essa função como parâmetro e agora, após realizar o <em>mock</em> de <code class="language-text">is-alive</code>, iremos importar essa função para verificar se ela foi de fato executada.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> filterCharacter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./filter-character'</span><span class="token punctuation">;</span>
 <span class="token comment">// importamos o modulo</span>
