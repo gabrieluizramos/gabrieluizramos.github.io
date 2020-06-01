@@ -184,11 +184,11 @@ Você deve utilizar estruturas de <em>mock</em> quando sua unidade (função ou 
 <h4>Funções</h4>
 <p>O Jest nos permite utilizar algumas <a href="https://jestjs.io/docs/pt-BR/jest-object#mock-functions" target="_blank" rel="nofollow noopener noreferrer">funções específicas</a> dependendo da necessidade do nosso teste e, para facilitar, vale a pena dividirmos esse tópico em outros 3:</p>
 <ul>
-<li>funções;</li>
+<li>funções comuns;</li>
 <li>módulos;</li>
 <li>espiões.</li>
 </ul>
-<h5>Funções tradicionais</h5>
+<h5>Funções comuns</h5>
 <p>Vamos imaginar que nossa função de filtrar personagens, recebe um terceiro parâmetro. Esse novo parâmetro é uma função que verifica se o personagem está vivo, baseado em um campo <code class="language-text">alive</code>.</p>
 <p>Nossa função será algo como:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">filterCharacter</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">characters<span class="token punctuation">,</span> name<span class="token punctuation">,</span> isAlive</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
