@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { hideLabel } from '@components/form/input/styles';
+
 import { colors, spacing, font } from '@variables';
 
 import messages from './messages';
@@ -23,7 +25,7 @@ export const Form = styled.div`
   .form {
     flex: 2;
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: -${spacing.half};
@@ -31,6 +33,10 @@ export const Form = styled.div`
     > * {
       margin: ${spacing.half};
     }
+  }
+
+  label {
+    ${hideLabel}
   }
 
   fieldset {

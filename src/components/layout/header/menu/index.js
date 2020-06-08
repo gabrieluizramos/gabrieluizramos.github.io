@@ -8,7 +8,7 @@ import url from './url';
 const Menu = () => (
   <S.List>
     {Object.entries(S.icons).map(([social, Icon]) => (
-      <S.Item>
+      <S.Item key={`menu-item-${social}`}>
         <Link href={url[social]} target="_blank">
           <Icon />
         </Link>
