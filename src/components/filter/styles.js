@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Field, Fieldset, Error } from '@components/form/input/styles';
+import { Field, Fieldset, Error, hideLabel } from '@components/form/input/styles';
 
 import { grid, spacing } from '@variables';
 
@@ -14,6 +14,10 @@ export const Form = styled.form`
 
   ${Fieldset} {
     flex: 1;
+  }
+
+  label {
+    ${hideLabel}
   }
 
   ${Field} {

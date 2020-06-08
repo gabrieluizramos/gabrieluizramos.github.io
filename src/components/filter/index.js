@@ -14,7 +14,9 @@ export const useFilter = ({ data, filter: initialFilter }) => {
   const [filter, setFilter] = useState(initialFilter);
   const onSetFilter = f => setFilter(f.toUpperCase());
 
-  const filtered = data.filter(({ node }) => filterByTerm(node.frontmatter, filter));
+  const filtered = data.filter(({ node }) =>
+    filterByTerm(node.frontmatter, filter)
+  );
 
   return [filtered, onSetFilter];
 };
@@ -22,7 +24,13 @@ export const useFilter = ({ data, filter: initialFilter }) => {
 const Filter = ({ onFilter }) => (
   <S.Form onSubmit={e => e.preventDefault()}>
     <S.Command>ls | grep</S.Command>
-    <Input type="text" placeholder="pesquisar por..." onChange={onFilter} />
+    <Input
+      type="text"
+      placeholder="pesquisar por..."
+      label="filtrar"
+      name="filtrar"
+      onChange={onFilter}
+    />
   </S.Form>
 );
 

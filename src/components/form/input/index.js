@@ -8,7 +8,7 @@ const Input = ({ type, label, error, ...props }) => (
     {label && (
       <S.Label htmlFor={props.name}>{label}</S.Label>
     )}
-    <S.Field type={type} {...props} />
+    <S.Field type={type} {...props} id={props.id || props.name} />
     <S.Error>
       {error}
     </S.Error>

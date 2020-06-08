@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
-import { colors, spacing, font } from '../../../variables';
+import { colors, spacing, font } from '@variables';
 
 export const Fieldset = styled.fieldset`
   display: flex;
   flex-direction: column;
+`;
+
+export const hideLabel = `
+  height: 0;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  opacity: 0;
 `;
 
 export const Label = styled.label`
