@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useKonamiCode } from 'hooks';
+import withKonami from './with-konami';
 
 import Reset from './reset';
 import Wrapper from '../wrapper';
@@ -9,25 +9,15 @@ import Footer from './footer';
 
 import * as S from './styles';
 
-const Layout = ({ children }) => {
-  const [active, setActive] = useState(false);
-  const toggleKonami = () => {
-    setActive(true)
-    setTimeout(() => setActive(false), S.KONAMI_DURATION);
-  };
-  useKonamiCode(toggleKonami);
+const Layout = ({ konami, children }) => (
+  <>
+    <Reset />
+    <S.Layout konami={konami}>
+      <Header />
+      <Wrapper>{children}</Wrapper>
+      <Footer />
+    </S.Layout>
+  </>
+);
 
-  return (
-    <>
-      <Reset />
-      <S.Layout konami={active}>
-        <Header />
-        <Wrapper>{children}</Wrapper>
-        <Footer />
-      </S.Layout>
-      <S.Konami active={active} />
-    </>
-  );
-};
-
-export default Layout;
+export default withKonami(Layout);
