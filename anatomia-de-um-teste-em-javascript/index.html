@@ -133,12 +133,12 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <p>É um dos termos mais comuns e acho que é o que mais utilizamos como parâmetro para algumas decisões e resultados quando estamos escrevendo testes.</p>
 <p>A <strong>cobertura</strong> de testes indica quais partes de seu código estão sendo <strong>executadas</strong>. Por exemplo: se temos um código de <code class="language-text">10 linhas</code> e uma <strong>cobertura</strong> de <code class="language-text">50%</code>, isso quer dizer que apenas metade das linhas desse código (ou seja, <code class="language-text">5 linhas</code>) estão sendo executadas ao longo dos testes.</p>
 <p>Algumas ferramentas geram alguns relatórios visuais em HTML ou até mesmo diretamente no seu terminal, como é o caso do <code class="language-text">Jest</code>, que oferece um report com uma tabela parecida com essa:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">----------|----------|----------|----------|----------|-------------------|
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">----------|----------|----------|----------|----------|-------------------|
 File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ----------|----------|----------|----------|----------|-------------------|
 All files |      100 |      100 |      100 |      100 |                   |
  data.js  |      100 |      100 |      100 |      100 |                   |
-----------|----------|----------|----------|----------|-------------------|</code></pre></div>
+----------|----------|----------|----------|----------|-------------------|</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Vale a pena darmos uma passada sobre cada uma das categorias desse relatório de cobertura.</p>
 <ul>
 <li>Arquivo (ou <em><code class="language-text">file</code></em>): nessa coluna podemos ver todos os arquivos que foram executados ao longo dos testes escritos;</li>
@@ -153,15 +153,15 @@ All files |      100 |      100 |      100 |      100 |                   |
 <p>Suítes de teste é um termo utilizado pra exemplificar um agrupamento de testes. Basicamente! :)</p>
 <p>É comum que, no caso do <code class="language-text">Jest</code>, isso seja confundido com os blocos de <code class="language-text">describe</code>, que são usados para agrupar alguns testes dentro de um mesmo arquivo, mas <a href="https://jestjs.io/docs/en/api.html#describename-fn" target="_blank" rel="nofollow noopener noreferrer"><strong>não é o caso</strong></a>. Pode parecer confuso, mas o <code class="language-text">Jest</code> considera que cada arquivo é uma suite de teste diferente.</p>
 <p>Nesse caso, a utilização do <code class="language-text">describe</code> é exclusivamente para realizar um agrupamento mais específico de testes relacionados, por exemplo:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// testes relacionados aos cálculos</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <p>Essa estrutura é totalmente opcional, já que é possível criar testes utilizando outras funções que veremos a seguir. Entretanto, é uma boa ferramenta para aprimorar a semântica (ou seja, o significado) de seus testes já que agrupa testes (ou outros <code class="language-text">describe</code>) com uma <code class="language-text">descrição</code>.</p>
 <h3>O teste em si</h3>
 <p>É o bloco onde devem ser declarados os testes que realmente serão executados e onde as asserções (que veremos a seguir) serão inseridas.</p>
 <p>Através do <code class="language-text">Jest</code> podem ser acessados através das funções <code class="language-text">it</code> (que nada mais é que um apelido, ou <code class="language-text">alias</code> para as funções <code class="language-text">test</code>).</p>
 <p>Dessa forma, podemos criar alguns testes como:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'Soma'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -169,7 +169,7 @@ All files |      100 |      100 |      100 |      100 |                   |
   <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Soma'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Como <code class="language-text">it</code> e <code class="language-text">test</code> são iguais, você pode optar pelo que achar melhor.</p>
 <p>O que vale a pena ter em mente é que, assim como o <code class="language-text">describe</code>, utilizar um ou outro pode trazer alguns detalhes mais semânticos pro seu código, já que as funções tem nomenclaturas diferentes.</p>
 <h3>Asserções (ou assertions)</h3>
@@ -180,17 +180,17 @@ All files |      100 |      100 |      100 |      100 |                   |
 </ul>
 <p>Com base nesses dois valores, conseguimos sempre organizar nossos testes. Vamos voltar ao exemplo da calculadora e vamos tentar implementar o teste da função de soma (não vamos realizar a função em si).</p>
 <p>Podemos criar nosso bloco de descrição (<code class="language-text">describe</code>) com um teste (<code class="language-text">it</code>) para iniciar:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
 
 <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'Soma'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token comment">// faremos o teste aqui</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Vamos imaginar que teremos um objeto <code class="language-text">calculadora</code> que possui o método <code class="language-text">soma</code>, que recebe como parâmetro dois valores que serão somados. Dessa forma, acessamos a função utilizando <code class="language-text">calculadora.soma</code>.</p>
 <p>Com isso, podemos já criar algumas variáveis que serão responsáveis por conter nosso valor <code class="language-text">esperado</code> e nosso <code class="language-text">resultado</code>.</p>
 <p>Continuando o teste:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
 
 <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'Soma'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -201,12 +201,12 @@ All files |      100 |      100 |      100 |      100 |                   |
 
     <span class="token comment">// asserção será feita a seguir</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Já temos as variáveis com o retorno função (<code class="language-text">atual</code>) e o resultado esperado (<code class="language-text">resultado</code>).</p>
 <p>Com isso podemos escrever nossa asserção. A função é iniciada com <code class="language-text">expect</code> (pois iremos consultar e <code class="language-text">esperar</code> que algum valor seja igual a algo que determinamos) e essa função retorna um objeto com outras funções (chamadas <code class="language-text">matchers</code> onde verificamos valores correspondentes), como: <code class="language-text">toEqual</code> (verifica se um valor é igual a outro), <code class="language-text">toThrow</code> (verifica se um erro foi disparado), <code class="language-text">toBeGreaterThan</code> (verifica se o valor é maior que outro).</p>
 <p>Caso tenha precise, você também pode criar seus <a href="https://jestjs.io/docs/pt-BR/expect#expectextendmatchers" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">matchers</code></a> customizados.</p>
 <p>Nesse exemplo, podemos utilizar o <code class="language-text">toEqual</code> já que vamos comparar se o valor retornado por nossa função é igual a <code class="language-text">2</code>.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
 
 <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'Soma'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -218,12 +218,12 @@ All files |      100 |      100 |      100 |      100 |                   |
     <span class="token comment">// asserção feita</span>
     <span class="token function">expect</span><span class="token punctuation">(</span>atual<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>esperado<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Poderíamos ter moldado o teste de qualquer forma, inclusive removendo as variáveis e passando os valores diretamente. Mas acho que dividindo os testes nessas etapas (entrada, saída e execução da função) é uma forma prática de entender como tudo funciona.</p>
 <p>Sobre a semântica e a leitura dos testes que comentamos, podemos parar para fazer uma leitura sobre o teste que criamos. Ao ler o código desenvolvido, podemos ler algo como:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Descrição: calculadora
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">Descrição: calculadora
 Ela: soma
-Espero: que o valor atual (2) seja igual ao esperado (resultado da calculadora.soma(1, 1));</code></pre></div>
+Espero: que o valor atual (2) seja igual ao esperado (resultado da calculadora.soma(1, 1));</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <p>Com isso, conseguimos ver que além de nos trazer mais confiança, escrever testes que se assemelham à forma como seu software é utilizado é uma forma também de documentar seu sistema. Se seus testes estão organizados, você consegue executá-los, ler suas descrições e entender como seu sistema funciona.</p>
 <h3>Hooks</h3>
 <p>Outra estrutura que as ferramentas (como o <code class="language-text">Jest</code>) costumam disponibilizar, são funções executadas em determinada "parte" dos seus testes. São bem úteis caso você precise ajustar/resetar alguma configuração antes, depois ou a cada teste, você consegue utilizá-las para realizar esse trabalho.</p>
@@ -235,7 +235,7 @@ Espero: que o valor atual (2) seja igual ao esperado (resultado da calculadora.s
 <li><code class="language-text">afterEach</code>: para executar algo após cada um dos testes executarem.</li>
 </ul>
 <p>Para utilizar essas funções, basta executarmos elas antes dos nossos códigos, algo como:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> calculadora <span class="token keyword">from</span> <span class="token string">'./calculadora'</span><span class="token punctuation">;</span>
 
 <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Calculadora'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -252,7 +252,7 @@ Espero: que o valor atual (2) seja igual ao esperado (resultado da calculadora.s
     <span class="token comment">// asserção feita</span>
     <span class="token function">expect</span><span class="token punctuation">(</span>atual<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>esperado<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>A <a href="https://jestjs.io/docs/pt-BR/setup-teardown#repetindo-a-configura%C3%A7%C3%A3o-para-v%C3%A1rios-testes" target="_blank" rel="nofollow noopener noreferrer">documentação</a> do <code class="language-text">Jest</code> tem uns exemplos bem bacanas se quiser dar uma lida.</p>
 <h3>Arquivos</h3>
 <p>Por fim, apenas um detalhe que vale ser comentado, é comum que alguns arquivos de teste sejam escritos dentro de um diretório como <code class="language-text">__test__</code> ou então com o sufixo <code class="language-text">.test</code> ou <code class="language-text">.spec</code> (que quer dizer especificação).</p>

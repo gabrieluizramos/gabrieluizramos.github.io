@@ -130,13 +130,13 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <p>É bem comum que você escreva seus componentes diretamente nas suas páginas e essa, com certeza, é a melhor e mais prática forma de trabalhar.</p>
 <p>Entretanto, quando suas páginas começam a crescer e você começa a criar vários componentes, pode ser que seu esse componente que contém a sua página fique um pouco grande. Para lidar com esses casos, Decidi separar o conteúdo de minhas páginas em 2 diretórios: <code class="language-text">pages</code> (a padrão do gatsby) e <code class="language-text">sections</code> (onde as seções de cada página estariam).</p>
 <p>Dessa forma, os arquivos dentro de <code class="language-text">pages</code> ficam, atualmente, responsáveis apenas por montar a estrutura básica repetida de cada da página com <code class="language-text">layout</code>, <code class="language-text">banner</code>, <code class="language-text">seo</code> e fazer a consulta em <code class="language-text">graphql</code> das imagens necessárias e os componentes dentro de <code class="language-text">sections</code> recebem essas imagens como prop e inserem de fato o conteúdo, a estrutura ficou algo como:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">|src
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">|src
 |____pages
 |       sobre.js
 |____sections
-|       sobre.js</code></pre></div>
+|       sobre.js</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Onde, no componente da página, ele possui uma declaração parecida com:</p>
-<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// arquivo pages/sobre.js</span>
+<div class="gatsby-highlight" data-language="jsx"><pre style="counter-reset: linenumber NaN" class="language-jsx line-numbers"><code class="language-jsx"><span class="token comment">// arquivo pages/sobre.js</span>
 
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> graphql <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'gatsby'</span><span class="token punctuation">;</span>
@@ -166,9 +166,9 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   // ... consulta imagens
 </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> SobrePage<span class="token punctuation">;</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token keyword">default</span> SobrePage<span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>E o componente da seção ficaria mais ou menos assim:</p>
-<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// arquivo sections/sobre.js</span>
+<div class="gatsby-highlight" data-language="jsx"><pre style="counter-reset: linenumber NaN" class="language-jsx line-numbers"><code class="language-jsx"><span class="token comment">// arquivo sections/sobre.js</span>
 
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
@@ -178,12 +178,12 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> SobreSections<span class="token punctuation">;</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token keyword">default</span> SobreSections<span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Talvez possa parecer uma estrutura um pouco repetitiva, mas conforme essas seções vão crescendo, achei que deu uma boa ajuda.</p>
 <p>Caso você também precise utilizar subpáginas, você pode criar outras diretórios recursivamente dentro desse diretório <code class="language-text">sections</code> e utilizar <a href="http://cangaceirojavascript.com.br/barrels-simplificando-importacoes-de-modulos/" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">barrel exports</code></a> para facilitar os imports dessas suas páginas.</p>
 <p>Por exemplo, imagine que nossa página <code class="language-text">sobre</code>, agora possuirá outras 3 subpáginas: <code class="language-text">/sobre/empresa</code>, <code class="language-text">/sobre/servico</code> e <code class="language-text">/sobre/membros</code>.</p>
 <p>Nesse cenário você poderia ter uma estrutura parecida com:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">|src
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">|src
 |____pages
 |   |____sobre
 |           empresa.js
@@ -194,20 +194,20 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 |           index.js
 |           empresa.js
 |           servico.js
-|           membros.js</code></pre></div>
+|           membros.js</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Facilitando o trabalho de <code class="language-text">import/export</code>, no arquivo <code class="language-text">index.js</code>, da seguinte maneira:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> EmpresaSections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./empresa'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> EmpresaSections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./empresa'</span><span class="token punctuation">;</span>
 <span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> ServicoSections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./servico'</span><span class="token punctuation">;</span>
-<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> MembrosSections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./membros'</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> MembrosSections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./membros'</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <p>E noas arquivos de cada página, os <code class="language-text">imports</code> podem ficar algo como:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> EmpresaSections <span class="token keyword">as</span> Sections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../sections/sobre'</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> EmpresaSections <span class="token keyword">as</span> Sections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../sections/sobre'</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <h3>Lidando com imports na aplicação</h3>
 <p>É bem comum criarmos alguns <code class="language-text">aliases</code> para facilitar a tarefa de lidar com os caminhos de diretórios de nossos arquivos.</p>
 <p>Com Gatsby não foi diferente e o plugin que me ajudou nessa tarefa foi o <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-alias-imports/" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">gatsby-plugin-alias-imports</code></a>.</p>
 <p>Não tem muito o que falar sobre ele, basta instalá-lo:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> i --save gatsby-plugin-alias-imports</code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> i --save gatsby-plugin-alias-imports</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>E configurar os alias necessários (dentro dos <code class="language-text">plugins</code> no arquivo <code class="language-text">gatsby-config.js</code>):</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -225,12 +225,12 @@ module<span class="token punctuation">.</span>exports <span class="token operato
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Agora o diretório <code class="language-text">src/components</code> do projeto, pode ser acessada assim, dentro dos componentes:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'@components/card'</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'@components/card'</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>Bem mais fácil do que ficar inserindo o caminho relativo ao arquivo, né?</p>
 <p>Vale lembrar que, caso esteja utilizando o VSCode, você precisará configurar o arquivo <code class="language-text">jsconfig.json</code> para que ele continue te ajudando com aqueles <code class="language-text">autocompletes</code> dos arquivos das diretórios. Com a estrutura de aliases acima, temos algo como:</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"es6"</span><span class="token punctuation">,</span>
     <span class="token property">"baseUrl"</span><span class="token operator">:</span> <span class="token string">"./src"</span><span class="token punctuation">,</span>
@@ -247,7 +247,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token string">"dist"</span><span class="token punctuation">,</span>
     <span class="token string">"build"</span>
   <span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Se você quiser ler um pouco mais sobre essas configurações, você pode acessar <a href="https://code.visualstudio.com/docs/languages/jsconfig" target="_blank" rel="nofollow noopener noreferrer">a página do VSCode que fala mais detalhadamente</a>.</p>
 <h3>Estruturas extras (de sua preferência)</h3>
 <p>Ali no trecho de configuração dos <code class="language-text">aliases</code> vocês devem ter visto que além da diretório <code class="language-text">components</code> e <code class="language-text">sections</code>, que comentamos, existe algumas outras diretórios, e são elas:</p>
@@ -262,9 +262,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>Provavelmente você não vai querer duplicar suas páginas completamente apenas para mudar o conteúdo. Duplicar essas páginas completamente apenas para mudar o conteúdo acaba se tornando uma tarefa chata e repetitiva, se suas páginas forem relativamente grandes esse problema se torna ainda pior.</p>
 <p>Pesquisando um pouco mais, encontrei um plugin chamado <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-intl/" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">gatsby-plugin-intl</code></a> que atendeu perfeitamente às minhas necessidades e realiza traduções baseada em arquivos <code class="language-text">.json</code> de configuração dos idiomas desejado (e com um suporte bacana aos hooks).</p>
 <p>Basicamente, basta instalá-lo:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> i --save gatsby-plugin-intl</code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> i --save gatsby-plugin-intl</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>E configurar (dentro dos <code class="language-text">plugins</code> no arquivo <code class="language-text">gatsby-config.js</code>):</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
       resolve<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">gatsby-plugin-intl</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
@@ -276,7 +276,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Onde:</p>
 <ul>
 <li><code class="language-text">path</code>: contém o caminho, no seu projeto, para onde os arquivos <code class="language-text">.json</code> de tradução estão localizados;</li>
@@ -285,19 +285,19 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><code class="language-text">redirect</code>: booleano que indica se, ao acessar a raíz do projeto <code class="language-text">/</code>, o usuário deve ser redirectionado para o caminho da linguagem padrão. Nesse caso, se estivesse como <code class="language-text">true</code>, os usuários seriam redirecionados para <code class="language-text">/pt</code> toda vez que acessassem o site e não era um comportamento que queríamos.</li>
 </ul>
 <p>Dessa forma, a estrutura das traduções ficou algo como:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">|src
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">|src
 |____translations
 |       pt.json
 |       en.json
-|       es.json</code></pre></div>
+|       es.json</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Onde, cada arquivo <code class="language-text">.json</code> possui as chaves que serão utilizadas como tradução:</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"header"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"name"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>E dentro dos componentes que precisam de um conteúdo traduzido, basta importar o hook (se quiser dessa maneira) e utilizá-lo, passando como <code class="language-text">id</code> a chave do conteúdo a ser traduzido:</p>
-<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useIntl <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'gatsby-plugin-intl'</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="jsx"><pre style="counter-reset: linenumber NaN" class="language-jsx line-numbers"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useIntl <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'gatsby-plugin-intl'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> intl <span class="token operator">=</span> <span class="token function">useItnl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -305,7 +305,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>intl<span class="token punctuation">.</span><span class="token function">formatMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">'header.title'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Esse plugin também te permite usar um componente <code class="language-text">Link</code>, que faz a navegação de forma parecida ao Link do gatsby, mas mantém a linguagem escolhida do usuário.</p>
 <h3>Conteúdo customizado por rota</h3>
 <p>É comum em alguns sites você ter algum conteúdo customizado baseado na rota que o usuário está acessando.</p>

@@ -133,9 +133,9 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <h3>Criando um <code class="language-text">package.json</code></h3>
 <p>Exitem algumas formas de <a href="https://docs.npmjs.com/creating-a-package-json-file" target="_blank" rel="nofollow noopener noreferrer">criar um arquivo <code class="language-text">package.json</code></a>. A maneira mais simples é executar <a href="https://docs.npmjs.com/cli/init" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">npm init</code></a> via terminal na pasta do seu projeto. Algumas perguntas aparecerão para você responder (como nome, descrição, versão) e após confirmar tudo isso, um arquivo básico será gerado para você.</p>
 <p>Você consegue configurar algumas informações para seu usuário, assim não precisa ficar inserindo essas informações a cada projeto que for criar. Se quiser configurar isso, basta criar um arquivo <code class="language-text">.npmrc</code> na raíz do seu usuário na sua máquina ou executar os comandos abaixo no terminal</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.email <span class="token string">"example-user@example.com"</span>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.email <span class="token string">"example-user@example.com"</span>
 <span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.name <span class="token string">"example_user"</span>
-<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.license <span class="token string">"MIT"</span></code></pre></div>
+<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.license <span class="token string">"MIT"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <p>O que esses comandos fazem, cada um, é:</p>
 <ul>
 <li>insere o email do usuário</li>
@@ -147,7 +147,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <hr>
 <h3>Informações</h3>
 <p>Vamos pensar no seguinte <code class="language-text">package.json</code></p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"@gabrieluizramos/utils"</span><span class="token punctuation">,</span>
   <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Alguns utilitários pessoais utilizados entre vários projetos"</span><span class="token punctuation">,</span>
   <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -161,7 +161,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
     <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"url-do-github"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"homepage"</span><span class="token operator">:</span> <span class="token string">"url"</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Ao gerar um arquivo desses automaticamente, algumas dessas estruturaas já virão preenchidas (outras eu ocultei pois vamos ver mais pra frente). E, o que cada uma delas significa é:</p>
 <h4>Name</h4>
 <p>É o nome do projeto e pode ser o nome que você quiser.</p>
@@ -180,7 +180,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <hr>
 <h3>Dependências</h3>
 <p>O próximo ponto são as dependências do nosso projeto e quais os tipos de dependência que podemos ter. Vamos pensar num arquivo como:</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"@gabrieluizramos/utils"</span><span class="token punctuation">,</span>
   <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Alguns utilitários pessoais utilizados entre vários projetos"</span><span class="token punctuation">,</span>
   <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -200,7 +200,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   <span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"testpackage"</span><span class="token operator">:</span> <span class="token string">"~0.1.1"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Agora temos as informações de <code class="language-text">dependencies</code> e <code class="language-text">devDependencies</code> no nosso projeto e elas se diferem da seguinte maneira:</p>
 <ul>
 <li><strong>dependencies</strong> são geralmente utilizadas para declarar os pacotes necessários para executar seu projeto em um ambiente de execução como produção;</li>
@@ -209,8 +209,8 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <p>Dentro dessas duas estruturas, segue-se um padrão de <code class="language-text">&quot;nome&quot;: &quot;versão&quot;</code> dos seus pacotes e, se reparou com cuidado, verá que um deles utiliza o prefixo <code class="language-text">^</code> para instalar uma versão de um pacote e outro está com o prefixo <code class="language-text">~</code>.</p>
 <p>Separando suas dependências dessa forma, em um cenário onde você vai publicar e executar sua aplicação em um ambiente de produção ou irá disponibilizar seu pacote para que alguém realiza a instalação, somente as dependências declaradas dentro de <code class="language-text">dependencies</code> serão instaladas junto com seu projeto. Afinal, quem for utilizar esse pacote não precisa ficar responsável por realizar nenhuma configuração ou teste no seu projeto, já que isso é uma responsabilidade do time que o desenvolveu.</p>
 <p>Para instalar e adicionar dependências nessa duas categorias, conseguimos passar um argumento para o comando <code class="language-text">npm install</code>, fazendo com que a inserção de um novo pacote no <code class="language-text">package.json</code> seja feita automaticamente ao realizar uma instalação, assim não precisamos nos preocupar de inserir isso manualmente. Para realizar uma instalação dessa forma, basta rodar no terminal:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> --save nome-do-pacote
-<span class="token function">npm</span> <span class="token function">install</span> --save-dev nome-do-pacote</code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> --save nome-do-pacote
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev nome-do-pacote</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <p>A linha que utiliza <code class="language-text">--save</code> salvará as dependências dentro do nó de <code class="language-text">dependencies</code> enquanto a que utiliza --save-dev salvará o pacote em <code class="language-text">devDependencies</code>. Você também pode especificar uma versão do pacote ao instalar, após o seu nome, basta adicionar <code class="language-text">@versao-desejada</code> para instalar algo em alguma versão específica.</p>
 <p>Você também consegue instalar dependências de maneira global no seu computador, passando a opção <code class="language-text">-g</code> ou <code class="language-text">--global</code> ao instalar uma dependência via terminal.</p>
 <p><strong>peerDependencies</strong> é outro ponto que vale a pena ser comentado e é bem utilizado quando você está criando algum plugin ou biblioteca reutilizável entre projetos. É uma categoria que serve para lidar com dependências compartilhadas entre projetos.</p>
@@ -220,7 +220,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <hr>
 <h3>Scripts</h3>
 <p>Por último, mas não menos importante, temos a parte de <code class="language-text">scripts</code> do nosso arquivo. Seguindo a criação dele, agora teremos uma configuração mais ou menos assim:</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"@gabrieluizramos/utils"</span><span class="token punctuation">,</span>
   <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Alguns utilitários pessoais utilizados entre vários projetos"</span><span class="token punctuation">,</span>
   <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -243,14 +243,14 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Se você criou esse arquivo com <code class="language-text">npm init -y</code> muito provavelmente o script de <code class="language-text">test</code> já vira preenchido para você.</p>
 <p>O que os <code class="language-text">scripts</code> nos permitem é realmente configurar rotinas e comandos a serem executados no nosso projeto. Você pode configurar comandos e rodar trechos de aplicações em <code class="language-text">JavaScript</code>, <code class="language-text">Shell</code> ou qualquer outra coisa que desejar.</p>
 <p>É bem comum encontrar nos projetos algumas configurações de <code class="language-text">start</code> e <code class="language-text">test</code>, que são responsáveis por executarem ou testarem suas aplicações, respectivamente. Mas você pode criar qualquer script que for necessário.</p>
 <p>Por padrão, existe um "ciclo" (se é que podemos chamar assim) de execução dos scripts. O que o <code class="language-text">npm</code> faz é, automaticamente, ao executar algum script, procurar por outros dois scripts para executarem antes e depois da execução de qualquer script definido.</p>
 <p>Por exemplo: ao executar <code class="language-text">npm install</code> você consegue configurar um script para ser executado automaticamente antes desse próprio install (chamado <code class="language-text">preinstall</code>) e outro pra executar automaticamente após a execução (chamado <code class="language-text">postinstall</code>).</p>
 <p>É algo bem útil para instalar algumas pacotes necessários globalmente ou realizar alguma consulta necessária antes de realizar a instalação do projeto. Utilizando o Gatsby como exemplo, você pode criar um script de <code class="language-text">preinstall</code>, como:</p>
-<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"@gabrieluizramos/utils"</span><span class="token punctuation">,</span>
   <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Alguns utilitários pessoais utilizados entre vários projetos"</span><span class="token punctuation">,</span>
   <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -273,9 +273,9 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"preinstall"</span><span class="token operator">:</span> <span class="token string">"sh preinstall.sh"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>E no script <code class="language-text">preinstall.sh</code> , "pular" a instalação do pacote <code class="language-text">gatsby-cli</code> caso ele já esteja instalado globalmente na sua máquina, da seguinte maneira:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token comment"># arquivo preinstall.sh</span>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token comment"># arquivo preinstall.sh</span>
 
 <span class="token comment"># Mensagem que indica que o script está sendo executado</span>
 <span class="token builtin class-name">echo</span> <span class="token string">"Executando script de preinstall"</span>
@@ -288,12 +288,12 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <span class="token keyword">else</span>
   <span class="token comment"># Se já existir, mostra a mensagem que o pacote já foi instalado</span>
   <span class="token builtin class-name">echo</span> <span class="token string">"O gatsby-cli já está instalado, prosseguindo com o restante da instalação..."</span>
-<span class="token keyword">fi</span></code></pre></div>
+<span class="token keyword">fi</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Outro exemplo prático: aqui no blog eu deixei <a href="https://github.com/gabrieluizramos/gabrieluizramos.github.io/blob/develop/package.json#L54" target="_blank" rel="nofollow noopener noreferrer">dois scripts prontos</a>. Um para <a href="https://github.com/gabrieluizramos/gabrieluizramos.github.io/blob/develop/commands/posts/draft.sh" target="_blank" rel="nofollow noopener noreferrer">criação de rascunhos</a> de novos posts e outro para <a href="https://github.com/gabrieluizramos/gabrieluizramos.github.io/blob/develop/commands/posts/publish.sh" target="_blank" rel="nofollow noopener noreferrer">publicação de rascunhos</a> existentes. Também deixei um <a href="https://github.com/gabrieluizramos/gabrieluizramos.github.io/blob/develop/commands/posts/template.md" target="_blank" rel="nofollow noopener noreferrer">template para os rascunhos</a> separado, assim eu não preciso criar toda a estrutura de arquivos/pastas a cada vez que for começar a escrever algo novo.</p>
 <p>Dessa forma, pra criar um post com uma data e nome, basta executar no terminal:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run draft:create <span class="token number">2020</span>-01-01.nome-do-novo-post</code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> run draft:create <span class="token number">2020</span>-01-01.nome-do-novo-post</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>E para publicar esse mesmo post, basta executar:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run draft:publish <span class="token number">2020</span>-01-01.nome-do-novo-post</code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">npm</span> run draft:publish <span class="token number">2020</span>-01-01.nome-do-novo-post</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>Onde o valor de <code class="language-text">2020-01-01.nome-do-novo-post</code> é manipulado internamente por esses scripts e utilizado para substituir as informações no template que já está separado e criar os arquivos e pastas necessários. Bem mais prático, não acha?</p>
 <p>Vale lembrar os scripts customizados (que não sejam os de <code class="language-text">start</code>, <code class="language-text">test</code> e alguns outros que estão na <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="nofollow noopener noreferrer">documentação oficial</a>), precisam ser executados com o <code class="language-text">run</code>, como os exemplos que citei acima: <code class="language-text">npm run script-customizado</code></p>
 <p>Se quiser se aprofundar um pouco mais no que os <code class="language-text">scripts</code> te oferecem, você pode ver também a documentação oficial no NPM sobre <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="nofollow noopener noreferrer">esses scripts</a> e sobre o <a href="https://docs.npmjs.com/cli/run-script" target="_blank" rel="nofollow noopener noreferrer">run scripts</a> que permite que você execute scripts customizados.</p>
