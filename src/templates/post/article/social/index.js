@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Disqus } from 'gatsby-plugin-disqus';
 
+import Divider from '@components/layout/divider';
 import { colors } from '@variables';
 
 import {
@@ -51,7 +52,7 @@ const Share = ({ title, path, id: identifier }) => {
 
   return (
     <>
-      <hr />
+      <Divider />
       <S.Share>
         <S.Icons>
           {social.map(({ Component, Icon }, index) => (

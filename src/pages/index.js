@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import SEO from '../components/seo';
-import PostList from '../templates/post/list';
-import Filter, { useFilter } from '../components/filter';
-import Layout from '../components/layout';
+import SEO from '@components/seo';
+import PostList from '@templates/post/list';
+import Filter, { useFilter } from '@components/filter';
+import Layout from '@components/layout';
 
 import { filterDraftNodes, showDrafts } from '../utils/drafts';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, font, colors } from '../../../variables';
+import { spacing, font, colors } from '@variables';
 
 export const Button = styled.button`
   cursor: pointer;

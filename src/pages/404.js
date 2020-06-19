@@ -1,16 +1,16 @@
-import React from "react"
+import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from "../components/layout"
-import { spacing, colors } from '../variables';
+import Layout from '@components/layout';
+import { spacing, colors, grid } from '@variables';
 import styled from 'styled-components';
 
-import SEO from "../components/seo"
+import SEO from '@components/seo';
 
 const Container = styled.div`
   text-align: center;
   width: 100%;
-  max-width: 750px;
+  max-width: ${grid.content};
   margin: 0 auto;
   padding: ${spacing.double};
 
@@ -43,6 +43,6 @@ const NotFoundPage = () => (
       <Link to="/">Voltar ao blog</Link>
     </Container>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

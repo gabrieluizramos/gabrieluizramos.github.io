@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, font, colors } from '@variables';
+import { spacing, font, colors, grid } from '@variables';
 import { cursor } from '../list/styles';
 
 export const Container = styled.div`
@@ -12,22 +12,13 @@ export const Container = styled.div`
 
 export const PostArticle = styled.article`
   width: 100%;
-  max-width: 750px;
+  max-width: ${grid.content};
   margin: 0 auto;
 
   color: ${colors.post.color};
   line-height: 1.7;
   letter-spacing: 0.5px;
   font-size: 17px;
-
-  hr {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, ${colors.white} 25%, transparent 25%, transparent 75%, ${colors.white} 75%);
-    background-size: ${spacing.default};
-    margin: ${spacing.double} 0;
-  }
 
   hr + h1,
   hr + h2,

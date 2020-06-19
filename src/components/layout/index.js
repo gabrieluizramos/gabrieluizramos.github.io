@@ -1,13 +1,14 @@
 import React from 'react';
 
-import withKonami from './with-konami';
+import Wrapper from '@components/wrapper';
 
 import Reset from './reset';
-import Wrapper from '../wrapper';
 import Header from './header';
 import Footer from './footer';
 
 import * as S from './styles';
+
+import withKonami from './with-konami';
 
 const Layout = ({ konami, children }) => (
   <>

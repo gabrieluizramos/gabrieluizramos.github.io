@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { colors, spacing } from '../../variables';
+import { colors, spacing } from '@variables';
+import { createDivider } from './divider/styles'
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap');
@@ -31,11 +32,7 @@ export default createGlobalStyle`
   }
 
   hr {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, ${colors.terminal.black} 25%,  transparent 25%, transparent 75%, ${colors.terminal.black} 75%);
-    background-size: ${spacing.default};
+    ${createDivider({})}
     margin: ${spacing.double} 0;
   }
 `;

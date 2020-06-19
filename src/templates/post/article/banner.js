@@ -3,6 +3,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 import Link from '@components/link';
+import Divider from '@components/layout/divider';
 
 import * as S from './styles';
 
@@ -14,7 +15,7 @@ const Banner = ({ image, href, author }) => image ? (
         Foto por <Link href={href} target="_blank">{author}</Link>
       </S.Caption>
     </S.Banner>
-    <hr />
+    <Divider />
   </>
 ) : null;
 

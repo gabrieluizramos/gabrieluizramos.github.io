@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import addToMailChimp from 'gatsby-plugin-mailchimp';
-
+import Divider from '@components/layout/divider';
 import Form from '@components/form';
+
 import schema from './schema';
 import messages from './messages';
 
@@ -39,7 +40,7 @@ const Newsletter = () => {
 
   return (
     <>
-      <hr />
+      <Divider />
       <S.Newsletter>
         <S.Title>
           <span role="img" aria-label="mailbox">📬</span> Assine a Newsletter!

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { colors, spacing, grid } from '@variables';
 
+import { createDivider } from '@components/layout/divider/styles';
+
 export const List = styled.ol`
   width: 100%;
   max-width: ${grid.size};
@@ -24,14 +26,10 @@ export const PostItem = styled.li`
   &:not(:last-child) {
     &:after {
       content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
       position: absolute;
       left: 0;
       bottom: 0;
-      background: linear-gradient(to right, transparent 25%, ${colors.terminal.black} 25%, ${colors.terminal.black} 75%, transparent 75%);
-      background-size: ${spacing.default};
+      ${createDivider({ color: colors.terminal.black })}
     }
   }
 `
