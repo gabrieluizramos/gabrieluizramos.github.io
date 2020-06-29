@@ -150,12 +150,12 @@ Para usuários Linux, os gerenciadores são um pouco mais variados. Acredito que
 <h3>Iniciando sua automatização</h3>
 <p>Vamos escrever agora um pequeno arquivo responsável por instalar o gerenciador de pacotes e instalar, por exemplo, o Spotify:</p>
 <p>Em um arquivo como <em>instalador-spotify.sh</em>.</p>
-<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token shebang important">#!/bin/sh</span>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token shebang important">#!/bin/sh</span>
 
 /usr/bin/ruby -e <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="token variable">)</span></span>"</span>
 brew cask
 
-brew cask <span class="token function">install</span> spotify</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+brew cask <span class="token function">install</span> spotify</code></pre></div>
 <p>Pode parecer um pouco complicado olhando pela primeira vez, mas é bem simples, vamos explicar cada uma das linhas:</p>
 <ul>
 <li>Na linha 1: existe um comentário, que indica ao terminal que deve processar esse arquivo como um <em>shell script</em>, é algo recorrente quando se está escrevendo scripts para serem executados no terminal.</li>
@@ -164,7 +164,7 @@ brew cask <span class="token function">install</span> spotify</code><span aria-h
 <li>Na linha 4: o <em>brew cask</em> é utilizado para instalar o spotify para você</li>
 </ul>
 <p>Executando esse arquivo pelo seu terminal rodando:</p>
-<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">sh</span> instalador-spotify.sh</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">sh</span> instalador-spotify.sh</code></pre></div>
 <p>Você verá uma série de logs sobre o processo e, ao finalizar, você pode pesquisar no seu sistema operacional (no caso o MacOS) que o Spotify estará instalado!</p>
 <p>Fácil, não é? Você pode agora identificar quais os programas que deseja instalar e automatizar essa parte do processo ao configurar sua máquina.</p>
 <p>Vale lembrar que, por estar executando esses comandos dentro de um terminal, você tem todos os benefícios como criação de variáveis, loops, condições, copiar arquivos de uma pasta para outra, criar <em>symlinks</em> (links simbólicos) e etc. O que abre um leque de possibilidades gigante para te ajudar a automatizar e deixar suas configurações bem fáceis de manter.</p>
@@ -172,10 +172,10 @@ brew cask <span class="token function">install</span> spotify</code><span aria-h
 <p>Algumas configurações (como ações de clicar/arrastar mouse/trackpad ou onde a barra de preferências do seu sistema operacional vai ficar localizada) do seu sistema operacional podem ser configuradas também.</p>
 <p>Essas preferências são salvas em alguns arquivos de configuração e podem, na maioria das vezes, ser customizadas para serem configuradas via terminal também.</p>
 <p>Por exemplo: eu, particularmente, gosto de olhar a porcentagem da bateria na barra superior no Macbook. Essa configuração pode ser feita rodando o seguinte comando via terminal:</p>
-<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">defaults <span class="token function">write</span> com.apple.menuextra.battery ShowPercent -string <span class="token string">"YES"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">defaults <span class="token function">write</span> com.apple.menuextra.battery ShowPercent -string <span class="token string">"YES"</span></code></pre></div>
 <p>Esse comando basicamente configura (ou escreve e, por isso o "write") um valor padrão (default) para a propriedade <em>ShowPercent</em> presente dentro das configurações em <em>com.apple.menuextra.battery</em> e insere o valor <em>"YES"</em> como string.</p>
 <p>E, caso eu quisesse checar uma configuração salva, bastaria executar:</p>
-<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">defaults <span class="token builtin class-name">read</span> com.apple.menuextra.battery ShowPercent</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">defaults <span class="token builtin class-name">read</span> com.apple.menuextra.battery ShowPercent</code></pre></div>
 <p>Dessa forma, o comando retorna (lê e, por isso o "read") o valor configurado em <em>com.apple.menuextra.battery</em></p>
 <p>Cada sistema operacional tem sua peculiaridade, o MacOS mantém essas preferências através do comando "defaults" no terminal (você pode dar uma olhada em alguns outros <a href="https://ss64.com/osx/defaults.html" target="_blank" rel="nofollow noopener noreferrer">aqui</a>). Sistemas Linux como o Ubuntu utilizam o <a href="https://manpages.ubuntu.com/manpages/xenial/en/man1/gsettings.1.html" target="_blank" rel="nofollow noopener noreferrer">gsettings</a>, responsável por configurar essas preferências gráficas.</p>
 <h3>Evite copiar dotfiles de terceiros</h3>

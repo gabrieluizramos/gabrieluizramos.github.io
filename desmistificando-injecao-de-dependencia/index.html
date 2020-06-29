@@ -135,7 +135,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <p>Para explicar um pouco mais detalhadamente, acho que vale a pena exemplificarmos diretamente no código.</p>
 <p>Imagine que em algum cenário da sua aplicação, você possui uma função que precisa fazer uma chamada <strong><em>get</em></strong> em uma <strong>API</strong> qualquer para acessar e formatar algum dado.</p>
 <p>Algo como:</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token comment">// módulo qualquer que fica responsável por fazer o fetching dos dados</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// módulo qualquer que fica responsável por fazer o fetching dos dados</span>
 <span class="token keyword">const</span> fetcher <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fetcher'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -149,11 +149,11 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
   <span class="token keyword">return</span> formattedData<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> getResources<span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> getResources<span class="token punctuation">;</span></code></pre></div>
 <p>O elo de <strong>dependência</strong> existente nesse trecho de código fica claro pelo fato de o componente responsável por realizar a chamada ser declarado fora da sua função e utilizado dentro dela.</p>
 <p><strong>Injeção de dependência, fundamentalmente, é nada mais do que inserir determinado código num escopo onde você acessa valores globais ou declarados fora desse mesmo escopo.</strong></p>
 <p>Se realizarmos um pequeno ajuste nessa função, para utilizar <strong>injeção de dependência</strong>, teríamos algo como:</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> fetcher <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fetcher'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> fetcher <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fetcher'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// inserimos a "injeção" ao receber fetcher como parâmetro</span>
 <span class="token comment">// podendo até setar o "default" como o fetcher do módulo que precisamos</span>
@@ -165,16 +165,16 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">return</span> formattedData<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> getResources<span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> getResources<span class="token punctuation">;</span></code></pre></div>
 <p>Vê a diferença? Agora você pode modificar ou passar um componente <code class="language-text">fetcher</code> diferente ao executar sua função. A forma como os parâmetros são declarados podem variar dependendo da sua abordagem (poderia ser um objeto, por exemplo, ou qualquer forma que achar mais adequada).</p>
 <p>Ou seja, você garante um código extensível para ser executado assim:</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">await</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token string">'http://my.api/v1/endpoint'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">await</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token string">'http://my.api/v1/endpoint'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Ou assim:</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token comment">// cria um componente "fake" para realizar essa chamada</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// cria um componente "fake" para realizar essa chamada</span>
 <span class="token keyword">const</span> fakeFetcher <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">await</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token string">'http://my.api/v1/endpoint'</span><span class="token punctuation">,</span> fetcher<span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token keyword">await</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token string">'http://my.api/v1/endpoint'</span><span class="token punctuation">,</span> fetcher<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h2>E quais as vantagens de utilizar injeção de dependência?</h2>
 <p>Além de evitar a utilização de variáveis e códigos globais ou fora do escopo declarado sem necessidade, você também ganha uma certa facilidade na hora testar unitariamente esses módulos.</p>
 <p>Para testar primeiro cenário, onde o módulo <code class="language-text">fetcher</code> era utilizado diretamente, você muito provavelmente precisaria fazer um <code class="language-text">mock</code> desse módulo e manipular os retornos em todos os casos que precisar.</p>

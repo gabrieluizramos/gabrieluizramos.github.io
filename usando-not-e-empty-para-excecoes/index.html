@@ -153,7 +153,7 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
     </span></p>
 <p>Conseguimos perceber que tem um estilo padrão que se repete em todos os elementos da listagem, exceto por um único detalhe: aquelas linhas (vamos chamar de bordas) só existem entre dois elementos da listagem.</p>
 <p>Pra resolver esse cenário, classicamente, seria só colocar uma borda em todos os elementos e remover essa mesma borda no primeiro ou no último, tendo algo como:</p>
-<div class="gatsby-highlight" data-language="css"><pre style="counter-reset: linenumber NaN" class="language-css line-numbers"><code class="language-css"><span class="token comment">/*
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token comment">/*
  vamos imaginar que os elementos da lista
  possuem a classe "post-item", ok?
 */</span>
@@ -182,13 +182,13 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 
 <span class="token selector">.post-item:last-child</span> <span class="token punctuation">{</span>
   <span class="token property">border-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token punctuation">}</span></code></pre></div>
 <p>Nesse caso, conseguimos inserir um estilo em todos os elementos da lista exceto o primeiro (<code class="language-text">:first-child</code>) ou último (<code class="language-text">:last-child</code>), dependendo da decisão por usar <code class="language-text">border-top</code> ou <code class="language-text">border-bottom</code>.</p>
 <p>A questão nesses dois casos é que você precisaria, explicitamente, remover essa borda aplicada e sobrescrever uma regra CSS em específico para um único elemento. Não tem nada de errado nisso e funciona perfeitamente! Entretanto, ainda assim é um pequeno "retrabalho" pra fazer esse estilo funcionar da forma correta.</p>
 <p>Em casos como esse que o seletor de pseudo-classe <code class="language-text">:not</code> funciona muito bem!</p>
 <p>A ideia com esse seletor é justamente fazer essa "negativa" numa regra CSS: aplicar estilo a todos os elementos <code class="language-text">exceto</code> ao que satisfazem alguma regra definida por você (no caso, <code class="language-text">:first-child</code> ou <code class="language-text">:last-child</code>), podendo ser combinado com outros seletores CSS.</p>
 <p>Sua utilização é bem simples, se adaptássemos o exemplo anterior para utilizar <code class="language-text">:not</code>, teríamos algo como:</p>
-<div class="gatsby-highlight" data-language="css"><pre style="counter-reset: linenumber NaN" class="language-css line-numbers"><code class="language-css"><span class="token comment">/*
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token comment">/*
  no caso de preferir inserir como border-top
  exceto no primeiro item, seria algo como:
 */</span>
@@ -204,22 +204,22 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 */</span>
 <span class="token selector">.post-item:not(:last-child)</span> <span class="token punctuation">{</span>
   <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px dashed #1F1E1E<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token punctuation">}</span></code></pre></div>
 <p>O que acha? Bem mais simples, não?</p>
 <p>Assim evitamos o retrabalho de sobrescrever uma única regra de CSS para um elemento específico e o código ficou bem mais legível. Dessa forma, enquanto estamos vendo esse último trecho de código conseguimos identificar mais facilmente o que ele faz em apenas uma única linha, sem precisar ler o restante do código e ver quais regras são sobrescritas.</p>
 <h1><code class="language-text">:empty</code></h1>
 <p>Como o próprio nome sugere, a ideia desse seletor é aplicar um estilo em todos os elementos que não possuem um conteúdo (nós filhos dentro do <code class="language-text">DOM</code>).</p>
 <p>Vamos pensar na seguinte estrutura HTML:</p>
-<div class="gatsby-highlight" data-language="html"><pre style="counter-reset: linenumber NaN" class="language-html line-numbers"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>empty<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>empty<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>empty-with-pseudo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>empty-with-space<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
-<div class="gatsby-highlight" data-language="css"><pre style="counter-reset: linenumber NaN" class="language-css line-numbers"><code class="language-css"><span class="token selector">*:empty</span> <span class="token punctuation">{</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>empty-with-space<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">*:empty</span> <span class="token punctuation">{</span>
   <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector">.empty-with-pseudo:before</span> <span class="token punctuation">{</span>
   <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'conteudo inserido via CSS'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token punctuation">}</span></code></pre></div>
 <p>Nesse caso, somente o elemento <code class="language-text">.empty</code> e o <code class="language-text">.empty-with-pseudo</code> receberão o background vermelho.</p>
 <p>Isso acontece porque o elemento <code class="language-text">.empty</code> realmente está vazio e o <code class="language-text">.empty-with-pseudo</code>, embora tenha um conteúdo inserido via CSS, não possui conteúdo algum inserido no HTML. Já o elemento <code class="language-text">.emtpy-with-space</code> possui o espaço em branco como conteúdo.</p>
 <hr>

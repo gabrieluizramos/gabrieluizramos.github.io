@@ -125,13 +125,13 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 /static/cd6ad86a08f0d69cb3eb461e4f348d62/88367/banner.jpg 600w,
 /static/cd6ad86a08f0d69cb3eb461e4f348d62/21095/banner.jpg 1200w,
 /static/cd6ad86a08f0d69cb3eb461e4f348d62/97ce3/banner.jpg 1800w,
-/static/cd6ad86a08f0d69cb3eb461e4f348d62/d23b7/banner.jpg 1920w" src="/static/cd6ad86a08f0d69cb3eb461e4f348d62/21095/banner.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><figcaption class="styles__Caption-sc-1rmqtvk-5 fVLEj">Foto por <a href="https://unsplash.com/photos/BtzBvzbTYxo" target="_blank" rel="noopener noreferrer">𝓴𝓘𝓡𝓚 𝕝𝔸𝕀</a></figcaption></figure><hr class="styles__Divider-sc-1hayvzj-0 jiVlWE"/><div class="styles__PostContent-sc-1rmqtvk-11 jLGCRF"><p>Nem sempre alguns conceitos teóricos sobre computação são aplicáveis ou comuns no dia-a-dia. Principalmente quando você desenvolve front-end e com <strong>recursividade</strong> não é diferente.</p>
+/static/cd6ad86a08f0d69cb3eb461e4f348d62/d23b7/banner.jpg 1920w" src="/static/cd6ad86a08f0d69cb3eb461e4f348d62/21095/banner.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><figcaption class="styles__Caption-sc-1rmqtvk-5 fVLEj">Foto por <a href="https://unsplash.com/photos/BtzBvzbTYxo" target="_blank" rel="noopener noreferrer">𝓴𝓘𝓡𝓚 𝕝𝔸𝕀</a></figcaption></figure><hr class="styles__Divider-sc-1hayvzj-0 jiVlWE"/><div class="styles__PostContent-sc-1rmqtvk-11 jLGCRF"><p>Nem sempre alguns conceitos teóricos sobre computação são aplicáveis ou comuns no dia-a-dia, principalmente quando você desenvolve front-end. Quando o assunto é <strong>recursividade</strong>, isso não é diferente.</p>
 <h3>Tá, mas pra que eu vou precisar usar isso?</h3>
 <p>Além de ser uma ótima forma de aplicar efetivamente um conceito teórico, também é uma forma um pouco mais enxuta (porém nem sempre a mais performática) de resolver algum problema, como esse aqui:</p>
 <blockquote>
 <p>Imagine que você precisa renderizar uma árvore de componentes onde cada elemento pode ou não ter inúmeros filhos</p>
 </blockquote>
-<p>Um pouco abstrato demais, eu sei, mas para deixar as coisas mais interessantes, vamos imaginar que para uma lista de itens como essa (onde as chaves dos objetos são os nomes dos links e os valorres são as URLs finais):</p>
+<p>Um pouco abstrato demais, eu sei, mas para deixar as coisas mais interessantes, vamos imaginar que para uma lista de itens como essa (onde as chaves dos objetos são os nomes dos links e os valores são as URLs finais):</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">[</span>
   <span class="token punctuation">{</span> <span class="token string">"Link 1"</span><span class="token operator">:</span> <span class="token string">"/link-1"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span> <span class="token string">"Link 2"</span><span class="token operator">:</span> <span class="token string">"/link-2"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -232,11 +232,11 @@ data-styled.g56[id="sc-global-hXwcMC1"]{content:"sc-global-hXwcMC1,"}/*!sc*/
 <p>Recursividade por si só é um tópico extenso e nem sempre é a forma mais performática de resolver um problema iterativo, dependendo muito da linguagem que você utiliza. Para nosso exemplo, vai cair como uma luva.</p>
 <hr>
 <h3>Aplicando isso ao nosso exemplo</h3>
-<p>Como no nosso exemplo o array é composto por objetos onde, cada objeto, possui a estrutura:</p>
+<p>Como no nosso exemplo, o array é composto por objetos onde, cada objeto, possui a estrutura:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">[</span>
   <span class="token punctuation">{</span> <span class="token string">'Titulo do link'</span><span class="token operator">:</span> <span class="token string">'url'</span> <span class="token punctuation">}</span>
 <span class="token punctuation">]</span></code></pre></div>
-<p>Podemos iniciar nosso raciocínio utilizando a função <code class="language-text">Object.entries</code>, que nos retornará um array de arrys, contendo as chaves e os valores dos nossos objetos. Ou seja, para um objeto como:</p>
+<p>Podemos iniciar nosso raciocínio utilizando a função <code class="language-text">Object.entries</code>, que nos retornará um array de arrays, contendo as chaves e os valores dos nossos objetos. Ou seja, para um objeto como:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">  <span class="token punctuation">{</span> <span class="token string">'Titulo do link'</span><span class="token operator">:</span> <span class="token string">'url'</span> <span class="token punctuation">}</span></code></pre></div>
 <p>Temos a seguinte saída:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> objeto <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">'Titulo do link'</span><span class="token operator">:</span> <span class="token string">'url'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
