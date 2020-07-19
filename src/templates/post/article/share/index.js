@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Disqus } from 'gatsby-plugin-disqus';
 
 import Divider from '@components/layout/divider';
 import { colors } from '@variables';
@@ -48,23 +47,20 @@ const Share = ({ title, path, id: identifier }) => {
 
   const { siteUrl, author } = data;
   const url = `${siteUrl}${path}`;
-  const disqus = { url, identifier, title };
 
   return (
     <>
       <Divider />
-      <S.Share>
-        <S.Icons>
-          {social.map(({ Component, Icon }, index) => (
-            <S.Icon key={`share_${index}`}>
-              <Component url={url} title={`${title} por ${author}`}>
-                <Icon size={35} bgStyle={{ fill: colors.terminal.black }} />
-              </Component>
-            </S.Icon>
-          ))}
-        </S.Icons>
-        <Disqus config={disqus} />
-      </S.Share>
+      <S.Icons>
+        <S.Title>Compartilhe</S.Title>
+        {social.map(({ Component, Icon }, index) => (
+          <S.Icon key={`share_${index}`}>
+            <Component url={url} title={`${title} por ${author}`}>
+              <Icon size={35} bgStyle={{ fill: colors.terminal.black }} />
+            </Component>
+          </S.Icon>
+        ))}
+      </S.Icons>
     </>
   );
 };

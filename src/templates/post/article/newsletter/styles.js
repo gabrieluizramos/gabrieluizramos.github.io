@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { hideLabel } from '@components/form/input/styles';
 
-import { colors, spacing, font } from '@variables';
+import { colors, spacing, font, media } from '@variables';
 
 import messages from './messages';
 
@@ -47,7 +47,7 @@ export const Form = styled.div`
     flex: 1.5;
   }
 
-  @media (max-width: 800px) {
+  ${media.query.default} {
     flex-direction: column;
 
     fieldset,

@@ -8,8 +8,9 @@ import SEO from '@components/seo';
 import Header from './header';
 import Breadcrumb from './breadcrumb';
 import Banner from './banner';
+import Share from './share';
 import Newsletter from './newsletter';
-import Social from './social';
+import Comments from './comments';
 
 import * as S from './styles';
 
@@ -37,8 +38,9 @@ const Article = ({
         <Banner {...banner} />
         <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
         <S.Footer>
+          <Share path={path} title={title} id={id} />
           <Newsletter />
-          <Social path={path} title={title} id={id} />
+          <Comments path={path} title={title} id={id} />
         </S.Footer>
       </S.PostArticle>
     </S.Container>
