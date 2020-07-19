@@ -49,11 +49,11 @@ const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
 const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
 
 export const icons = {
+  twitter: TwitterIcon,
+  instagram: InstagramIcon,
+  unsplash: UnsplashIcon,
+  linkedin: LinkedinIcon,
   github: GithubIcon,
   codepen: CodepenIcon,
-  linkedin: LinkedinIcon,
   behance: BehanceIcon,
-  instagram: InstagramIcon,
-  twitter: TwitterIcon,
-  unsplash: UnsplashIcon
 };
