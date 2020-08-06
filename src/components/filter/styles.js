@@ -2,15 +2,14 @@ import styled from 'styled-components';
 
 import { Field, Fieldset, Error, hideLabel } from '@components/form/input/styles';
 
-import { grid, spacing } from '@variables';
+import { spacing } from '@variables';
 
 export const Form = styled.form`
   margin: 0 auto;
-  max-width: ${grid.size};
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: ${spacing.triple} ${spacing.double} ${spacing.default};
+  padding-bottom: ${spacing.default};
 
   ${Fieldset} {
     flex: 1;

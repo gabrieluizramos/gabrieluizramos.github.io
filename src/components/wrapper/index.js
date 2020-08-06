@@ -2,8 +2,8 @@ import React from 'react';
 
 import * as S from './styles';
 
-const Wrapper = ({ children }) => (
-  <S.Wrapper>
+const Wrapper = ({ children, post }) => (
+  <S.Wrapper post={post}>
     {children}
   </S.Wrapper>
 );

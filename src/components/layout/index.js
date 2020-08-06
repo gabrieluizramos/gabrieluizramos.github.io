@@ -10,12 +10,12 @@ import * as S from './styles';
 
 import withKonami from './with-konami';
 
-const Layout = ({ konami, children }) => (
+const Layout = ({ konami, children, post }) => (
   <>
     <Reset />
     <S.Layout konami={konami}>
       <Header />
-      <Wrapper>{children}</Wrapper>
+      <Wrapper post={post}>{children}</Wrapper>
       <Footer />
     </S.Layout>
   </>

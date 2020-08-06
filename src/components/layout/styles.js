@@ -7,5 +7,6 @@ export const Layout = styled.div`
   opacity: ${({ konami }) => konami && 0.25};
   filter: ${({ konami }) => konami && 'blur(5px)'};
   animation: ${({ konami }) => konami && 'blackout 2s 3s'};
+
   ${blackout};
 `;

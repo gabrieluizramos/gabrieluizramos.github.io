@@ -24,26 +24,19 @@ const Article = ({
     }
   }
 }) => (
-  <Layout>
-    <S.Container>
-      <SEO title={title} description={subtitle} banner={banner} />
-      <S.PostArticle>
-        <Breadcrumb current={title} />
-        <Header
-          title={title}
-          subtitle={subtitle}
-          time={timeToRead}
-          date={date}
-        />
-        <Banner {...banner} />
-        <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
-        <S.Footer>
-          <Share path={path} title={title} id={id} />
-          <Newsletter />
-          <Comments path={path} title={title} id={id} />
-        </S.Footer>
-      </S.PostArticle>
-    </S.Container>
+  <Layout post>
+    <SEO title={title} description={subtitle} banner={banner} />
+    <S.PostArticle>
+      <Breadcrumb current={title} />
+      <Header title={title} subtitle={subtitle} time={timeToRead} date={date} />
+      <Banner {...banner} />
+      <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
+      <S.Footer>
+        <Share path={path} title={title} id={id} />
+        <Newsletter />
+        <Comments path={path} title={title} id={id} />
+      </S.Footer>
+    </S.PostArticle>
   </Layout>
 );
 

@@ -3,13 +3,6 @@ import styled from 'styled-components';
 import { spacing, font, colors, grid } from '@variables';
 import { cursor } from '../list/styles';
 
-export const Container = styled.div`
-  margin: 0 auto;
-  padding: ${spacing.double};
-
-  background: ${colors.post.background};
-`;
-
 export const PostArticle = styled.article`
   width: 100%;
   max-width: ${grid.content};
