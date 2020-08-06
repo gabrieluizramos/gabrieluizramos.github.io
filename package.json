@@ -28,6 +28,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-source-name": "^1.0.0",
     "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-source-gravatar": "^1.0.0",
     "gatsby-transformer-remark": "^2.6.50",
     "gatsby-transformer-sharp": "^2.3.13",
     "hooks": "github:gabrieluizramos/hooks",

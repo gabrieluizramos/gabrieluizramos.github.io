@@ -9,7 +9,8 @@ const plugins = [
   'sitemap',
   'feed',
   'mailchimp',
-  'disqus'
+  'disqus',
+  'gravatar'
 ];
 
 module.exports = plugins
