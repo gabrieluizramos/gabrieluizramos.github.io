@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import addToMailChimp from 'gatsby-plugin-mailchimp';
 import Divider from '@components/layout/divider';
 import Form from '@components/form';
+import Emoji from '@components/emoji';
 
 import schema from './schema';
 import messages from './messages';
@@ -43,7 +44,7 @@ const Newsletter = () => {
       <Divider />
       <S.Newsletter>
         <S.Title>
-          <span role="img" aria-label="mailbox">📬</span> Assine a Newsletter!
+          <Emoji aria-label="mailbox" content="📬" /> Assine a Newsletter!
         </S.Title>
         <S.Text>
           Assim você recebe por email as novidades :)
