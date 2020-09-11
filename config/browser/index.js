@@ -1,3 +1,2 @@
 import 'lazysizes';
-
-import './prism/nord.css';
+import 'prism-themes/themes/prism-nord.css';
