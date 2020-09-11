@@ -8,8 +8,7 @@ module.exports = [
         {
           resolve: `gatsby-remark-autolink-headers`,
           options: {
-            className: 'post-anchor',
-            isIconAfterHeader: true,
+            icon: false,
             removeAccents: true,
           }
         },
