@@ -2,7 +2,7 @@ const plugins = [
   'alias',
   'manifest',
   'helmet',
-  'images',
+  'files',
   'posts',
   'components',
   'analytics',
