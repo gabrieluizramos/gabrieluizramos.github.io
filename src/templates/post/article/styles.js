@@ -21,6 +21,10 @@ export const PostArticle = styled.article`
   hr + h6 {
     padding-top: 0;
   }
+
+  .post-anchor {
+    fill: ${colors.white};
+  }
 `;
 
 export const Footer = styled.footer`

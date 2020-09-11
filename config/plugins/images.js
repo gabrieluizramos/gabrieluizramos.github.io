@@ -20,6 +20,14 @@ module.exports = [
     options: {
       plugins: [
         {
+          resolve: `gatsby-remark-autolink-headers`,
+          options: {
+            className: 'post-anchor',
+            isIconAfterHeader: true,
+            removeAccents: true,
+          }
+        },
+        {
           resolve: 'gatsby-remark-external-links',
           options: {
             target: '_blank'
