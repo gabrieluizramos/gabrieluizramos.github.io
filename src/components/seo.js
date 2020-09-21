@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, title, banner }) {
     `
   )
 
-  const image = banner ? banner.image.childImageSharp.fixed.src : '';
+  const image = banner ? banner.image.childImageSharp.fluid.src : '';
   const metaDescription = description || site.siteMetadata.description;
 
   const metas = [

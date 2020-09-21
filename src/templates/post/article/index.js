@@ -61,9 +61,6 @@ export const pageQuery = graphql`
               fluid(maxWidth: 1200, maxHeight: 750) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
-              fixed(width: 1200, height: 1200) {
-                ...GatsbyImageSharpFixed
-              }
             }
           }
         }
