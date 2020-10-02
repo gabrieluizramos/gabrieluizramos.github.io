@@ -394,6 +394,15 @@ mockFn<span class="token punctuation">.</span><span class="token function">mockR
 <span class="token comment">// e também faz com que a função retorne ao seu valor original</span>
 <span class="token comment">// antes do mock</span>
 mockFn<span class="token punctuation">.</span><span class="token function">mockRestore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>E, caso queiramos limpar todos os mocks do teste, sem ficar manipulando um por um, podemos usar também:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// similar ao `mockClear`, mas para todas as funções de mock</span>
+jest<span class="token punctuation">.</span><span class="token function">clearAllMocks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// similar ao `mockReset`, mas para todas as funções de mock</span>
+jest<span class="token punctuation">.</span><span class="token function">resetAllMocks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// similar ao `mockRestore`, mas para todas as funções de mock</span>
+jest<span class="token punctuation">.</span><span class="token function">restoreAllMocks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Muito provavelmente você vai querer automatizar essas limpezas em algum hook dos seus testes, como <a href="https://gabrieluizramos.com.br/anatomia-de-um-teste-em-javascript" target="_blank" rel="nofollow noopener noreferrer">vimos anteriormente</a>.</p>
 <hr>
 <h3 id="ja-utilizava-mock-nos-seus-testes" style="position:relative;">Já utilizava <em>mock</em> nos seus testes?</h3>
