@@ -1,9 +1,12 @@
+const username = 'gabrieluizramos';
+
 export default {
-  github: 'https://github.com/gabrieluizramos',
-  behance: 'https://www.behance.net/gabrieluizramos',
-  codepen: 'https://codepen.io/gabrieluizramos/',
-  instagram: 'https://www.instagram.com/gabrieluizramos/',
-  linkedin: 'https://www.linkedin.com/in/gabrieluizramos/',
-  unsplash: 'https://unsplash.com/@gabrieluizramos',
-  twitter: 'https://twitter.com/gabrieluizramos',
+  github: `https://github.com/${username}`,
+  behance: `https://www.behance.net/${username}`,
+  codepen: `https://codepen.io/${username}/`,
+  instagram: `https://www.instagram.com/${username}/`,
+  linkedin: `https://www.linkedin.com/in/${username}/`,
+  unsplash: `https://unsplash.com/@${username}`,
+  twitter: `https://twitter.com/${username}`,
+  flickr: `https://www.flickr.com/photos/${username}/`,
 }

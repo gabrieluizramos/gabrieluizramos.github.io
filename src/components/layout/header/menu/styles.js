@@ -6,7 +6,8 @@ import {
   Instagram,
   Twitter,
   Linkedin,
-  Unsplash
+  Unsplash,
+  Flickr
 } from '@styled-icons/boxicons-logos';
 
 import { colors, spacing } from '@variables';
@@ -14,7 +15,7 @@ import { colors, spacing } from '@variables';
 export const List = styled.ul`
   display: flex;
   width: 95%;
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
   padding: ${spacing.onehalf} 0;
 `;
@@ -24,7 +25,7 @@ export const Item = styled.li`
 
   a {
     display: block;
-    padding: 10px ${spacing.default};
+    padding: ${spacing.default};
 
     &:hover {
       svg {
@@ -40,18 +41,22 @@ const iconsStyle = () => `
   transition: .2s ease-in-out;
 `;
 
-const GithubIcon = styled(Github)`${iconsStyle}`;
-const BehanceIcon = styled(Behance)`${iconsStyle}`;
-const CodepenIcon = styled(Codepen)`${iconsStyle}`;
-const InstagramIcon = styled(Instagram)`${iconsStyle}`;
+
+
 const TwitterIcon = styled(Twitter)`${iconsStyle}`;
-const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
+const InstagramIcon = styled(Instagram)`${iconsStyle}`;
 const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
+const FlickIcon = styled(Flickr)`${iconsStyle}`;
+const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
+const GithubIcon = styled(Github)`${iconsStyle}`;
+const CodepenIcon = styled(Codepen)`${iconsStyle}`;
+const BehanceIcon = styled(Behance)`${iconsStyle}`;
 
 export const icons = {
   twitter: TwitterIcon,
   instagram: InstagramIcon,
   unsplash: UnsplashIcon,
+  flickr: FlickIcon,
   linkedin: LinkedinIcon,
   github: GithubIcon,
   codepen: CodepenIcon,
