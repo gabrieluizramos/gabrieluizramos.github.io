@@ -232,7 +232,6 @@ button<span class="token punctuation">.</span><span class="token function">addEv
 <p>Agora, precisaremos criar uma função que será responsável por registrar as dependências de nossa aplicação, vamos chamá-la de <code class="language-text">registrar</code>. Essa função simplesmente irá adicionar uma função no array de <code class="language-text">dependencias</code>. A propriedade <code class="language-text">name</code> é um valor presente em qualquer função em JavaScript, podemos utilizar ela ao longo de nosso código para nos auxiliar em alguns cenários.</p>
 <p>Por enquanto, vamos utilizá-la apenas para fazer um <code class="language-text">log</code>:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> framework <span class="token operator">=</span> <span class="token punctuation">{</span>
-  prefixo<span class="token operator">:</span> <span class="token string">'cria'</span><span class="token punctuation">,</span>
   dependencias<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   container<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// criamos a função registrar</span>
@@ -303,8 +302,8 @@ button<span class="token punctuation">.</span><span class="token function">addEv
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>Com isso, poderemos criar nossas funções com prefixo <code class="language-text">criaFuncaoManeira</code> mas elas serão acessíveis e injetadas com o nome <code class="language-text">funcaomaneira</code> nas demais funções que precisarem dela.</p>
-<p>Agora só precisaremos criar uma função que irá iniciar a aplicação, aplicando toda a inversão de controle que comentamos. Vamos chamar essa função de <code class="language-text">iniciar</code>.</p>
+<p>Com isso, poderemos criar nossas funções com prefixo <code class="language-text">criaFuncaoManeira</code> mas elas serão acessíveis e injetadas com o nome <code class="language-text">funcaomaneira</code> nas demais funções que precisarem dela como dependência.</p>
+<p>Agora só precisamos criar uma função que irá iniciar a aplicação propriamente dita, aplicando toda a inversão de controle que comentamos. Vamos chamar essa função de <code class="language-text">iniciar</code>.</p>
 <p>Para facilitar nossa vida, vamos definir que essa função que irá executar a aplicação se chamará <code class="language-text">criaApp</code>. Portanto, será acessível através dhe <code class="language-text">container.app</code> no nosso framework. Com isso, basta apenas executar essa função que nossa aplicação irá começar:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> framework <span class="token operator">=</span> <span class="token punctuation">{</span>
   prefixo<span class="token operator">:</span> <span class="token string">'cria'</span><span class="token punctuation">,</span>
