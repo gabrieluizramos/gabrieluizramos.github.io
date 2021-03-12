@@ -232,16 +232,16 @@ button<span class="token punctuation">.</span><span class="token function">addEv
 <p>Agora, precisaremos criar uma função que será responsável por registrar as dependências de nossa aplicação, vamos chamá-la de <code class="language-text">registrar</code>. Essa função simplesmente irá adicionar uma função no array de <code class="language-text">dependencias</code>. A propriedade <code class="language-text">name</code> é um valor presente em qualquer função em JavaScript, podemos utilizar ela ao longo de nosso código para nos auxiliar em alguns cenários.</p>
 <p>Por enquanto, vamos utilizá-la apenas para fazer um <code class="language-text">log</code>:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> framework <span class="token operator">=</span> <span class="token punctuation">{</span>
-    prefix<span class="token operator">:</span> <span class="token string">'cria'</span><span class="token punctuation">,</span>
-    dependencias<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    container<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token comment">// criamos a função registrar</span>
-    <span class="token function">registrar</span><span class="token punctuation">(</span><span class="token parameter">dependencia</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">// inserimos o log de registro</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Registrando </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dependencia<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token comment">// realizamos o push no array de dependencias</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>dependencias<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>dependencia<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  prefixo<span class="token operator">:</span> <span class="token string">'cria'</span><span class="token punctuation">,</span>
+  dependencias<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  container<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// criamos a função registrar</span>
+  <span class="token function">registrar</span><span class="token punctuation">(</span><span class="token parameter">dependencia</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// inserimos o log de registro</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Registrando </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dependencia<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// realizamos o push no array de dependencias</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>dependencias<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>dependencia<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>Precisaremos agora de um método para executar e construir as dependências da aplicação. Vamos chamá-lo de <code class="language-text">construir</code>. Esse método também será bem simples. O que ele irá fazer, basicamente, é executar cada uma das dependências <strong>fornecendo todo o container de dependência como parâmetro</strong>. Além disso, ele também irá criar uma nova dependência nesse próprio container a cada vez que uma nova função é construida.</p>
 <p>Vamos ver como fica nosso código:</p>
