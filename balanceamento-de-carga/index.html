@@ -504,7 +504,7 @@ balancer<span class="token punctuation">.</span><span class="token function">on<
   req<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>connector<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h3 id="testando-tudo-junto" style="position:relative;">Testando tudo junto</h3>
-<p>Para validar nossa implementação ao final de todo o desenvolvimento, basta abrir duas abas em seu terminal e, em uma delas, executar <code class="language-text">node ./servers</code> e, na outra, <code class="language-text">node ./balancers</code>.</p>
+<p>Para validar nossa implementação ao final de todo o desenvolvimento, basta abrir duas abas em seu terminal e, em uma delas, executar <code class="language-text">node ./servers</code> e, na outra, <code class="language-text">node ./balancer</code>.</p>
 <p>Após isso, basta fazer uma requisição ao servidor que está balanceando toda a carga através do seu navegador acessando <code class="language-text">localhost:3000</code> ou utilizando alguma ferramenta como <code class="language-text">curl</code>, no terminal.</p>
 <p>Caso repita essa requisição variás vezes, você verá que cada um dos servidores irá responder em seu respectivo momento, por exemplo, ao executar 3 vezes, é possível ver:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">curl -X GET localhost:3000
