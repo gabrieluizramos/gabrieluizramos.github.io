@@ -10,7 +10,7 @@ import {
   Flickr
 } from '@styled-icons/boxicons-logos';
 
-import { colors, spacing } from '@variables';
+import { colors, spacing, font } from '@variables';
 
 export const List = styled.ul`
   display: flex;
@@ -22,6 +22,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   flex: 1;
+  position: relative;
 
   a {
     display: block;
@@ -31,6 +32,25 @@ export const Item = styled.li`
       svg {
         fill: ${colors.post.color};
       }
+    }
+  }
+
+  &:after {
+    content: attr(data-description);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: ${font.size.smaller};
+    position: absolute;
+    opacity: 0;
+    transition: .1s ease-in-out;
+    left: 0;
+    right: 0;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
     }
   }
 `;

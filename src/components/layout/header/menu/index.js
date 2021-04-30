@@ -3,13 +3,13 @@ import React from 'react';
 import Link from '@components/link';
 
 import * as S from './styles';
-import url from './url';
+import links from './links';
 
 const Menu = () => (
   <S.List>
-    {Object.entries(S.icons).map(([social, Icon]) => (
-      <S.Item key={`menu-item-${social}`}>
-        <Link href={url[social]} target="_blank">
+    {links.map(({ name, url, description, Icon = S.icons[name] }) => (
+      <S.Item key={`menu-item-${name}`} data-description={description}>
+        <Link href={url} target="_blank">
           <Icon />
         </Link>
       </S.Item>
