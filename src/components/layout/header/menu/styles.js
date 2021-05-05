@@ -46,11 +46,13 @@ export const Item = styled.li`
     transition: .1s ease-in-out;
     left: 0;
     right: 0;
+    transform: translateY(-5px);
   }
 
   &:hover {
     &:after {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 `;
