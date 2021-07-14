@@ -10,7 +10,6 @@ import Breadcrumb from './breadcrumb';
 import Banner from './banner';
 import Share from './share';
 import Newsletter from './newsletter';
-import Comments from './comments';
 
 import * as S from './styles';
 
@@ -34,7 +33,6 @@ const Article = ({
       <S.Footer>
         <Share path={path} title={title} id={id} />
         <Newsletter />
-        <Comments path={path} title={title} id={id} />
       </S.Footer>
     </S.PostArticle>
   </Layout>

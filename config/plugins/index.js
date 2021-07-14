@@ -9,7 +9,6 @@ const plugins = [
   'sitemap',
   'feed',
   'mailchimp',
-  'disqus',
   'gravatar'
 ];
 
