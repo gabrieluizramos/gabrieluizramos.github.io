@@ -3,7 +3,8 @@ import { graphql } from 'gatsby';
 
 import SEO from '@components/seo';
 import Layout from '@components/layout';
-import Bio from '@components/bio';
+import { PostArticle as Article, PostContent as Content } from '@templates/post/article/styles';
+import Bio from '@components/about/bio';
 
 const AboutPage = ({
   data: {
@@ -11,9 +12,13 @@ const AboutPage = ({
   }
 }) => {
   return (
-    <Layout>
-      <SEO title="Sobre mim" />
-      <Bio avatar={avatar} />
+    <Layout post>
+      <SEO title="Sobre" description="Um pouco mais sobre mim" />
+      <Article>
+        <Content>
+          <Bio avatar={avatar} />
+        </Content>
+      </Article>
     </Layout>
   );
 }
