@@ -41,5 +41,6 @@
 <url> <loc>https://gabrieluizramos.com.br/uso-acessivel/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gabrieluizramos.com.br/parse-objetos-na-nuvem/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gabrieluizramos.com.br/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gabrieluizramos.com.br/setup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gabrieluizramos.com.br/sobre/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
