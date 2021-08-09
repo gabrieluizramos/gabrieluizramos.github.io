@@ -2,6 +2,16 @@ const username = 'gabrieluizramos';
 
 export default [
   {
+    name: 'about',
+    url: '/sobre',
+    description: 'sobre',
+  },
+  {
+    name: 'setup',
+    url: '/setup',
+    description: 'setup',
+  },
+  {
     name: 'twitter',
     url: `https://twitter.com/${username}`,
     description: 'coisas'
