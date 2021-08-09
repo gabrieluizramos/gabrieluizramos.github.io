@@ -1,4 +1,18 @@
 import styled from 'styled-components';
+
+import {
+  InfoCircle as About,
+  Gear as Setup
+} from '@styled-icons/bootstrap';
+
+// import {
+//   Bookmark as Book
+// } from '@styled-icons/boxicons-solid';
+
+import {
+  Bookmark as Book
+} from '@styled-icons/boxicons-regular'
+
 import {
   Github,
   Behance,
@@ -10,18 +24,13 @@ import {
   Flickr
 } from '@styled-icons/boxicons-logos';
 
-import {
-  InfoCircle as About,
-  Gear as Setup
-} from '@styled-icons/bootstrap';
-
 
 import { colors, spacing, font, media } from '@variables';
 
 export const List = styled.ul`
   display: flex;
-  width: 85%;
-  max-width: 460px;
+  width: 90%;
+  max-width: 500px;
   margin: 0 auto;
   padding: ${spacing.onehalf} 0;
 `;
@@ -76,6 +85,7 @@ const iconsStyle = () => `
 
 const AboutIcon = styled(About)`${iconsStyle}`;
 const SetupIcon = styled(Setup)`${iconsStyle}`;
+const BookIcon = styled(Book)`${iconsStyle}`;
 const TwitterIcon = styled(Twitter)`${iconsStyle}`;
 const InstagramIcon = styled(Instagram)`${iconsStyle}`;
 const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
@@ -88,6 +98,7 @@ const BehanceIcon = styled(Behance)`${iconsStyle}`;
 export const icons = {
   about: AboutIcon,
   setup: SetupIcon,
+  book: BookIcon,
   twitter: TwitterIcon,
   instagram: InstagramIcon,
   unsplash: UnsplashIcon,

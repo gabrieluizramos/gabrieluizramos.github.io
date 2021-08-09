@@ -12,6 +12,11 @@ export default [
     description: 'setup',
   },
   {
+    name: 'book',
+    url: 'https://javascriptassertivo.com.br/',
+    description: 'livro'
+  },
+  {
     name: 'twitter',
     url: `https://twitter.com/${username}`,
     description: 'coisas'
