@@ -35,7 +35,7 @@ const Bio = ({ avatar }) => (
         No menu principal você consegue acessar todas as minhas redes sociais e conferir mais detalhadamente algumas outras informações sobre mim, profissionais e até sobre meus hobbies e minhas fotos que posto por aí.
       </p>
       <p>
-        Ah! E antes que eu me esqueça... Caso ainda não nos conheçamos pessoalmente, esse da foto aí embaixo sou eu <Emoji aria-label="arrow" content="⤵" />
+        Ah! E antes que eu me esqueça... Caso ainda não nos conheçamos pessoalmente, esse da foto aí embaixo sou eu <Emoji aria-label="seta para baixo" content="⤵" />
       </p>
     </section>
     <Avatar>

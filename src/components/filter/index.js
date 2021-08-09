@@ -22,7 +22,7 @@ export const useFilter = ({ data, filter: initialFilter }) => {
 };
 
 const Filter = ({ onFilter }) => (
-  <S.Form onSubmit={e => e.preventDefault()}>
+  <S.Filter onSubmit={e => e.preventDefault()}>
     <S.Command>ls | grep</S.Command>
     <Input
       type="text"
@@ -31,7 +31,7 @@ const Filter = ({ onFilter }) => (
       name="filtrar"
       onChange={onFilter}
     />
-  </S.Form>
+  </S.Filter>
 );
 
 export default Filter;

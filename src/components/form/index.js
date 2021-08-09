@@ -5,6 +5,8 @@ import Button from './button';
 import Input from './input';
 import validators from './helpers/validators';
 
+import * as S from './styles';
+
 const Form = ({ schema, onSubmit: submit, disabled }) => {
   const fieldsWithValidations = schema.fields.filter(field =>  field.validations && field.validations.length);
   const [fields, setFields] = useState(
@@ -58,7 +60,7 @@ const Form = ({ schema, onSubmit: submit, disabled }) => {
   };
 
   return (
-    <form method="POST" onSubmit={onSubmit} ref={formRef} className="form">
+    <S.Form method="POST" onSubmit={onSubmit} ref={formRef} className="form">
       {
         schema.fields.map(({ type, name, label, placeholder, mask, inputProps }, index) => {
           const props = {type, name, id: name , placeholder, label, mask };
@@ -78,7 +80,7 @@ const Form = ({ schema, onSubmit: submit, disabled }) => {
         })
       }
       <Button disabled={disabled}>{schema.submit}</Button>
-    </form>
+    </S.Form>
   );
 }
 

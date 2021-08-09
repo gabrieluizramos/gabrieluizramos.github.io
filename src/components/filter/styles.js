@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+import { Form } from '@components/form/styles'
 import { Field, Fieldset, Error, hideLabel } from '@components/form/input/styles';
 
 import { spacing } from '@variables';
 
-export const Form = styled.form`
+export const Filter = styled(Form)`
   margin: 0 auto;
   display: flex;
   align-items: center;

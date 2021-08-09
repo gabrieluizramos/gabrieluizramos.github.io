@@ -44,7 +44,7 @@ const Newsletter = () => {
       <Divider />
       <S.Newsletter>
         <S.Title>
-          <Emoji aria-label="mailbox" content="📬" /> Assine a Newsletter!
+          <Emoji aria-label="caixa de correspondências" content="📬" /> Assine a Newsletter!
         </S.Title>
         <S.Text>
           Assim você recebe por email as novidades :)
