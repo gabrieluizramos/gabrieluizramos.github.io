@@ -66,7 +66,9 @@
     "--Commands--": "",
     "preinstall": "sh commands/preinstall.sh",
     "draft:create": "sh commands/posts/draft.sh",
-    "draft:publish": "sh commands/posts/publish.sh"
+    "draft:publish": "sh commands/posts/publish.sh",
+    "draft:redate": "sh commands/posts/redate.sh drafts",
+    "post:redate": "sh commands/posts/redate.sh published"
   },
   "repository": {
     "type": "git",

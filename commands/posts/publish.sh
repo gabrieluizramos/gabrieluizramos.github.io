@@ -7,7 +7,7 @@ echo "Moving post file to published folder"
 mv posts/drafts/${name}.md posts/published/
 
 echo "Moving post images to published folder"
-mv -v posts/drafts/images/${name} posts/published/images/${name}
+mv posts/drafts/images/${name} posts/published/images/${name}
 
 echo "Removing draft from post path"
 sed -i '' "s/draft\///g;" posts/published/${name}.md
