@@ -16,6 +16,3 @@ echo "Committing and pushing published post"
 git add .
 git commit -m "feat(post): publish post $name"
 git push origin develop -f
-
-echo "Running deploy script"
-npm run deploy
