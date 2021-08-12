@@ -13,5 +13,4 @@ const plugins = [
 ];
 
 module.exports = plugins
-  .map(plugin => require(`./${plugin}`))
-  .reduce((acc, plugin) => [...acc, ...plugin], []);
+  .reduce((acc, plugin) => [...acc, ...require(`./${plugin}`)], []);
