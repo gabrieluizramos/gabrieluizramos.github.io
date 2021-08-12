@@ -20,7 +20,8 @@ jobs:
       run: npm install
 
     - name: Build
-      run: npm run build
+      # Still trying to find out why some built images folder are not created at initial build
+      run: npm run build && npm run build
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
