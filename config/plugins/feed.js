@@ -28,11 +28,10 @@ module.exports = [
               .edges
               .filter(filterDraftNodes)
               .map(({ node: { frontmatter: { banner, ...frontmatter } } }) => {
-              const bannerUrl = banner && `${siteUrl}${banner.image.childImageSharp.fluid.src}`;
+              const bannerUrl = banner && `${siteUrl}${banner.image.childImageSharp.fixed.src}`;
               const bannerMedia = banner && `media:content url="${bannerUrl}" type="image/jpg"`;
 
               return Object.assign({}, frontmatter, {
-
                 description: frontmatter.subtitle,
                 date: frontmatter.date,
                 url: `${siteUrl}${frontmatter.path}`,
@@ -63,7 +62,7 @@ module.exports = [
                       banner {
                         image {
                           childImageSharp {
-                            fluid(maxWidth: 600, maxHeight: 350) {
+                            fixed(width: 600, height: 350) {
                               src
                             }
                           }

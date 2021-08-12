@@ -60,6 +60,11 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
+            childImageSharp {
+              fixed(width: 600, height: 350) {
+                src
+              }
+            }
           }
         }
       }
