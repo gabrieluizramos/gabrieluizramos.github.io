@@ -27,3 +27,5 @@ jobs:
       with:
         branch: master
         folder: public
+        git-config-name: Deployment bot
+        git-config-email: deployment-bot@example.com
