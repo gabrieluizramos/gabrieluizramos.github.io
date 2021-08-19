@@ -93,10 +93,13 @@ const Setup = () => (
           Até que eu conheci o <em>switch</em> Kailh Box White e o teclado <A href="https://www.annepro.net/products/anne-pro-2">Anne Pro 2</A>. Foi o único <em>switch</em> que eu realmente senti interessante de digitar.
         </p>
         <p>
+          Na época, <A href="https://pt.aliexpress.com/item/32838679826.html?spm=a2g0s.9042311.0.0.30e9b90apNB2F9">comprei pelo AliExpress com essas configurações que comentei</A>, estava compensando bastante.
+        </p>
+        <p>
           Ele permite que você configure as teclas assim você pode mudar e ajustar tudo pra forma como for melhor pra você. Ele é um modelo 60% então é bem menor do que os teclados mais "tradicionais".
         </p>
         <p>
-          Além disso, eu fiz uma pequena mudança e coloquei teclas (<em>keycaps</em>) pretas lisas (sem nada escrito) nele, ficou bem legal!
+          Além disso, eu fiz uma pequena mudança e coloquei <A href="https://pt.aliexpress.com/item/32791605680.html?spm=a2g0s.9042311.0.0.30e9b90apNB2F9">teclas (<em>keycaps</em>) pretas lisas</A> (sem nada escrito) nele, ficou bem legal!
         </p>
 
         <h4>Mouse</h4>
