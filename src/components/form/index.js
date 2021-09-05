@@ -61,24 +61,26 @@ const Form = ({ schema, onSubmit: submit, disabled }) => {
 
   return (
     <S.Form method="POST" onSubmit={onSubmit} ref={formRef} className="form">
-      {
-        schema.fields.map(({ type, name, label, placeholder, mask, inputProps }, index) => {
-          const props = {type, name, id: name , placeholder, label, mask };
+      {schema.fields.map(({ type, name, label, placeholder, mask, inputProps }, index) => {
+        const props = { type, name, id: name , placeholder, label, mask };
 
-          if (validations[name]) {
-            props.onChange = props.onBlur = (e) => validations[name](e.target.value);
-          }
+        if (validations[name]) {
+          props.onChange = props.onBlur = (e) => validations[name](e.target.value);
+        }
 
-          return (
-            <Input
-              {...props}
-              {...inputProps}
-              error={fields[name]}
-              key={`input-field-${index}-${name}-${type}`}
-            />
-          )
-        })
-      }
+        const hasError = typeof fields[name] === 'string';
+        if (hasError) {
+          props.error = fields[name];
+        }
+
+        return (
+          <Input
+            {...props}
+            {...inputProps}
+            key={`input-field-${index}-${name}-${type}`}
+          />
+        )
+      })}
       <Button disabled={disabled}>{schema.submit}</Button>
     </S.Form>
   );
