@@ -160,4 +160,8 @@ export const PostContent = styled.div`
     width: 100%;
     min-height: 350px;
   }
+
+  .twitter-tweet {
+    margin: 0 auto;
+  }
 `;
