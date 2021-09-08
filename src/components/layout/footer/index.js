@@ -6,7 +6,7 @@ import * as S from './styles';
 
 const Footer = () => (
   <S.Footer>
-    <Link to="/sobre">
+    <Link to="/">
       @gabrieluizramos
     </Link>
   </S.Footer>
