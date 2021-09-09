@@ -185,7 +185,7 @@ button<span class="token punctuation">.</span><span class="token function">addEv
 <span class="token punctuation">}</span></code></pre></div>
 <p>Quando utilizamos <code class="language-text">.map</code>, indicamos a função que será executada pelo método pré-existente na linguagem, quando realizamos isso manualmente, temos controle total sobre a execução do nosso código e a inversão de controle não é aplicada.</p>
 <h3 id="como-frameworks-de-injecao-de-dependencia-aplicam-isso" style="position:relative;">Como frameworks de injeção de dependência aplicam isso</h3>
-<p>Inversão de controle é algo muito utilizado por frameworks de injeção de dependência (outro tópico que <a href="https://gabrieluizramos.com.br/desmistificando-injecao-de-dependencia/" target="_blank" rel="nofollow noopener noreferrer">já comentei anteriormente por aqui</a>) e isso se dá pela forma como esses frameworks são feitos.</p>
+<p>Inversão de controle é algo muito utilizado por frameworks de injeção de dependência (outro tópico que <a href="/desmistificando-injecao-de-dependencia/">já comentei anteriormente por aqui</a>) e isso se dá pela forma como esses frameworks são feitos.</p>
 <p>Esses frameworks geralmente trabalham criando uma espécie de "container" que é responsável por armazenar as instâncias das dependências das aplicações. Após instanciar todas as funções e objetos necessários, a aplicação é, de fato, executada pelo próprio framework.</p>
 <p>Dessa forma, seu código passa a receber suas dependências via parâmetro e não mais através de <code class="language-text">imports</code> ou utilizações diretas.</p>
 <p>Para revisar esse tópico, de forma breve, se fossemos pensar, por exemplo, numa função que depende de outra diretamente:</p>
