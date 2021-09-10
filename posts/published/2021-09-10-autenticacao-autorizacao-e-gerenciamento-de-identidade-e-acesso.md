@@ -1,5 +1,5 @@
 ---
-path: /draft/autenticacao-autorizacao-e-gerenciamento-de-identidade-e-acesso
+path: /autenticacao-autorizacao-e-gerenciamento-de-identidade-e-acesso
 
 title: Autenticação, autorização e gerenciamento de identidade e acesso
 subtitle: Um resumo sobre termos e conceitos que envolvem gerenciamento de acesso, permissões e privilégios
