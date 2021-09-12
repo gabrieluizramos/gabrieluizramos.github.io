@@ -1,14 +1,16 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 import Emoji from '@components/emoji';
 import Link from '@components/link';
 
 const A = ({ href, children }) => <Link href={href} target="_blank">{children}</Link>
 
-const Setup = () => (
+const Setup = ({ images }) => (
   <>
     <header>
       <h1>Setup <Emoji aria-label="ferramentas" content="🛠" /></h1>
+      <Img fluid={images.setup.childImageSharp.fluid} />
       <h2>Hardware, software e ferramentas em geral</h2>
     </header>
     <section>
@@ -21,8 +23,9 @@ const Setup = () => (
       <hr />
       <section>
         <h2>Hardware</h2>
-
         <h3>Dispositivos</h3>
+        <Img fluid={images.devices.childImageSharp.fluid} />
+
         <h4>Máquina</h4>
         <p>
           Como máquina pra trabalho e coisas pessoais eu utilizo um Macbook Pro de 13" modelo 2020. Ele tem um processador i7, 32Gb de RAM e 2Tb de armazenamento. <br />
@@ -70,6 +73,7 @@ const Setup = () => (
         </p>
 
         <h3>Periféricos</h3>
+        <Img fluid={images.peripherals.childImageSharp.fluid} />
 
         <h4>Monitor</h4>
         <p>
@@ -152,7 +156,7 @@ const Setup = () => (
           Acabei ficando com o <A href="https://www.bluemic.com/en-us/products/yeti/">Blue Yeti (blackout)</A> que estava parado lá com ele.
         </p>
 
-        <h3>Ergonomia / Visual</h3>
+        <h3>Ergonomia & Visual</h3>
         <h4>Cadeira</h4>
         <p>
           Eu tenho azar com cadeiras... As últimas duas que eu tive morreram em menos de 1 ano de uso!
@@ -194,6 +198,12 @@ const Setup = () => (
           Sempre gostei muito de uma marca chamada Cutterman e foi lá que eu encontrei o que mais me agradou. O <A href="https://www.cutterman.co/produto/desk-pad-coffee-569">deskpad de couro marrom</A> é o que eu uso, é bem firme e resistente.
         </p>
 
+        <h3>Organização</h3>
+        <p>
+          Afinal, quem vê front-end não vê back-end, né não? <Emoji aria-label="ferramentas" content="🤣" />
+        </p>
+        <Img fluid={images.cableUp.childImageSharp.fluid} />
+        <Img fluid={images.cableDown.childImageSharp.fluid} />
 
         <h4>Dock</h4>
         <p>
@@ -209,12 +219,9 @@ const Setup = () => (
           Além disso, também peguei o <A href="https://www.dell.com/pt-br/shop/kit-de-montagem-da-dell-dock-station/apd/575-bbiv?ref=frommyaccount">kit de montagem</A> pra poder parafusar ela embaixo da mesa, mas isso já entra no próximo ponto que eu queria comentar...
         </p>
 
-        <h4>Organização de cabos</h4>
+        <h4>Cabeamento</h4>
         <p>
-          E já que estamos falando de cabos, uma saída interessante pra deixar o espaço mais organizada foi jogar tudo pra baixo da mesa.
-        </p>
-        <p>
-          Todos os cabos, computador, dock, tudo fica na parte de baixo (quem vê front-end não vê back-end, né não?).
+          E já que estamos falando de organização, um tópico que ajuda a deixar o espaço mais arrumado é justamente a disposição dos cabos. Uma saída interessante pra deixar a mesa mais organizada <del>e esconder os fios</del> foi colocar tudo na parte de baixo. Todos os cabos, fontes, dock, computador, tudo!
         </p>
         <p>
           Pra chegar nesse resultado, eu comprei duas <A href="https://produto.mercadolivre.com.br/MLB-1284746394-cesto-gaveta-aramado-prateleira-organizador-preto-_JM">cestinhas de arame</A> que podem ser usadas em alguns armários e "entortei" a haste delas pra frente pra que ficassem retas. Depois disso, só comprei uns <A href="https://www.leroymerlin.com.br/parafuso-gancho-aco-bicromatizado-1,9x21mm-5-pecas_86947196">parafusos de gancho</A> e prendi elas embaixo da mesa.
@@ -235,12 +242,14 @@ const Setup = () => (
       <hr />
       <section>
         <h2>Software</h2>
+
         <p>
           Muitas das ferramentas que eu uso você consegue dar uma olhada lá nos meus <A href="https://github.com/gabrieluizramos/dotfiles">dotfiles</A> (inclusive, <A href="/configure-seus-dotfiles">já comentamos por aqui</A> sobre os motivos pelos quais é interessante você criar os seus também)!
         </p>
         <p>
           Mesmo assim, nem tudo que está lá está relacionado com trabalho e setup, propriamente dito, então vale a pena ressaltar algumas coisas por aqui.
         </p>
+        <Img fluid={images.software.childImageSharp.fluid} />
 
         <h3>Navegadores</h3>
         <p>

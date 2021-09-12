@@ -28,4 +28,11 @@ module.exports = [
       path: `posts/drafts/images`,
     },
   },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `src/images`,
+    },
+  },
 ]
