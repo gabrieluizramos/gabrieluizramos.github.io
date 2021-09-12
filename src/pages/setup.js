@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-
 import SEO from '@components/seo';
 import Layout from '@components/layout';
 import { PostArticle as Article, PostContent as Content } from '@templates/post/article/styles';
 import Setup from '@components/about/setup';
-
 
 const SetupPage = ({ data }) => {
   return (
