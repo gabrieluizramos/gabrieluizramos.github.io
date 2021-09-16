@@ -14,7 +14,7 @@ banner:
   image: ./images/2021-09-10-autenticacao-autorizacao-e-gerenciamento-de-identidade-e-acesso/banner.jpg
 ---
 
-Embora seja um pouco teórico, gerenciamento de identidade e acesso (*identity and access management* ou IAM) é um assunto importante e amplamente usado em quase tudo que toca a web.
+Embora seja um pouco teórico, gerenciamento de identidade e acesso (_identity and access management_ ou IAM) é um assunto importante e amplamente usado em quase tudo que toca a web.
 
 Esse termo é usado pra descrever um contexto de sistemas e serviços que utilizam técnicas pra identificar usuários e suas determinadas permissões.
 
@@ -58,13 +58,15 @@ Identificar se determinado acesso pode criar ou deletar alguma publicação é a
 
 Outro exemplo é, pensando em um controle de uma empresa, você poder ou não gerenciar cadastros de outras pessoas desse mesmo sistema. Nem todo mundo é administrador ou tem acesso à uma ferramenta por diversas questões (incluindo segurança).
 
+Um outro termo muito comum de se usar quando se fala de permissionamento é "política de acesso" (ou _access policy_).
+
 ### Controle de acesso e algumas siglas comuns
 
 Agora que já entendemos como o fluxo de identificação e restrição funcionam, podemos pensar em como essas "regras do jogo" são construídas e aplicadas.
 
 Para gerenciar essas permissões, existem alguma estratégias utilizadas, geralmente identificadas pelas suas siglas.
 
-#### Lista de controle de acesso (ou *access-control list*, ACL)
+#### Lista de controle de acesso (ou _access-control list_, ACL)
 
 É o termo mais comum.
 
@@ -72,7 +74,7 @@ Uma lista de controle de acesso é um termo genérico pra falar sobre permissõe
 
 Na maioria das vezes não segue uma regra ou uma definição muito específica e é por isso é um termo "curinga" mais utilizado quando se fala de gerenciamento do assunto.
 
-#### Controle de acesso baseado em "papéis/funções/cargo" (ou *role-based access control*, RBAC)
+#### Controle de acesso baseado em "papéis/funções/cargo" (ou _role-based access control_, RBAC)
 
 Quando pensamos em controle de acesso, uma estratégia comum e pensar em algumas funções (ou papéis) que determinados usuários podem exercer no nosso sistema.
 
@@ -88,16 +90,18 @@ Percebeu como nossa divisão foi feita através do papel (ou cargo) que é exerc
 
 Definindo esses papeis é que os níveis de permissão são criados e, por isso, o termo "role" ("papel") é usado nessa estratégia.
 
-#### Controle de acesso baseado em "atributos" (ou *attribute-based access control*, ABAC)
+#### Controle de acesso baseado em "atributos" (ou _attribute-based access control_, ABAC)
 
 Parecido com o modelo anterior mas de uma forma ainda mais genérica, essa estratégia se baseia em atributos, ao invés de pensar no "papel" que determinada pessoa exerce dentro da empresa ou do sistema que está lidando com essas permissões.
 
 Esses atributos podem ser relacionados à diferentes necessidades, como:
+
 - O próprio usuário que está acessando (dados de cadastro e definições de perfil)
 - O ambiente em que o acesso ocorre (horário de acesso, localização e restrições da empresa)
 - O recurso que está sendo acessado (o conteúdo que está sendo acessado/alterado/criado no sistema)
 
 Algumas restrições fáceis de imaginar quando pensamos nesses tipos de atributo são:
+
 - Localização: habilitar/desabilitar um conteúdo baseado no local onde o acesso está ocorrendo (baseado no ambiente)
 - Idade: restringir o conteúdo baseado na idade de quem acessa como conteúdo para maiores de 18 anos (baseado nos atributos do próprio usuário)
 
