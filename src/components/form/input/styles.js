@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, spacing, font } from '@variables';
+import { colors, spacing, font, radius } from '@variables';
 
 export const Fieldset = styled.fieldset`
   display: flex;
@@ -29,6 +29,7 @@ export const Field = styled.input`
   color: ${colors.white};
   font-size: ${font.size.default};
   border: 2px solid ${colors.white};
+  border-radius: ${radius.half};
 `;
 
 export const Error = styled.span`

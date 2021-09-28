@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, font, colors } from '@variables';
+import { spacing, font, colors, radius } from '@variables';
 
 export const Button = styled.button`
   cursor: pointer;
@@ -8,17 +8,17 @@ export const Button = styled.button`
   font-size: ${font.size.default};
   transition: .2s ease-in-out;
   border: 2px solid ${colors.white};
+  border-radius: ${radius.half};
   background: ${colors.white};
 
   &:not([disabled]) {
     &:hover {
-      background: transparent;
-      color: ${colors.white};
+      opacity: 0.9;
     }
   }
 
   &[disabled] {
-    cursor: initial;
+    cursor: not-allowed;
     background: ${colors.post.color};
     border-color: ${colors.post.color};
   }
