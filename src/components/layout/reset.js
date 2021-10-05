@@ -11,6 +11,7 @@ export default createGlobalStyle`
     height: 100%;
     background: ${colors.black};
     color: ${colors.white};
+    scroll-behavior: smooth;
   }
 
   * {

@@ -8,7 +8,7 @@ module.exports = [
         {
           resolve: `gatsby-remark-autolink-headers`,
           options: {
-            icon: false,
+            icon: '#',
             removeAccents: true,
           }
         },

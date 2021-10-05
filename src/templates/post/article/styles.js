@@ -85,6 +85,24 @@ export const PostContent = styled.div`
   .terminal-black { color: ${colors.terminal.black}; }
   .cursor { ${cursor} }
 
+  .anchor {
+    top: initial;
+    font-weight: initial;
+    padding-right: ${spacing.half};
+    color: ${colors.white};
+    opacity: 0;
+    transition: .1s ease-in-out;
+  }
+  h1:hover > .anchor,
+  h2:hover > .anchor,
+  h3:hover > .anchor,
+  h4:hover > .anchor,
+  h5:hover > .anchor,
+  h6:hover > .anchor,
+  .anchor:hover {
+    opacity: 1;
+  }
+
   blockquote {
     padding: ${spacing.default};
     font-style: italic;
