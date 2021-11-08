@@ -133,14 +133,25 @@ const Setup = ({ images }) => (
         <p>
           Por utilizar óculos e alguns modelos de fone acabarem incomodando com alguma horas de uso, acabei optando por fones modelo <em>over-ear</em> pra uma experiência mais imersiva.
         </p>
+        <del>
+          <p>
+            Embora eu ache a ideia daqueles headphones com cancelamento de ruído ativo MUITO interessantes (como o da Sony <Link href="https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4">WH-1000XM4</Link>), há uns anos atrás eu comprei um da Edifier modelo <Link href="https://edifier.com.br/headphone-bluetooth-w830bt-edifier-preto.html">W830BT</Link> e tem uma coisa nele que é imbatível: sua bateria.
+          </p>
+          <p>
+            Eu uso esse fone por um bom tempo, muitas vezes alguns meses, sem precisar carregar. De acordo com a especificação técnica diz que ele dura até 95h de música e, com certeza, pelo menos umas 80h ele aguenta sem problema algum.
+          </p>
+          <p>
+            A qualidade de áudio também é maravilhosa e não deixa nada a desejar. Na época comprei usado pra testar (já que não sabia como seria) e paguei absurdamente barato. De lá até hoje só fiz uma troca das espumas e ele ficou melhor que novo!
+          </p>
+        </del>
         <p>
-          Embora eu ache a ideia daqueles headphones com cancelamento de ruído ativo MUITO interessantes (como o da Sony <Link href="https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4">WH-1000XM4</Link>), há uns anos atrás eu comprei um da Edifier modelo <Link href="https://edifier.com.br/headphone-bluetooth-w830bt-edifier-preto.html">W830BT</Link> e tem uma coisa nele que é imbatível: sua bateria.
+          Me dei por vencido e comprei o Sony <Link href="https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4">WH-1000XM4</Link> e tenho gostado bastante!
         </p>
         <p>
-          Eu uso esse fone por um bom tempo, muitas vezes alguns meses, sem precisar carregar. De acordo com a especificação técnica diz que ele dura até 95h de música e, com certeza, pelo menos umas 80h ele aguenta sem problema algum.
+          No começo é um pouco estranha a sensação de pressão no ouvido por causa do cancelamento de ruído mas acredito que seja costume.
         </p>
         <p>
-          A qualidade de áudio também é maravilhosa e não deixa nada a desejar. Na época comprei usado pra testar (já que não sabia como seria) e paguei absurdamente barato. De lá até hoje só fiz uma troca das espumas e ele ficou melhor que novo!
+          Fora isso, vamo ver se a bateria chega a pelo menos uma semaninha, já que o meu antigo fone passava fácil de um mês.
         </p>
 
         <h4>Microfone</h4>
