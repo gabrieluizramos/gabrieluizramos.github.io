@@ -341,6 +341,14 @@ const Setup = ({ images }) => (
         <p>
           De qualquer forma, pra forma que eu gosto de trabalhar, a CC sempre foi ideal. Dessa forma eu também deixo as minhas salvas na nuvem da própria Adobe e sempre posso olhar o histórico das edições quando quiser.
         </p>
+
+        <h3>Vídeo-chamada</h3>
+        <p>
+          Praticamente todo mundo precisa ficar em vídeo-chamada hoje em dia é comum ter alguns barulhos no seu ambiente Isso é ainda pior se a pessoa que mora do seu lado tiver fazendo uma reforma ou caso você more perto de algum lugar barulhento com oficina e aeroporto (eu vi, eu tava lá, parecia que o avião ia entrar dentro de casa).
+        </p>
+        <p>
+          Comecei a testar o <Link href="https://krisp.ai/">Krisp</Link> e tenho gostado muito! É um software pra cancelamento de ruído que atua tanto no seu microfone removendo os ruídos na sua fala como no seu fone de ouvido, removendo os ruídos que você ouve. Particularmente, só tenho usado no microfone pra não arriscar perder qualidade de áudio nas chamadas.
+        </p>
       </section>
     </section>
   </>
