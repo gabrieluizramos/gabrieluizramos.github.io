@@ -119,14 +119,28 @@ const Setup = ({ images }) => (
         </p>
 
         <h4>Webcam</h4>
+        <del>
+          <p>
+            Sempre ouvi falar (e depois de um tempo virei fã) dos produtos da Logitech. Atualmente utilizo uma webcam HD (720p) dessa marca, modelo <Link href="https://www.logitech.com/pt-br/products/webcams/c270-hd-webcam.960-000694.html">C270i</Link>. Olhando pelo site da Logitech, visualmente ela é igual à <Link href="https://www.logitech.com/pt-br/products/webcams/c505-hd-webcam.960-001363.html">C505</Link> ao invés do modelo C270, não sei se aconteceu alguma atualização ou mudança no modelo mas elas são praticamente similares.
+          </p>
+          <p>
+            Ela possui microfone e funciona super bem! Gosto bastante. Futuramente talvez troque para uma do modelo <Link href="https://www.logitech.com/pt-br/products/webcams/brio-4k-hdr-webcam.960-001105.html">Brio</Link> mas é algo que ainda preciso pensar, já que pro meu uso essa atual já é o suficiente.
+          </p>
+          <p>
+            Fora isso, aquele <Link href="https://produto.mercadolivre.com.br/MLB-1525377355-protetor-tampa-camera-webcam-notebook-tablet-c-3-unid-_JM">protetor</Link> é sempre interessante de usar também (já me salvou de passar algumas vergonhas na internet por aí, rs).
+          </p>
+        </del>
         <p>
-          Sempre ouvi falar (e depois de um tempo virei fã) dos produtos da Logitech. Atualmente utilizo uma webcam HD (720p) dessa marca, modelo <Link href="https://www.logitech.com/pt-br/products/webcams/c270-hd-webcam.960-000694.html">C270i</Link>. Olhando pelo site da Logitech, visualmente ela é igual à <Link href="https://www.logitech.com/pt-br/products/webcams/c505-hd-webcam.960-001363.html">C505</Link> ao invés do modelo C270, não sei se aconteceu alguma atualização ou mudança no modelo mas elas são praticamente similares.
+          Comprei a <Link href="https://getlumina.com/">Lumina</Link> quando eles estavam no <Link href="https://www.indiegogo.com/projects/lumina-4k-webcam-look-great-on-every-call-with-ai/">IndieGogo</Link> e chegou recentemente.
         </p>
         <p>
-          Ela possui microfone e funciona super bem! Gosto bastante. Futuramente talvez troque para uma do modelo <Link href="https://www.logitech.com/pt-br/products/webcams/brio-4k-hdr-webcam.960-001105.html">Brio</Link> mas é algo que ainda preciso pensar, já que pro meu uso essa atual já é o suficiente.
+          Tem sido bem interessante até então. Você consegue controlar várias definições de imagem/cor padrões, além de ter uma abertura bem ampla do cenário que você está.
         </p>
         <p>
-          Fora isso, aquele <Link href="https://produto.mercadolivre.com.br/MLB-1525377355-protetor-tampa-camera-webcam-notebook-tablet-c-3-unid-_JM">protetor</Link> é sempre interessante de usar também (já me salvou de passar algumas vergonhas na internet por aí, rs).
+          Por ter uns superpoderes usando inteligência artifical, tem umas funcionalidades bem interessantes. Minha favorita até agora é a "cameraman", onde a imagem fica sempre focada e centralizada em você, mesmo que você se mexa na cadeira (ou até fique em pé, rs), como se realmente tivesse uma pessoa ali "por trás da câmera" fazendo o trabalho. Até comentaram em algumas chamadas que dá uma cara mais "profissional" pro vídeo.
+        </p>
+        <p>
+          Ela tem um <em>design</em> bem elegante, bonito e simples. Aproveitei até pra começar a brincar com algumas fotografias de produto quandoe ela chegou (se quiser ver as fotos, <Link href="https://unsplash.com/collections/nZCIGPBf9E4/product">estão nessa coleção do Unsplash</Link>).
         </p>
 
         <h4>Headphone</h4>
