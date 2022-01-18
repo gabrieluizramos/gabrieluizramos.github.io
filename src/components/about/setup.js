@@ -159,13 +159,16 @@ const Setup = ({ images }) => (
           </p>
         </del>
         <p>
-          Me dei por vencido e comprei o Sony <Link href="https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4">WH-1000XM4</Link> e tenho gostado bastante!
+          Me dei por vencido e comprei o Sony <Link href="https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4">WH-1000XM4</Link>!
         </p>
         <p>
           No começo é um pouco estranha a sensação de pressão no ouvido por causa do cancelamento de ruído mas acredito que seja costume.
         </p>
         <p>
-          Fora isso, vamo ver se a bateria chega a pelo menos uma semaninha, já que o meu antigo fone passava fácil de um mês.
+          A construção é claramente superior, super confortável e leve, o que explica sua bateria menor também, mas admito que usar só 3 dias e já precisar carregar é um pouco frustrante, já que com o fone anterior eu conseguia por volta de 1 mês de bateria.
+        </p>
+        <p>
+          Embora tenha sido bem interessante usar esse fone, não acho que foi uma compra que valeu muito a pena, principalmente pelo valor que ele custa...
         </p>
 
         <h4>Microfone</h4>
