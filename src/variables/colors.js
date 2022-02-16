@@ -1,6 +1,7 @@
 export default {
   white: '#FFF',
   black: '#000',
+  red: '#FF6347',
   terminal: {
     blue: {
       default: '#006CAD',
@@ -14,5 +15,5 @@ export default {
   post: {
     color: '#DADADA',
     background: '#1F1F1F'
-  }
+  },
 }
