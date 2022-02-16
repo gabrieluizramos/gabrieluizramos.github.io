@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --color-white: #FFF;
+  --color-black: #000;
+  --color-red: #FF6347;
+  --color-terminal-blue-default: #006CAD;
+  --color-terminal-blue-light: #4F93D5;
+  --color-terminal-purple: #696AC6;
+  --color-terminal-green: #4FB06E;
+  --color-terminal-yellow: #F8AB03;
+  --color-terminal-black: #1F1E1E;
+  --color-post-color: #DADADA;
+  --color-post-background: #1F1F1F;
+
+  /* Font */
+  --font-size-smaller: 10px;
+  --font-size-small: 12px;
+  --font-size-default: 14px;
+  --font-size-medium: 18px;
+  --font-size-big: 24px;
+  --font-size-biggest: 48px;
+
+  /* Grid */
+  --grid-size: 1000px;
+  --grid-content: 805px;
+
+  /* Radius */
+  --radius-default: 4px;
+  --radius-half: 2px;
+  --radius-rounded: 50%;
+
+  /* Shadow */
+  --base-shadow: rgba(255, 255, 255, 0.3);
+  --shadow-default: 0 0 15px var(--base-shadow);
+  --shadow-light: 0 0 5px var(--base-shadow);
+
+  /* Spacing */
+  --base-spacing: 15px;
+  --spacing-half: calc(var(--base-spacing) / 2);
+  --spacing-default: var(--base-spacing);
+  --spacing-onehalf: calc(var(--base-spacing) + (var(--base-spacing) / 2));
+  --spacing-double: calc(var(--base-spacing) * 2);
+  --spacing-triple: calc(var(--base-spacing) * 3);
+  --spacing-quadruple: calc(var(--base-spacing) * 4);
+
+  /* Transition */
+  --transition-default: .2s ease-in-out;
+  --transition-slow: 0.8s ease;
+}

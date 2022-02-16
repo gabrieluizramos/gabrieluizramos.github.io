@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  z-index: 0;
+  font-family: 'Fira Code', monospace, arial;
+  font-variant-ligatures: none;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-terminal-blue-default);
+}
