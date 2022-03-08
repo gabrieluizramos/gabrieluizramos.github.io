@@ -41,3 +41,8 @@ hr {
   background-size: var(--spacing-default);
   background-position: calc(-var(--spacing-default) / 1.5);
 }
+
+::selection {
+  background: var(--color-post-color);
+  color: var(--color-post-background);
+}
