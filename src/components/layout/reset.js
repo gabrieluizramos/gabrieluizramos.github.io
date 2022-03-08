@@ -36,4 +36,9 @@ export default createGlobalStyle`
     ${createDivider({})}
     margin: ${spacing.double} 0;
   }
+
+  ::selection {
+    background: ${colors.post.color};
+    color: ${colors.post.background};
+  }
 `;
