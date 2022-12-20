@@ -17,24 +17,14 @@ export default [
     description: 'livro'
   },
   {
-    name: 'twitter',
-    url: `https://twitter.com/${username}`,
-    description: 'coisas'
-  },
-  {
-    name: 'instagram',
-    url: `https://www.instagram.com/${username}/`,
-    description: 'posts'
-  },
-  {
-    name: 'unsplash',
-    url: `https://unsplash.com/@${username}`,
+    name: 'photography',
+    url: 'https://fotografia.gabrieluizramos.com.br/',
     description: 'fotografia'
   },
   {
-    name: 'flickr',
-    url: `https://www.flickr.com/photos/${username}/`,
-    description: 'jogos'
+    name: 'twitter',
+    url: `https://twitter.com/${username}`,
+    description: 'coisas'
   },
   {
     name: 'linkedin',

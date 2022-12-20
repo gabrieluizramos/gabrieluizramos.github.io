@@ -5,9 +5,6 @@ import {
   Gear as Setup
 } from '@styled-icons/bootstrap';
 
-// import {
-//   Bookmark as Book
-// } from '@styled-icons/boxicons-solid';
 
 import {
   Bookmark as Book
@@ -17,20 +14,19 @@ import {
   Github,
   Behance,
   Codepen,
-  Instagram,
   Twitter,
   Linkedin,
-  Unsplash,
-  Flickr
 } from '@styled-icons/boxicons-logos';
+
+import { Camera } from '@styled-icons/ionicons-outline';
 
 
 import { colors, spacing, font, media } from '@variables';
 
 export const List = styled.ul`
   display: flex;
-  width: 90%;
-  max-width: 500px;
+  width: 85%;
+  max-width: 450px;
   margin: 0 auto;
   padding: ${spacing.onehalf} 0;
 `;
@@ -86,10 +82,8 @@ const iconsStyle = () => `
 const AboutIcon = styled(About)`${iconsStyle}`;
 const SetupIcon = styled(Setup)`${iconsStyle}`;
 const BookIcon = styled(Book)`${iconsStyle}`;
+const PhotographyIcon = styled(Camera)`${iconsStyle}`;
 const TwitterIcon = styled(Twitter)`${iconsStyle}`;
-const InstagramIcon = styled(Instagram)`${iconsStyle}`;
-const UnsplashIcon = styled(Unsplash)`${iconsStyle}`;
-const FlickIcon = styled(Flickr)`${iconsStyle}`;
 const LinkedinIcon = styled(Linkedin)`${iconsStyle}`;
 const GithubIcon = styled(Github)`${iconsStyle}`;
 const CodepenIcon = styled(Codepen)`${iconsStyle}`;
@@ -99,10 +93,8 @@ export const icons = {
   about: AboutIcon,
   setup: SetupIcon,
   book: BookIcon,
+  photography: PhotographyIcon,
   twitter: TwitterIcon,
-  instagram: InstagramIcon,
-  unsplash: UnsplashIcon,
-  flickr: FlickIcon,
   linkedin: LinkedinIcon,
   github: GithubIcon,
   codepen: CodepenIcon,
