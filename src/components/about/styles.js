@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
-import { spacing } from '@variables';
+import { spacing, colors } from '@variables';
 
 export const Avatar = styled.figure`
+  margin: ${spacing.double} auto 0;
   text-align: center;
-  padding-top: ${spacing.double};
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid ${colors.post.color};
 
   img {
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
+

@@ -4,7 +4,7 @@ import Emoji from '@components/emoji';
 
 import { Avatar } from './styles';
 
-const Bio = ({ avatar }) => (
+const Bio = () => (
   <>
     <header>
       <h1>Oi <Emoji aria-label="sorriso" content="😀" /></h1>
@@ -39,7 +39,7 @@ const Bio = ({ avatar }) => (
       </p>
     </section>
     <Avatar>
-      <img src={avatar} loading="lazy" alt="Eu" />
+      <img src="https://github.com/gabrieluizramos.png" loading="lazy" alt="Eu" />
     </Avatar>
   </>
 );
